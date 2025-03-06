@@ -1,0 +1,37 @@
+[versions]
+activity = "1.10.1"
+agp = "8.8.2"
+appcompat = "1.7.0"
+composeBom = "2025.02.00"
+constraintlayout = "2.2.1"
+core = "1.1.2"
+coreKtx = "1.15.0"
+espressoCore = "3.6.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+kotlin = "2.0.0"
+kotlinxSerializationJson = "1.8.0"
+material = "1.12.0"
+
+[libraries]
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-material3 = { module = "androidx.compose.material3:material3" }
+androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+hotwire-core = { module = "dev.hotwire:core", version.ref = "core" }
+hotwire-navigation-fragments = { module = "dev.hotwire:navigation-fragments", version.ref = "core" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+

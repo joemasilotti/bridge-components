@@ -1,23 +1,25 @@
-package com.masilotti.demo.components
+package com.masilotti.demo.components // Replace with your package name.
 
 import android.view.Gravity
 import android.view.ViewGroup
 import androidx.appcompat.widget.Toolbar
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.ComposeView
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
+import com.masilotti.demo.R // Replace with your package name.
 import dev.hotwire.core.bridge.BridgeComponent
 import dev.hotwire.core.bridge.BridgeDelegate
 import dev.hotwire.core.bridge.Message
 import dev.hotwire.navigation.destinations.HotwireDestination
 import dev.hotwire.navigation.fragments.HotwireFragment
-import image
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -45,7 +47,7 @@ class ButtonComponent(
             setContent {
                 ToolbarButton(
                     title = data.title,
-                    icon = image(data.imageName),
+                    imageName = data.imageName,
                     onClick = { replyTo(message.event) }
                 )
             }
@@ -69,7 +71,7 @@ class ButtonComponent(
 @Composable
 private fun ToolbarButton(
     title: String,
-    icon: ImageVector?,
+    imageName: String?,
     onClick: () -> Unit
 ) {
     Button(
@@ -79,8 +81,15 @@ private fun ToolbarButton(
             contentColor = Color.Black
         )
     ) {
-        icon?.let {
-            Icon(imageVector = it, contentDescription = title)
+        imageName?.let {
+            Text(
+                text = imageName,
+                fontFamily = FontFamily(Font(R.font.material_symbols)),
+                fontSize = 28.sp,
+                style = TextStyle(
+                    fontFeatureSettings = "liga"
+                )
+            )
         } ?: Text(title)
     }
 }
@@ -90,7 +99,7 @@ private fun ToolbarButton(
 fun Preview() {
     ToolbarButton(
         title = "Click me",
-        icon = null,
+        imageName = null,
         onClick = {}
     )
 }

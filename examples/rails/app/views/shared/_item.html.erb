@@ -1,0 +1,14 @@
+<%= link_to path, data: local_assigns[:data] || {}, class: "list-group-item list-group-item-action d-flex py-3" do %>
+  <div class="col flex-grow-0 flex-shrink-1 my-auto ps-1 pe-4">
+    <i class="bi <%= icon %> fs-1"></i>
+  </div>
+
+  <div class="w-100 mx-auto">
+    <p class="fs-5 mb-0"><%= name %></p>
+    <p class="mb-0 text-muted"><%= description %></p>
+  </div>
+
+  <div class="col flex-grow-0 flex-shrink-1 my-auto d-sm-none">
+    <i class="bi bi-chevron-right"></i>
+  </div>
+<% end %>

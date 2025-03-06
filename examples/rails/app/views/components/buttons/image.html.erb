@@ -1,0 +1,14 @@
+<% content_for :title, "Image Button" %>
+
+<div class="container mt-3">
+  <h1 class="d-hotwire-native-none mt-4">Image Button</h1>
+  <p>TODO</p>
+</div>
+
+<div class="container">
+  <%= link_to "Button", result_components_button_path, class: "btn btn-primary", data: {
+    controller: "bridge--button",
+    bridge_ios_image: "photo",
+    bridge_android_image: "Add"
+  } %>
+</div>

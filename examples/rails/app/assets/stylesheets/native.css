@@ -1,0 +1,10 @@
+/* Hide elements in Hotwire Native apps. */
+.d-hotwire-native-none {
+  display: none !important;
+}
+
+/* Hide the HTML button when the "button" component is registered. */
+[data-bridge-components~="button"]
+[data-controller~="bridge--button"] {
+  display: none;
+}

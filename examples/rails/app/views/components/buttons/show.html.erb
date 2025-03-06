@@ -1,0 +1,20 @@
+<% content_for :title, "Button Component" %>
+
+<div class="container mt-3">
+  <h1 class="d-hotwire-native-none mt-4">Button Component</h1>
+  <p>TODO</p>
+</div>
+
+<div class="list-group list-group-flush container-sm">
+  <%= render "shared/item",
+    path: text_components_button_path,
+    icon: "bi-fonts",
+    name: "Text button",
+    description: "Render text inside the button." %>
+
+  <%= render "shared/item",
+    path: image_components_button_path,
+    icon: "bi-image",
+    name: "Image button",
+    description: "Render an image inside the button." %>
+</div>

@@ -1,5 +1,14 @@
-<div class="container mt-3">
-  <h1>Bridge Components</h1>
+<% content_for :title, "Bridge Components" %>
 
-  <%= link_to "Button", button_components_path %>
+<div class="container mt-3">
+  <h1 class="d-hotwire-native-none">Bridge Components</h1>
+  <p>TODO</p>
+</div>
+
+<div class="list-group list-group-flush container-sm">
+  <%= render "shared/item",
+    path: components_button_path,
+    icon: "bi-app",
+    name: "Button component",
+    description: "Render a native button in the nav bar." %>
 </div>

@@ -8,3 +8,10 @@
 [data-controller~="bridge--button"] {
   display: none;
 }
+
+/* Hide the HTML submit button when the "form" component is registered. */
+[data-bridge-components~="form"]
+[data-controller~="bridge--form"]
+[type="submit"] {
+  display: none;
+}

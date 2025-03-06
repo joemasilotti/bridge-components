@@ -6,7 +6,7 @@ When the native button is tapped, the underlying HTML button will be clicked.
 
 The button can contain either a text string or an image.
 
-![ButtonComponent examples](screenshot.png)
+![Button Component examples](screenshot.png)
 
 ## Text button
 

@@ -10,12 +10,7 @@ Rails.application.routes.draw do
       end
     end
 
-    resource :form, only: :show do
-      collection do
-        get :title
-        get :image
-      end
-    end
+    resource :form, only: %i[new create show]
   end
 
   root "components#index"

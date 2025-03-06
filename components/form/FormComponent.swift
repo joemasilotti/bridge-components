@@ -1,9 +1,11 @@
+import Foundation
 import HotwireNative
 import UIKit
 
-final class ButtonComponent: BridgeComponent {
-    override class var name: String { "button" }
+final class FormComponent: BridgeComponent {
+    override class var name: String { "form" }
 
+    private weak var submitBarButtonItem: UIBarButtonItem?
     private var viewController: UIViewController? {
         delegate.destination as? UIViewController
     }
@@ -14,35 +16,44 @@ final class ButtonComponent: BridgeComponent {
         switch event {
         case .connect:
             addButton(via: message)
+        case .enableSubmit:
+            enableButton()
+        case .disableSubmit:
+            disableButton()
         }
     }
 
     private func addButton(via message: Message) {
         guard let data: MessageData = message.data() else { return }
 
-        let image = UIImage(systemName: data.image ?? "")
         let action = UIAction { [unowned self] _ in
-            self.reply(to: message.event)
+            reply(to: message.event)
         }
-        let item = UIBarButtonItem(title: data.title, image: image, primaryAction: action)
+
+        let item = UIBarButtonItem(title: data.title, primaryAction: action)
         viewController?.navigationItem.rightBarButtonItem = item
+        submitBarButtonItem = item
+    }
+
+    private func enableButton() {
+        submitBarButtonItem?.isEnabled = true
+    }
+
+    private func disableButton() {
+        submitBarButtonItem?.isEnabled = false
     }
 }
 
-private extension ButtonComponent {
+private extension FormComponent {
     enum Event: String {
         case connect
+        case enableSubmit
+        case disableSubmit
     }
 }
 
-private extension ButtonComponent {
+private extension FormComponent {
     struct MessageData: Decodable {
         let title: String
-        let image: String?
-
-        enum CodingKeys: String, CodingKey {
-            case title
-            case image = "iosImage"
-        }
     }
 }

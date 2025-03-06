@@ -8,14 +8,14 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.ComposeView
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.sp
-import com.masilotti.demo.R // Replace with your package name.
+import androidx.compose.ui.platform.ViewCompositionStrategy
 import dev.hotwire.core.bridge.BridgeComponent
 import dev.hotwire.core.bridge.BridgeDelegate
 import dev.hotwire.core.bridge.Message
@@ -24,11 +24,12 @@ import dev.hotwire.navigation.fragments.HotwireFragment
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-class ButtonComponent(
+class FormComponent(
     name: String,
     private val bridgeDelegate: BridgeDelegate<HotwireDestination>
 ) : BridgeComponent<HotwireDestination>(name, bridgeDelegate) {
     private val buttonId = 1
+    private var isButtonEnabled: MutableState<Boolean>? = null
     private val fragment: HotwireFragment
         get() = bridgeDelegate.destination.fragment as HotwireFragment
 
@@ -36,8 +37,10 @@ class ButtonComponent(
         when (message.event) {
             "connect" -> addButton(message)
             "disconnect" -> removeButton()
+            "enableSubmit" -> enableButton()
+            "disableSubmit" -> disableButton()
             else -> Log.w(
-                "ButtonComponent",
+                "FormComponent",
                 "Unknown event for message: $message"
             )
         }
@@ -48,10 +51,14 @@ class ButtonComponent(
 
         val composeView = ComposeView(fragment.requireContext()).apply {
             id = buttonId
+            setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent {
-                ToolbarButton(
+                val enabledState = remember { mutableStateOf(true) } // Default to enabled
+                isButtonEnabled = enabledState
+
+                SubmitButton(
                     title = data.title,
-                    imageName = data.imageName,
+                    enabled = enabledState.value,
                     onClick = { replyTo(message.event) }
                 )
             }
@@ -71,45 +78,34 @@ class ButtonComponent(
         toolbar?.removeView(button)
     }
 
+    private fun enableButton() {
+        isButtonEnabled?.value = true
+    }
+
+    private fun disableButton() {
+        isButtonEnabled?.value = false
+    }
+
     @Serializable
     data class MessageData(
-        @SerialName("title") val title: String,
-        @SerialName("androidImage") val imageName: String?
+        @SerialName("title") val title: String
     )
 }
 
 @Composable
-private fun ToolbarButton(
+private fun SubmitButton(
     title: String,
-    imageName: String?,
+    enabled: Boolean,
     onClick: () -> Unit
 ) {
     Button(
         onClick = onClick,
+        enabled = enabled,
         colors = ButtonDefaults.buttonColors(
             containerColor = Color.Transparent,
             contentColor = Color.Black
         )
     ) {
-        imageName?.let {
-            Text(
-                text = imageName,
-                fontFamily = FontFamily(Font(R.font.material_symbols)),
-                fontSize = 28.sp,
-                style = TextStyle(
-                    fontFeatureSettings = "liga"
-                )
-            )
-        } ?: Text(title)
+        Text(title)
     }
-}
-
-@Composable
-@Preview
-fun Preview() {
-    ToolbarButton(
-        title = "Click me",
-        imageName = null,
-        onClick = {}
-    )
 }

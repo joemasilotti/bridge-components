@@ -11,7 +11,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func configureHotwire() {
         Hotwire.registerBridgeComponents([
-            ButtonComponent.self
+            ButtonComponent.self,
+            FormComponent.self
         ])
 
         Hotwire.config.backButtonDisplayMode = .minimal

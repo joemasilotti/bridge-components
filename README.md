@@ -8,9 +8,13 @@ This repository contains generalized, production-ready bridge components extract
 
 ## Components
 
-### [`ButtonComponent`](components/button/)
+### [Button Component](components/button/)
 
-![ButtonComponent examples](components/button/screenshot.png)
+![Button Component examples](components/button/screenshot.png)
+
+### [Form Component](components/form/)
+
+![Form Component examples](components/form/screenshot.png)
 
 ## Installation
 

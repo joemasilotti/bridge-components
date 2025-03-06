@@ -1,0 +1,36 @@
+<% content_for :title, "Form Component" %>
+
+<div class="container mt-3">
+  <h1 class="d-hotwire-native-none mt-4">Form Component</h1>
+  <p>Replaces a form's submit <code>&lt;button&gt;</code> with a native one that disables during submission.</p>
+  <p><%= link_to "View documentation", "https://github.com/joemasilotti/bridge-components/tree/main/components/form", class: "btn btn-outline-primary btn-sm" %></p>
+</div>
+
+<% if @form.errors.any? %>
+  <div class="container">
+    <div class="alert alert-danger" role="alert">
+      <ul class="list-unstyled mb-0">
+        <% @form.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
+
+<div class="container">
+  <%= form_with model: @form, url: components_form_path, data: {
+    controller: "bridge--form",
+    action: "turbo:submit-start->bridge--form#submitStart turbo:submit-end->bridge--form#submitEnd"
+  } do |form| %>
+    <div>
+      <%= form.label :name, class: "form-label" %>
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
+
+    <%= form.submit "Submit form", class: "btn btn-primary btn-lg w-100 mt-4", data: {
+      bridge__form_target: "submit",
+      bridge_title: "Submit"
+    } %>
+  <% end %>
+</div>

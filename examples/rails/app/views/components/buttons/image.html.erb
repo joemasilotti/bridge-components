@@ -2,7 +2,16 @@
 
 <div class="container mt-3">
   <h1 class="d-hotwire-native-none mt-4">Image Button</h1>
-  <p>TODO</p>
+  <p>Sets the content of the button to an image.</p>
+  <p>iOS uses <%= link_to "SF Symbols", "https://developer.apple.com/sf-symbols/" %>, set <code>bridge-ios-image</code> to the name of the symbol.</p>
+  <p>Android uses <%= link_to "Material Symbols", "https://fonts.google.com/icons" %>, set <code>bridge-android-image</code> to the icon name.</p>
+  <code><pre>
+&lt;%= link_to "Button", "#", data: {
+  controller: "bridge--button",
+  bridge_ios_image: "photo",
+  bridge_android_image: "Image"
+} %&gt;
+  </pre></code>
 </div>
 
 <div class="container">

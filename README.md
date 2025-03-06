@@ -1,14 +1,20 @@
 # Bridge Components for Hotwire Native apps
 
-[Hotwire Native](https://native.hotwired.dev) enables seamless communication between native Swift and Kotlin code and web views in hybrid mobile apps. [Bridge components](https://native.hotwired.dev/reference/bridge-components) extend this functionality by providing reusable, battle-tested native components that interact effortlessly with Hotwire Native-powered web views.
+[Hotwire Native](https://native.hotwired.dev) enables seamless communication between native Swift and Kotlin code and web views in hybrid mobile apps. [Bridge components](https://native.hotwired.dev/overview/bridge-components) extend this functionality by providing reusable, battle-tested native components that interact effortlessly with Hotwire Native-powered web views.
 
-This repository contains generalized, production-ready bridge components extracted from [real-world client projects](https://masilotti.com/services/). Each component simplifies common use cases, reducing the need for custom implementations and speeding up development.
+> This component-based framework allows some web features to break out of the web view container and drive native features — whether it’s displaying native buttons in the top app bar, displaying native menu sheets, or calling native platform APIs. Bridge components enable you to do all of this and give you the flexibility to build components that are specific to your app’s needs. 
 
-Once configured, each component can be added to any page of your app and customized by updating the HTML.
+This repository contains generalized, production-ready bridge components extracted from [real-world client projects](https://masilotti.com/services/). Once configured, each component can be added to any page of your app and customized by only updating HTML.
+
+## Components
+
+### `ButtonComponent`
+
+![ButtonComponent examples](.github/images/ButtonComponent.png)
 
 ## Installation
 
-To use a bridge component, copy the relevant Swift/Kotlin and JavaScript files from the [`components/` directory](components/) into your project.
+To use a bridge component, copy the relevant Swift/Kotlin and JavaScript files from the [`components/` directory](components/) into your project and register the component.
 
 ### iOS (Swift)
 

@@ -2,11 +2,11 @@
 
 Adds a native button to the navigation bar on iOS and action bar on Android.
 
-When the native button is tapped, the hidden HTML button will be clicked.
+When the native button is tapped, the underlying HTML button will be clicked.
 
 The button can contain either a text string or an image.
 
-![ButtonComponent examples](../../.github/images/ButtonComponent.png)
+![ButtonComponent examples](screenshot.png)
 
 ## Text button
 
@@ -34,4 +34,15 @@ Android uses [Material Symbols](https://fonts.google.com/icons), set `bridge-and
 } %>
 ```
 
-For Android, download the [Material Symbols](https://fonts.google.com/icons) font and unzip the Outlined version to ``app/src/main/res/font/material_symbols.ttf`.
+For Android, download the [Material Symbols](https://fonts.google.com/icons) font and unzip the Outlined version to `app/src/main/res/font/material_symbols.ttf`.
+
+## Hide the HTML button
+
+Hide the HTML button when the "button" component is registered with the following CSS.
+
+```css
+[data-bridge-components~="button"]
+[data-controller~="bridge--button"] {
+  display: none;
+}
+```

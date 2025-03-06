@@ -10,7 +10,7 @@ This repository contains generalized, production-ready bridge components extract
 
 ### [`ButtonComponent`](components/button/)
 
-![ButtonComponent examples](.github/images/ButtonComponent.png)
+![ButtonComponent examples](components/button/screenshot.png)
 
 ## Installation
 

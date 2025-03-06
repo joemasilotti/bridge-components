@@ -5,6 +5,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configureHotwire()
+        configureAppearance()
         return true
     }
 
@@ -12,5 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Hotwire.registerBridgeComponents([
             ButtonComponent.self
         ])
+
+        Hotwire.config.backButtonDisplayMode = .minimal
+    }
+
+    private func configureAppearance() {
+        UINavigationBar.appearance().scrollEdgeAppearance = .init()
     }
 }

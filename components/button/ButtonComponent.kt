@@ -3,9 +3,6 @@ package com.masilotti.demo.components
 import android.view.Gravity
 import android.view.ViewGroup
 import androidx.appcompat.widget.Toolbar
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
@@ -20,6 +17,7 @@ import dev.hotwire.core.bridge.BridgeDelegate
 import dev.hotwire.core.bridge.Message
 import dev.hotwire.navigation.destinations.HotwireDestination
 import dev.hotwire.navigation.fragments.HotwireFragment
+import image
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -47,8 +45,7 @@ class ButtonComponent(
             setContent {
                 ToolbarButton(
                     title = data.title,
-//                    icon = data.icon,
-                    icon = null,
+                    icon = image(data.imageName),
                     onClick = { replyTo(message.event) }
                 )
             }
@@ -101,12 +98,5 @@ fun Preview() {
 @Serializable
 data class MessageData(
     @SerialName("title") val title: String,
-//    @SerialName("iconName") val iconName: String?
-) {
-//    val icon: ImageVector?
-//        get() = when (iconName) {
-//            "Add" -> Icons.Filled.Add
-//            "Edit" -> Icons.Filled.Edit
-//            else -> null
-//        }
-}
+    @SerialName("androidImage") val imageName: String?
+)

@@ -1,0 +1,19 @@
+source "https://rubygems.org"
+
+gem "rails", "~> 8.0.1"
+
+gem "bootsnap", require: false
+gem "importmap-rails"
+gem "jbuilder"
+gem "propshaft"
+gem "puma", ">= 5.0"
+gem "sqlite3", ">= 2.1"
+gem "standard"
+gem "stimulus-rails"
+gem "turbo-rails"
+gem "tzinfo-data", platforms: %i[windows jruby]
+
+group :development do
+  gem "debug", platforms: %i[mri windows], require: "debug/prelude"
+  gem "web-console"
+end

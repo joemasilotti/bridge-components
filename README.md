@@ -8,7 +8,7 @@ This repository contains generalized, production-ready bridge components extract
 
 ## Components
 
-### `ButtonComponent`
+### [`ButtonComponent`](components/button/)
 
 ![ButtonComponent examples](.github/images/ButtonComponent.png)
 

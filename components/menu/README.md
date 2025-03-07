@@ -7,7 +7,7 @@ When a native menu item is tapped, the corresponding HTML element will be clicke
 ![Menu Component examples](screenshot.png)
 
 ```html
-<div data-controller="bridge--menu" data-bridge-side="right">
+<div data-controller="bridge--menu">
   <a href="/one"
     data-bridge--menu-target="item"
     data-bridge-title="One"
@@ -25,10 +25,6 @@ When a native menu item is tapped, the corresponding HTML element will be clicke
   </a>
 </div>
 ```
-
-## Menu location
-
-By default, the menu will appear on the left side. Move it to the right by adding `data-bridge-side="right"`.
 
 ## Item customizations
 

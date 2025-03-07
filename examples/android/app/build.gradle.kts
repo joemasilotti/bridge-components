@@ -55,7 +55,6 @@ dependencies {
     implementation(libs.hotwire.navigation.fragments)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.material3)
-    implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.kotlinx.serialization.json)
     debugImplementation(libs.androidx.ui.tooling)
     testImplementation(libs.junit)

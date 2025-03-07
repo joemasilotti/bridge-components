@@ -23,7 +23,6 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-material3 = { module = "androidx.compose.material3:material3" }
 androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
-androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 hotwire-core = { module = "dev.hotwire:core", version.ref = "core" }
 hotwire-navigation-fragments = { module = "dev.hotwire:navigation-fragments", version.ref = "core" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }

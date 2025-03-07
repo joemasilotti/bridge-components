@@ -13,7 +13,6 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.masilotti.demo.R // Replace with your package name.
 import dev.hotwire.core.bridge.BridgeComponent
@@ -36,10 +35,7 @@ class ButtonComponent(
         when (message.event) {
             "connect" -> addButton(message)
             "disconnect" -> removeButton()
-            else -> Log.w(
-                "ButtonComponent",
-                "Unknown event for message: $message"
-            )
+            else -> Log.w( "ButtonComponent", "Unknown event for message: $message" )
         }
     }
 
@@ -93,7 +89,7 @@ private fun ToolbarButton(
     ) {
         imageName?.let {
             Text(
-                text = imageName,
+                text = it,
                 fontFamily = FontFamily(Font(R.font.material_symbols)),
                 fontSize = 28.sp,
                 style = TextStyle(
@@ -102,14 +98,4 @@ private fun ToolbarButton(
             )
         } ?: Text(title)
     }
-}
-
-@Composable
-@Preview
-fun Preview() {
-    ToolbarButton(
-        title = "Click me",
-        imageName = null,
-        onClick = {}
-    )
 }

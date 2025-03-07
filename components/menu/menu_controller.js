@@ -6,8 +6,16 @@ export default class extends BridgeComponent {
   static targets = ["item"]
 
   connect() {
-    const side = this.bridgeElement.bridgeAttribute("side") || "left"
+    super.connect()
+    this.#addMenuButton()
+  }
 
+  disconnect() {
+    super.disconnect()
+    this.#removeMenuButton()
+  }
+
+  #addMenuButton() {
     const items = this.itemTargets.map(target => {
       const element = new BridgeElement(target)
       return {
@@ -17,9 +25,13 @@ export default class extends BridgeComponent {
       }
     })
 
-    this.send("connect", {side, items}, message => {
+    this.send("connect", {items}, message => {
       const item = this.itemTargets[message.data.index]
       new BridgeElement(item).click()
     })
+  }
+
+  #removeMenuButton() {
+    this.send("disconnect")
   }
 }

@@ -31,18 +31,11 @@ class MenuComponent: BridgeComponent {
 
         let button = UIBarButtonItem(
             title: "Menu",
-            image: UIImage(systemName: "line.3.horizontal"),
+            image: UIImage(systemName: "ellipsis"),
             menu: UIMenu(children: actions)
         )
 
-        if data.side == "right" {
-            viewController?.navigationItem.rightBarButtonItem = button
-        } else if data.side == "left" {
-            // Only add button on first screen so it doesn't conflict with the back button.
-            if viewController?.navigationController?.viewControllers.count == 1 {
-                viewController?.navigationItem.leftBarButtonItem = button
-            }
-        }
+        viewController?.navigationItem.rightBarButtonItem = button
     }
 }
 
@@ -55,7 +48,6 @@ private extension MenuComponent {
 private extension MenuComponent {
     struct MessageData: Decodable {
         let items: [Item]
-        let side: String
     }
 
     struct Item: Decodable {

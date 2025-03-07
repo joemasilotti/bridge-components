@@ -16,6 +16,10 @@ This repository contains generalized, production-ready bridge components extract
 
 ![Form Component examples](components/form/screenshot.png)
 
+### [Menu Component](components/menu/)
+
+![Menu Component examples](components/menu/screenshot.png)
+
 ## Installation
 
 To use a bridge component, copy the relevant Swift/Kotlin and JavaScript files from the [`components/` directory](components/) into your project and register the component.

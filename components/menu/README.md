@@ -12,7 +12,7 @@ When a native menu item is tapped, the corresponding HTML element will be clicke
     data-bridge--menu-target="item"
     data-bridge-title="One"
     data-bridge-ios-image="1.circle"
-    data-bridge-android-image="Counter 1">
+    data-bridge-android-image="counter_1">
       One
   </a>
 
@@ -20,7 +20,7 @@ When a native menu item is tapped, the corresponding HTML element will be clicke
     data-bridge--menu-target="item"
     data-bridge-title="Two"
     data-bridge-ios-image="2.circle"
-    data-bridge-android-image="Counter 2">
+    data-bridge-android-image="counter_2">
       Two
   </a>
 </div>

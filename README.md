@@ -10,15 +10,15 @@ This repository contains generalized, production-ready bridge components extract
 
 ### [Button Component](components/button/)
 
-![Button Component examples](components/button/screenshot.png)
+[![Button Component examples](components/button/screenshot.png)](components/button/)
 
 ### [Form Component](components/form/)
 
-![Form Component examples](components/form/screenshot.png)
+[![Form Component examples](components/form/screenshot.png)](components/form/)
 
 ### [Menu Component](components/menu/)
 
-![Menu Component examples](components/menu/screenshot.png)
+[![Menu Component examples](components/menu/screenshot.png)](components/menu/)
 
 ## Installation
 

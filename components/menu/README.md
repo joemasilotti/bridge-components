@@ -2,7 +2,7 @@
 
 Adds a native button to the navigation bar that, when tapped, renders a native menu powered by `UIMenu` on iOS and `DropdownMenu` on Android.
 
-When the native menu item is tapped, the corresponding HTML element will be clicked.
+When a native menu item is tapped, the corresponding HTML element will be clicked.
 
 ![Menu Component examples](screenshot.png)
 
@@ -11,16 +11,16 @@ When the native menu item is tapped, the corresponding HTML element will be clic
   <a href="/one"
     data-bridge--menu-target="item"
     data-bridge-title="One"
-    data-bridge-ios-image: "1.circle"
-    data-bridge-android-image: "Counter 1">
+    data-bridge-ios-image="1.circle"
+    data-bridge-android-image="Counter 1">
       One
   </a>
 
   <a href="/two"
     data-bridge--menu-target="item"
     data-bridge-title="Two"
-    data-bridge-ios-image: "2.circle"
-    data-bridge-android-image: "Counter 2">
+    data-bridge-ios-image="2.circle"
+    data-bridge-android-image="Counter 2">
       Two
   </a>
 </div>

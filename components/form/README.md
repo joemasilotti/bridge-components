@@ -2,7 +2,7 @@
 
 Replaces a form's submit `<button>` with a native one that disables during submission.
 
-The title of the native button will get set from the HTML `<button>`'s `innerText`. Override this by setting `data-bridge-title`, as shown below.
+The title of the native button will get set from the HTML `<button>`'s `innerText`. Override this by setting `data-bridge-title`.
 
 Make sure to wire up the two `data-action` attributes to ensure the button disables while the form submission is in progress.
 

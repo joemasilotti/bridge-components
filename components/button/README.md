@@ -2,7 +2,7 @@
 
 Adds a native button to the navigation bar on iOS and action bar on Android.
 
-When the native button is tapped, the underlying HTML button will be clicked.
+When the native button is tapped, the underlying HTML element will be clicked.
 
 The button can contain either a text string or an image.
 

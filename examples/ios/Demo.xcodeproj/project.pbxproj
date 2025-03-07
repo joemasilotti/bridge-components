@@ -14,6 +14,7 @@
 		84197AF32D796CDA006BA4A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197AE82D796CDA006BA4A3 /* SceneDelegate.swift */; };
 		84197AF52D796CEB006BA4A3 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197AF42D796CEB006BA4A3 /* ButtonComponent.swift */; };
 		84197AF92D7A526B006BA4A3 /* FormComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197AF82D7A526B006BA4A3 /* FormComponent.swift */; };
+		84197B4D2D7A6EF7006BA4A3 /* MenuComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197B4C2D7A6EF7006BA4A3 /* MenuComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		84197AEB2D796CDA006BA4A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84197AF42D796CEB006BA4A3 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonComponent.swift; path = ../../components/button/ButtonComponent.swift; sourceTree = SOURCE_ROOT; };
 		84197AF82D7A526B006BA4A3 /* FormComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FormComponent.swift; path = "/Users/joemasilotti/workspace/projects/bridge-components/components/form/FormComponent.swift"; sourceTree = "<absolute>"; };
+		84197B4C2D7A6EF7006BA4A3 /* MenuComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuComponent.swift; path = "/Users/joemasilotti/workspace/projects/bridge-components/components/menu/MenuComponent.swift"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 		84197AE42D796CDA006BA4A3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				84197AF82D7A526B006BA4A3 /* FormComponent.swift */,
 				84197AF42D796CEB006BA4A3 /* ButtonComponent.swift */,
+				84197AF82D7A526B006BA4A3 /* FormComponent.swift */,
+				84197B4C2D7A6EF7006BA4A3 /* MenuComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84197AF22D796CDA006BA4A3 /* AppDelegate.swift in Sources */,
+				84197B4D2D7A6EF7006BA4A3 /* MenuComponent.swift in Sources */,
 				84197AF92D7A526B006BA4A3 /* FormComponent.swift in Sources */,
 				84197AF52D796CEB006BA4A3 /* ButtonComponent.swift in Sources */,
 				84197AF32D796CDA006BA4A3 /* SceneDelegate.swift in Sources */,

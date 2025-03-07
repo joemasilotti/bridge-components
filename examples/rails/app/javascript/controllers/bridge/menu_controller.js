@@ -1,0 +1,1 @@
+/Users/joemasilotti/workspace/projects/bridge-components/components/menu/menu_controller.js

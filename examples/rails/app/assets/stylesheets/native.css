@@ -15,3 +15,9 @@
 [type="submit"] {
   display: none;
 }
+
+/* Hide the HTML element when the "menu" component is registered. */
+[data-bridge-components~="menu"]
+[data-controller~="bridge--menu"] {
+  display: none;
+}

@@ -8,6 +8,10 @@ This repository contains generalized, production-ready bridge components extract
 
 ## Components
 
+### [Alert Component](components/alert/)
+
+[![Alert Component examples](components/alert/screenshot.png)](components/alert/)
+
 ### [Button Component](components/button/)
 
 [![Button Component examples](components/button/screenshot.png)](components/button/)

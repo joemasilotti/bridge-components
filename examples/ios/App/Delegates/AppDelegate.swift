@@ -11,6 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func configureHotwire() {
         Hotwire.registerBridgeComponents([
+            AlertComponent.self,
             ButtonComponent.self,
             FormComponent.self,
             MenuComponent.self

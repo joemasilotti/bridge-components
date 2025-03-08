@@ -1,0 +1,32 @@
+<% content_for :title, "Alert Component" %>
+
+<div class="container mt-3">
+  <h1 class="d-hotwire-native-none">Alert Component</h1>
+  <p>Render a native, customizable alert dialog to confirm an action.</p>
+  <p><%= link_to "View documentation", "https://github.com/joemasilotti/bridge-components/tree/main/components/alert", class: "btn btn-outline-primary btn-sm" %></p>
+</div>
+
+<div class="container d-flex flex-column gap-2 w-100">
+  <%= link_to "Basic alert", result_components_alert_path, class: "btn btn-lg btn-outline-primary", data: {
+    bridge_title: "Are you sure?",
+    controller: "bridge--alert",
+    action: "bridge--alert#show"
+  } %>
+
+  <%= link_to "Destructive alert", result_components_alert_path, class: "btn btn-lg btn-outline-primary", data: {
+    controller: "bridge--alert",
+    action: "bridge--alert#show",
+    bridge_title: "Delete this record?",
+    bridge_destructive: true
+  } %>
+
+  <%= link_to "Fully customized alert", result_components_alert_path, class: "btn btn-lg btn-outline-primary", data: {
+    controller: "bridge--alert",
+    action: "bridge--alert#show",
+    bridge_title: "Delete this record?",
+    bridge_description: "This action cannot be undone.",
+    bridge_destructive: true,
+    bridge_confirm: "Delete",
+    bridge_dismiss: "Cancel"
+  } %>
+</div>

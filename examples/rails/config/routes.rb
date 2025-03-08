@@ -2,6 +2,12 @@ Rails.application.routes.draw do
   resources :components, only: :index
 
   namespace :components do
+    resource :alert, only: :show do
+      collection do
+        get :result
+      end
+    end
+
     resource :button, only: :show do
       collection do
         get :text

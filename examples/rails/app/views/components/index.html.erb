@@ -7,6 +7,12 @@
 
 <div class="list-group list-group-flush container-sm">
   <%= render "shared/item",
+    path: components_alert_path,
+    icon: "bi-exclamation-triangle",
+    name: "Alert component",
+    description: "Render a native, customizable dialog." %>
+
+  <%= render "shared/item",
     path: components_button_path,
     icon: "bi-app",
     name: "Button component",

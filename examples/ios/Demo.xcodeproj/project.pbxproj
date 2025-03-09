@@ -26,9 +26,9 @@
 		84197AEA2D796CDA006BA4A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84197AEB2D796CDA006BA4A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84197AF42D796CEB006BA4A3 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonComponent.swift; path = ../../components/button/ButtonComponent.swift; sourceTree = SOURCE_ROOT; };
-		84197AF82D7A526B006BA4A3 /* FormComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FormComponent.swift; path = "/Users/joemasilotti/workspace/projects/bridge-components/components/form/FormComponent.swift"; sourceTree = "<absolute>"; };
-		84197B4C2D7A6EF7006BA4A3 /* MenuComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuComponent.swift; path = "/Users/joemasilotti/workspace/projects/bridge-components/components/menu/MenuComponent.swift"; sourceTree = "<absolute>"; };
-		84197B4E2D7CAA6D006BA4A3 /* AlertComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertComponent.swift; path = "/Users/joemasilotti/workspace/projects/bridge-components/components/alert/AlertComponent.swift"; sourceTree = "<absolute>"; };
+		84197AF82D7A526B006BA4A3 /* FormComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FormComponent.swift; path = ../../components/form/FormComponent.swift; sourceTree = SOURCE_ROOT; };
+		84197B4C2D7A6EF7006BA4A3 /* MenuComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuComponent.swift; path = ../../components/menu/MenuComponent.swift; sourceTree = SOURCE_ROOT; };
+		84197B4E2D7CAA6D006BA4A3 /* AlertComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertComponent.swift; path = ../../components/alert/AlertComponent.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

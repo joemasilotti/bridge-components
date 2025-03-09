@@ -69,7 +69,7 @@ class ButtonComponent(
 
     @Serializable
     data class MessageData(
-        @SerialName("title") val title: String,
+        val title: String,
         @SerialName("androidImage") val imageName: String?
     )
 }

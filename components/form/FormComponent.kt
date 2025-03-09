@@ -86,7 +86,7 @@ class FormComponent(
 
     @Serializable
     data class MessageData(
-        @SerialName("title") val title: String
+        val title: String
     )
 }
 

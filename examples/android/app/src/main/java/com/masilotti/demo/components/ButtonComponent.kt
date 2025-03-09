@@ -1,1 +1,1 @@
-/Users/joemasilotti/workspace/projects/bridge-components/components/button/ButtonComponent.kt
+../../../../../../../../../../components/button/ButtonComponent.kt

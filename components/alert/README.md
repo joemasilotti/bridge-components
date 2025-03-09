@@ -14,9 +14,9 @@ Set the title of the alert with `data-bridge-title`. If not set, the `innerText`
 
 ```erb
 <%= link_to "Link title", "#", data: {
-  bridge_title: "Overridden Alert Title",
   controller: "bridge--alert",
-  action: "bridge--alert#show"
+  action: "bridge--alert#show",
+  bridge_title: "Overridden Alert Title"
 } %>
 ```
 
@@ -26,9 +26,9 @@ An optional description can be set with `data-bridge-description`. This appears 
 
 ```erb
 <%= link_to "Link title", "#", data: {
-  bridge_description: "Custom alert description."
   controller: "bridge--alert",
-  action: "bridge--alert#show"
+  action: "bridge--alert#show",
+  bridge_description: "Custom alert description.
 } %>
 ```
 
@@ -37,10 +37,9 @@ An optional description can be set with `data-bridge-description`. This appears 
 Set `data-bridge-destructive="true"` to show a red confirmation button on iOS.
 
 ```erb
-<%= link_to "Destructive alert", "#", data: {
+<%= link_to "Delete this record?", "#", data: {
   controller: "bridge--alert",
   action: "bridge--alert#show",
-  bridge_title: "Delete this record?",
   bridge_destructive: true
 } %>
 ```

@@ -3,29 +3,30 @@ import { BridgeElement } from "@hotwired/hotwire-native-bridge"
 
 export default class extends BridgeComponent {
   static component = "alert"
-  #stopImmediatePropagation = true
+  #cancel = true
 
   show(event) {
-    if (this.#stopImmediatePropagation) {
+    if (this.#cancel) {
       event.stopImmediatePropagation()
+      event.preventDefault()
       this.#showAlert()
     }
   }
 
   #showAlert() {
     const element = this.bridgeElement
-    const data = {
-      title: element.title,
-      description: element.bridgeAttribute("description"),
-      destructive: element.bridgeAttribute("destructive") == "true",
-      confirm: element.bridgeAttribute("confirm"),
-      dismiss: element.bridgeAttribute("dismiss")
-    }
 
+    const title = element.title || "Are you sure?"
+    const description = element.bridgeAttribute("description")
+    const destructive = element.bridgeAttribute("destructive") == "true"
+    const confirm = element.bridgeAttribute("confirm") || "OK"
+    const dismiss = element.bridgeAttribute("dismiss") || "Cancel"
+
+    const data = {title, description, destructive, confirm, dismiss}
     this.send("show", data, () => {
-      this.#stopImmediatePropagation = false
+      this.#cancel = false
       this.bridgeElement.click()
-      this.#stopImmediatePropagation = true
+      this.#cancel = true
     })
   }
 }

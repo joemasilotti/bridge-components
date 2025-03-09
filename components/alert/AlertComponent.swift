@@ -57,23 +57,5 @@ private extension AlertComponent {
         let dismiss: String
 
         var confirmActionStyle: UIAlertAction.Style { destructive ? .destructive : .default }
-
-        init(from decoder: Decoder) throws {
-            let container = try decoder.container(keyedBy: CodingKeys.self)
-
-            title = try container.decodeIfPresent(String.self, forKey: .title) ?? "Are you sure?"
-            description = try container.decodeIfPresent(String.self, forKey: .description)
-            confirm = try container.decodeIfPresent(String.self, forKey: .confirm) ?? "OK"
-            destructive = try container.decodeIfPresent(Bool.self, forKey: .destructive) ?? false
-            dismiss = try container.decodeIfPresent(String.self, forKey: .dismiss) ?? "Cancel"
-        }
-
-        enum CodingKeys: String, CodingKey {
-            case title
-            case description
-            case destructive
-            case confirm
-            case dismiss
-        }
     }
 }

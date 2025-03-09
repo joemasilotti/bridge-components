@@ -1,6 +1,7 @@
 package com.masilotti.demo
 
 import android.app.Application
+import com.masilotti.demo.components.AlertComponent
 import com.masilotti.demo.components.ButtonComponent
 import com.masilotti.demo.components.FormComponent
 import com.masilotti.demo.components.MenuComponent
@@ -14,6 +15,7 @@ class DemoApplication : Application() {
         super.onCreate()
 
         Hotwire.registerBridgeComponents(
+            BridgeComponentFactory("alert", ::AlertComponent),
             BridgeComponentFactory("button", ::ButtonComponent),
             BridgeComponentFactory("form", ::FormComponent),
             BridgeComponentFactory("menu", ::MenuComponent)

@@ -1,0 +1,15 @@
+<% content_for :title, "Review Prompt Component" %>
+
+<div class="container mt-3">
+  <h1 class="d-hotwire-native-none">Review Prompt Component</h1>
+  <p>Prompts the user for a review in the respective app store.</p>
+  <p>Note that you will only see the review prompt UI on Android when running an app downloaded from Google Play.</p>
+  <p><%= link_to "View documentation", "https://github.com/joemasilotti/bridge-components/tree/main/components/review-prompt", class: "btn btn-outline-primary btn-sm" %></p>
+</div>
+
+<div class="container d-flex flex-column gap-2 w-100">
+  <%= link_to "Prompt for review", "#", class: "btn btn-lg btn-outline-primary", data: {
+    controller: "bridge--review-prompt",
+    action: "bridge--review-prompt#prompt"
+  } %>
+</div>

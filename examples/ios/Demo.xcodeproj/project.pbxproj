@@ -16,6 +16,7 @@
 		84197AF92D7A526B006BA4A3 /* FormComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197AF82D7A526B006BA4A3 /* FormComponent.swift */; };
 		84197B4D2D7A6EF7006BA4A3 /* MenuComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197B4C2D7A6EF7006BA4A3 /* MenuComponent.swift */; };
 		84197B4F2D7CAA6D006BA4A3 /* AlertComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197B4E2D7CAA6D006BA4A3 /* AlertComponent.swift */; };
+		84197B532D7E43ED006BA4A3 /* ReviewPromptComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197B522D7E43ED006BA4A3 /* ReviewPromptComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		84197AF82D7A526B006BA4A3 /* FormComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FormComponent.swift; path = ../../components/form/FormComponent.swift; sourceTree = SOURCE_ROOT; };
 		84197B4C2D7A6EF7006BA4A3 /* MenuComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuComponent.swift; path = ../../components/menu/MenuComponent.swift; sourceTree = SOURCE_ROOT; };
 		84197B4E2D7CAA6D006BA4A3 /* AlertComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertComponent.swift; path = ../../components/alert/AlertComponent.swift; sourceTree = SOURCE_ROOT; };
+		84197B522D7E43ED006BA4A3 /* ReviewPromptComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewPromptComponent.swift; path = "/Users/joemasilotti/workspace/projects/bridge-components/components/review-prompt/ReviewPromptComponent.swift"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				84197AF42D796CEB006BA4A3 /* ButtonComponent.swift */,
 				84197AF82D7A526B006BA4A3 /* FormComponent.swift */,
 				84197B4C2D7A6EF7006BA4A3 /* MenuComponent.swift */,
+				84197B522D7E43ED006BA4A3 /* ReviewPromptComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				84197AF92D7A526B006BA4A3 /* FormComponent.swift in Sources */,
 				84197AF52D796CEB006BA4A3 /* ButtonComponent.swift in Sources */,
 				84197AF32D796CDA006BA4A3 /* SceneDelegate.swift in Sources */,
+				84197B532D7E43ED006BA4A3 /* ReviewPromptComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

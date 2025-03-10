@@ -5,6 +5,7 @@ import com.masilotti.demo.components.AlertComponent
 import com.masilotti.demo.components.ButtonComponent
 import com.masilotti.demo.components.FormComponent
 import com.masilotti.demo.components.MenuComponent
+import com.masilotti.demo.components.ReviewPromptComponent
 import dev.hotwire.core.bridge.BridgeComponentFactory
 import dev.hotwire.core.bridge.KotlinXJsonConverter
 import dev.hotwire.core.config.Hotwire
@@ -18,7 +19,8 @@ class DemoApplication : Application() {
             BridgeComponentFactory("alert", ::AlertComponent),
             BridgeComponentFactory("button", ::ButtonComponent),
             BridgeComponentFactory("form", ::FormComponent),
-            BridgeComponentFactory("menu", ::MenuComponent)
+            BridgeComponentFactory("menu", ::MenuComponent),
+            BridgeComponentFactory("review-prompt", ::ReviewPromptComponent),
         )
 
         Hotwire.config.jsonConverter = KotlinXJsonConverter()

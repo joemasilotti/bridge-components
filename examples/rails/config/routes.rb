@@ -23,6 +23,8 @@ Rails.application.routes.draw do
         get :result
       end
     end
+
+    resource :review_prompt, only: :show
   end
 
   root "components#index"

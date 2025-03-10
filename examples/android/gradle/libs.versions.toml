@@ -12,6 +12,7 @@ junitVersion = "1.2.1"
 kotlin = "2.0.0"
 kotlinxSerializationJson = "1.8.0"
 material = "1.12.0"
+reviewKtx = "2.0.2"
 
 [libraries]
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
@@ -28,6 +29,7 @@ hotwire-navigation-fragments = { module = "dev.hotwire:navigation-fragments", ve
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+review-ktx = { group = "com.google.android.play", name = "review-ktx", version.ref = "reviewKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

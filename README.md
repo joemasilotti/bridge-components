@@ -24,6 +24,10 @@ This repository contains generalized, production-ready bridge components extract
 
 [![Menu Component examples](components/menu/screenshot.png)](components/menu/)
 
+### [Review Prompt Component](components/review-prompt/)
+
+[![Review Prompt Component examples](components/review-prompt/screenshot.png)](components/review-prompt/)
+
 ## Installation
 
 To use a bridge component, copy the relevant Swift/Kotlin and JavaScript files from the [`components/` directory](components/) into your project and register the component.

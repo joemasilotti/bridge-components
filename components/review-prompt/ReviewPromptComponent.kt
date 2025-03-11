@@ -32,16 +32,23 @@ class ReviewPromptComponent(
     }
 
     override fun onReceive(message: Message) {
+        when (message.event) {
+            "prompt" -> promptForReview()
+            else -> Log.w( "Review Prompt Component", "Unknown event for message: $message" )
+        }
+    }
+
+    private fun promptForReview() {
         val request = manager?.requestReviewFlow()
         request?.addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 val reviewInfo = task.result
                 val flow = fragment.activity?.let { manager?.launchReviewFlow(it, reviewInfo) }
                 flow?.addOnCompleteListener { _ ->
-                    Log.d("Review Prompt", "Fake review flow completed.")
+                    Log.d("Review Prompt Component", "Fake review flow completed.")
                 }
             } else {
-                Log.e("Review Prompt", task.exception?.message ?: "(no message)")
+                Log.e("Review Prompt Component", task.exception?.message ?: "(no message)")
             }
         }
     }

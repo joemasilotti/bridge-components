@@ -45,8 +45,7 @@ class MenuComponent(
             "connect" -> addMenuButton(message)
             "disconnect" -> removeMenuButton()
             else -> Log.w(
-                "MenuComponent",
-                "Unknown event: ${message.event}"
+                "Menu Component", "Unknown event: ${message.event}"
             )
         }
     }
@@ -64,8 +63,7 @@ class MenuComponent(
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent {
                 MenuDropdown(
-                    data = data,
-                    onItemSelected = { index ->
+                    data = data, onItemSelected = { index ->
                         replyTo(message.event, SelectionMessageData(index))
                     }
                 )
@@ -106,8 +104,7 @@ class MenuComponent(
 
 @Composable
 private fun MenuDropdown(
-    data: MenuComponent.MessageData,
-    onItemSelected: (Int) -> Unit
+    data: MenuComponent.MessageData, onItemSelected: (Int) -> Unit
 ) {
     var expanded by remember { mutableStateOf(false) }
 
@@ -119,9 +116,7 @@ private fun MenuDropdown(
     }
 
     DropdownMenu(
-        expanded = expanded,
-        onDismissRequest = { expanded = false }
-    ) {
+        expanded = expanded, onDismissRequest = { expanded = false }) {
         data.items.forEachIndexed { index, item ->
             DropdownMenuItem(
                 trailingIcon = {

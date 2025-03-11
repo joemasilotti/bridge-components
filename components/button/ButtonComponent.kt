@@ -35,7 +35,9 @@ class ButtonComponent(
         when (message.event) {
             "connect" -> addButton(message)
             "disconnect" -> removeButton()
-            else -> Log.w( "ButtonComponent", "Unknown event for message: $message" )
+            else -> Log.w(
+                "Button Component", "Unknown event for message: $message"
+            )
         }
     }
 
@@ -48,8 +50,7 @@ class ButtonComponent(
                 ToolbarButton(
                     title = data.title,
                     imageName = data.imageName,
-                    onClick = { replyTo(message.event) }
-                )
+                    onClick = { replyTo(message.event) })
             }
         }
         val layoutParams = Toolbar.LayoutParams(
@@ -76,9 +77,7 @@ class ButtonComponent(
 
 @Composable
 private fun ToolbarButton(
-    title: String,
-    imageName: String?,
-    onClick: () -> Unit
+    title: String, imageName: String?, onClick: () -> Unit
 ) {
     Button(
         onClick = onClick,
@@ -92,9 +91,7 @@ private fun ToolbarButton(
                 text = it,
                 fontFamily = FontFamily(Font(R.font.material_symbols)),
                 fontSize = 28.sp,
-                style = TextStyle(
-                    fontFeatureSettings = "liga"
-                )
+                style = TextStyle(fontFeatureSettings = "liga")
             )
         } ?: Text(title)
     }

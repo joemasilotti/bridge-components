@@ -6,13 +6,28 @@ import struct HotwireNative.Message
 class ReviewPromptComponent: BridgeComponent {
     override class var name: String { "review-prompt" }
 
+    private var viewController: UIViewController? {
+        delegate.destination as? UIViewController
+    }
+
     override func onReceive(message: Message) {
+        guard let event = Event(rawValue: message.event) else { return }
+
+        switch event {
+        case .prompt:
+            promptForReview()
+        }
+    }
+
+    private func promptForReview() {
         if let scene = viewController?.view.window?.windowScene {
             AppStore.requestReview(in: scene)
         }
     }
+}
 
-    private var viewController: UIViewController? {
-        delegate.destination as? UIViewController
+private extension ReviewPromptComponent {
+    enum Event: String {
+        case prompt
     }
 }

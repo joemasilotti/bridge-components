@@ -38,8 +38,7 @@ class FormComponent(
             "enableSubmit" -> enableButton()
             "disableSubmit" -> disableButton()
             else -> Log.w(
-                "FormComponent",
-                "Unknown event for message: $message"
+                "Form Component", "Unknown event for message: $message"
             )
         }
     }
@@ -51,7 +50,7 @@ class FormComponent(
             id = buttonId
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent {
-                val enabledState = remember { mutableStateOf(true) } // Default to enabled
+                val enabledState = remember { mutableStateOf(true) }
                 isButtonEnabled = enabledState
 
                 SubmitButton(
@@ -92,16 +91,13 @@ class FormComponent(
 
 @Composable
 private fun SubmitButton(
-    title: String,
-    enabled: Boolean,
-    onClick: () -> Unit
+    title: String, enabled: Boolean, onClick: () -> Unit
 ) {
     Button(
         onClick = onClick,
         enabled = enabled,
         colors = ButtonDefaults.buttonColors(
-            containerColor = Color.Transparent,
-            contentColor = Color.Black
+            containerColor = Color.Transparent, contentColor = Color.Black
         )
     ) {
         Text(title)

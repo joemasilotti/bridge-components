@@ -20,8 +20,7 @@ class AlertComponent(
         when (message.event) {
             "show" -> showAlert(message)
             else -> Log.w(
-                "AlertComponent",
-                "Unknown event for message: $message"
+                "Alert Component", "Unknown event for message: $message"
             )
         }
     }
@@ -29,15 +28,12 @@ class AlertComponent(
     private fun showAlert(message: Message) {
         val data = message.data<MessageData>() ?: return
 
-        AlertDialog.Builder(fragment.requireContext())
-            .setTitle(data.title)
-            .setMessage(data.description)
-            .setCancelable(true)
+        AlertDialog.Builder(fragment.requireContext()).setTitle(data.title)
+            .setMessage(data.description).setCancelable(true)
             .setNegativeButton(data.dismiss, null)
             .setPositiveButton(data.confirm) { _, _ ->
                 replyTo(message.event)
-            }
-            .show()
+            }.show()
     }
 
     @Serializable

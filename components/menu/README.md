@@ -4,7 +4,7 @@ Adds a native button to the navigation bar that, when tapped, renders a native m
 
 When a native menu item is tapped, the corresponding HTML element will be clicked.
 
-![Menu Component examples](screenshot.png)
+![Menu Component examples](/resources/screenshots/menu.png)
 
 ```html
 <div data-controller="bridge--menu">

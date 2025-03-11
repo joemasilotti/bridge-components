@@ -6,7 +6,7 @@ When the native confirm button is tapped, the underlying HTML element will be cl
 
 The dialog can be optionally customized.
 
-![Alert Component examples](screenshot.png)
+![Alert Component examples](/resources/screenshots/alert.png)
 
 ## Title
 

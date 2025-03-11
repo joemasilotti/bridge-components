@@ -6,7 +6,7 @@ The title of the native button will get set from the HTML `<button>`'s `innerTex
 
 Make sure to wire up the two `data-action` attributes to ensure the button disables while the form submission is in progress.
 
-![Form Component examples](screenshot.png)
+![Form Component examples](/resources/screenshots/form.png)
 
 ```erb
 <%= form_with model: @model, data: {

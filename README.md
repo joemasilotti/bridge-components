@@ -10,23 +10,23 @@ This repository contains generalized, production-ready bridge components extract
 
 ### [Alert Component](components/alert/)
 
-[![Alert Component examples](components/alert/screenshot.png)](components/alert/)
+[![Alert Component examples](resources/screenshots/alert.png)](components/alert/)
 
 ### [Button Component](components/button/)
 
-[![Button Component examples](components/button/screenshot.png)](components/button/)
+[![Button Component examples](resources/screenshots/button.png)](components/button/)
 
 ### [Form Component](components/form/)
 
-[![Form Component examples](components/form/screenshot.png)](components/form/)
+[![Form Component examples](resources/screenshots/form.png)](components/form/)
 
 ### [Menu Component](components/menu/)
 
-[![Menu Component examples](components/menu/screenshot.png)](components/menu/)
+[![Menu Component examples](resources/screenshots/menu.png)](components/menu/)
 
 ### [Review Prompt Component](components/review-prompt/)
 
-[![Review Prompt Component examples](components/review-prompt/screenshot.png)](components/review-prompt/)
+[![Review Prompt Component examples](resources/screenshots/review-prompt.png)](components/review-prompt/)
 
 ## Installation
 

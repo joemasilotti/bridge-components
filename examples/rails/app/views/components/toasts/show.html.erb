@@ -1,0 +1,15 @@
+<% content_for :title, "Toast Component" %>
+
+<div class="container mt-3">
+  <h1 class="d-hotwire-native-none">Toast Component</h1>
+  <p>Render a native, floating message that disappears after a few seconds.</p>
+  <p><%= link_to "View documentation", "https://github.com/joemasilotti/bridge-components/tree/main/components/toast", class: "btn btn-outline-primary btn-sm" %></p>
+</div>
+
+<div class="container d-flex flex-column gap-2 w-100">
+  <%= link_to "Show a toast", "#", class: "btn btn-lg btn-outline-primary", data: {
+    controller: "bridge--toast",
+    action: "bridge--toast#show",
+    bridge_message: "This is a toast message."
+  } %>
+</div>

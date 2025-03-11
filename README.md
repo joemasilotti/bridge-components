@@ -28,6 +28,10 @@ This repository contains generalized, production-ready bridge components extract
 
 [![Review Prompt Component examples](resources/screenshots/review-prompt.png)](components/review-prompt/)
 
+### [Toast Component](components/toast/)
+
+[![Toast Component examples](resources/screenshots/toast.png)](components/toast/)
+
 ## Installation
 
 To use a bridge component, copy the relevant Swift/Kotlin and JavaScript files from the [`components/` directory](components/) into your project and register the component.

@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ButtonComponent.self,
             FormComponent.self,
             MenuComponent.self,
-            ReviewPromptComponent.self
+            ReviewPromptComponent.self,
+            ToastComponent.self
         ])
 
         Hotwire.config.backButtonDisplayMode = .minimal

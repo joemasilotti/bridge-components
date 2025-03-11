@@ -25,6 +25,8 @@ Rails.application.routes.draw do
     end
 
     resource :review_prompt, only: :show
+
+    resource :toast, only: :show
   end
 
   root "components#index"

@@ -40,7 +40,7 @@ Gain access to these components by [purchasing a Pro license](https://buy.stripe
 
 ### [Location Component](components/location/)
 
-[![Location Component examples](resources/screenshots/menu.png)](components/location/)
+[![Location Component examples](resources/screenshots/location.png)](components/location/)
 
 ## Installation
 

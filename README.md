@@ -6,7 +6,9 @@
 
 This repository contains generalized, production-ready bridge components extracted from [real-world client projects](https://masilotti.com/services/). Once configured, each component can be added to any page of your app and customized by only updating HTML.
 
-## Components
+## Free components
+
+The source code for these components is included in this repo.
 
 ### [Alert Component](components/alert/)
 
@@ -31,6 +33,14 @@ This repository contains generalized, production-ready bridge components extract
 ### [Toast Component](components/toast/)
 
 [![Toast Component examples](resources/screenshots/toast.png)](components/toast/)
+
+## Paid components
+
+Gain access to these components by [purchasing a Pro license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b?prefilled_promo_code=EARLYACCESS). This is a **one-time payment** and currently 50% off while more components are built.
+
+### [Location Component](components/location/)
+
+[![Location Component examples](resources/screenshots/menu.png)](components/location/)
 
 ## Installation
 

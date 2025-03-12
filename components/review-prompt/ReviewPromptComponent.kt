@@ -14,6 +14,8 @@ import dev.hotwire.navigation.destinations.HotwireDestination
 // Note that the UI for the review prompt will only appear when running an
 // app downloaded from Google Play. Otherwise, FakeReviewManager will
 // simulator the API calls.
+//
+// Requires the com.google.android.play.review-ktx dependency.
 class ReviewPromptComponent(
     name: String,
     private val bridgeDelegate: BridgeDelegate<HotwireDestination>
@@ -34,7 +36,7 @@ class ReviewPromptComponent(
     override fun onReceive(message: Message) {
         when (message.event) {
             "prompt" -> promptForReview()
-            else -> Log.w( "Review Prompt Component", "Unknown event for message: $message" )
+            else -> Log.w("Review Prompt Component", "Unknown event for message: $message")
         }
     }
 

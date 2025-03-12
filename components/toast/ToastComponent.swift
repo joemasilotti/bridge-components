@@ -1,7 +1,7 @@
 import HotwireNative
 import UIKit
 
-class ToastComponent: BridgeComponent {
+final class ToastComponent: BridgeComponent {
     override class var name: String { "toast" }
 
     private var viewController: UIViewController? {

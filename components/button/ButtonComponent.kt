@@ -23,6 +23,7 @@ import dev.hotwire.navigation.fragments.HotwireFragment
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+// Requires the androidx.compose.material3:material3 dependency.
 class ButtonComponent(
     name: String,
     private val bridgeDelegate: BridgeDelegate<HotwireDestination>
@@ -35,9 +36,7 @@ class ButtonComponent(
         when (message.event) {
             "connect" -> addButton(message)
             "disconnect" -> removeButton()
-            else -> Log.w(
-                "Button Component", "Unknown event for message: $message"
-            )
+            else -> Log.w("Button Component", "Unknown event for message: $message")
         }
     }
 

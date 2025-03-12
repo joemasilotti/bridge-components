@@ -19,9 +19,7 @@ class AlertComponent(
     override fun onReceive(message: Message) {
         when (message.event) {
             "show" -> showAlert(message)
-            else -> Log.w(
-                "Alert Component", "Unknown event for message: $message"
-            )
+            else -> Log.w("Alert Component", "Unknown event for message: $message")
         }
     }
 

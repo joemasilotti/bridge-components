@@ -31,6 +31,7 @@ import dev.hotwire.navigation.fragments.HotwireFragment
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+// Requires the androidx.compose.material3:material3 dependency.
 class MenuComponent(
     name: String,
     private val bridgeDelegate: BridgeDelegate<HotwireDestination>
@@ -44,9 +45,7 @@ class MenuComponent(
         when (message.event) {
             "connect" -> addMenuButton(message)
             "disconnect" -> removeMenuButton()
-            else -> Log.w(
-                "Menu Component", "Unknown event: ${message.event}"
-            )
+            else -> Log.w("Menu Component", "Unknown event: ${message.event}")
         }
     }
 
@@ -63,7 +62,8 @@ class MenuComponent(
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent {
                 MenuDropdown(
-                    data = data, onItemSelected = { index ->
+                    data = data,
+                    onItemSelected = { index ->
                         replyTo(message.event, SelectionMessageData(index))
                     }
                 )
@@ -116,7 +116,9 @@ private fun MenuDropdown(
     }
 
     DropdownMenu(
-        expanded = expanded, onDismissRequest = { expanded = false }) {
+        expanded = expanded,
+        onDismissRequest = { expanded = false }
+    ) {
         data.items.forEachIndexed { index, item ->
             DropdownMenuItem(
                 trailingIcon = {

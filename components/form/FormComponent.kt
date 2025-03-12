@@ -22,6 +22,7 @@ import dev.hotwire.navigation.fragments.HotwireFragment
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+// Requires the androidx.compose.material3:material3 dependency.
 class FormComponent(
     name: String,
     private val bridgeDelegate: BridgeDelegate<HotwireDestination>

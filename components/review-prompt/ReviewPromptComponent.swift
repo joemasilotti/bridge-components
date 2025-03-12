@@ -3,7 +3,7 @@ import StoreKit
 
 import struct HotwireNative.Message
 
-class ReviewPromptComponent: BridgeComponent {
+final class ReviewPromptComponent: BridgeComponent {
     override class var name: String { "review-prompt" }
 
     private var viewController: UIViewController? {

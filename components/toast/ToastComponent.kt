@@ -15,10 +15,7 @@ class ToastComponent(
     override fun onReceive(message: Message) {
         when (message.event) {
             "show" -> showToast(message)
-            else -> Log.w(
-                "Toast Component",
-                "Unknown event for message: $message"
-            )
+            else -> Log.w("Toast Component", "Unknown event for message: $message")
         }
     }
 

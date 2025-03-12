@@ -1,7 +1,7 @@
 import HotwireNative
 import UIKit
 
-class MenuComponent: BridgeComponent {
+final class MenuComponent: BridgeComponent {
     override class var name: String { "menu" }
 
     private var viewController: UIViewController? {

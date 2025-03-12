@@ -1,1 +1,1 @@
-/Users/joemasilotti/workspace/projects/bridge-components/components/menu/menu_controller.js
+../../../../../../components/menu/menu_controller.js

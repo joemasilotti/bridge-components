@@ -38,6 +38,10 @@ The source code for these components is included in this repo.
 
 Gain access to these components by [purchasing a Pro license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b?prefilled_promo_code=EARLYACCESS). This is a **one-time payment** and currently 50% off while more components are built.
 
+### [Notification Token Component](components/notification-token/)
+
+[![Notification Token Component examples](resources/screenshots/notification-token.png)](components/notification-token/)
+
 ### [Location Component](components/location/)
 
 [![Location Component examples](resources/screenshots/location.png)](components/location/)

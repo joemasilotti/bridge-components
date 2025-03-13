@@ -73,8 +73,9 @@
 				84197B522D7E43ED006BA4A3 /* ReviewPromptComponent.swift */,
 				84633BF42D7FF0AB00B527E7 /* ToastComponent.swift */,
 			);
-			path = Components;
-			sourceTree = "<group>";
+			name = Components;
+			path = App/Components;
+			sourceTree = SOURCE_ROOT;
 		};
 		84197AE62D796CDA006BA4A3 /* Configuration */ = {
 			isa = PBXGroup;

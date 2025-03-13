@@ -36,7 +36,7 @@ The source code for these components is included in this repo.
 
 ## Paid components
 
-Gain access to these components by [purchasing a Pro license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b?prefilled_promo_code=EARLYACCESS). This is a **one-time payment** and currently 50% off while more components are built.
+Gain access to these components by [purchasing a Pro license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b). This is a **one-time payment** and not a subscription. It includes access to all bridge components available today, plus all future updates.
 
 ### [Location Component](components/location/)
 

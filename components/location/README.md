@@ -2,7 +2,7 @@
 
 Prompts the user for their precise location with a single system dialog.
 
-![Location screenshots](/resources/screenshots/location.png)
+![Location Component examples](/resources/screenshots/location.png)
 
 ```html
 <div data-controller="bridge--location">

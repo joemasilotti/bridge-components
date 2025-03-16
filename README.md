@@ -40,7 +40,7 @@ Gain access to these components by [purchasing a Pro license](https://buy.stripe
 
 ### [Barcode Scanner Component](components/barcode-scanner/)
 
-[![Barcode Scanner examples](resources/screenshots/barcode-scanner.png)](components/barcode-scanner/)
+[![Barcode Scanner Component examples](resources/screenshots/barcode-scanner.png)](components/barcode-scanner/)
 
 ### [Location Component](components/location/)
 

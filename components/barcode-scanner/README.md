@@ -4,6 +4,8 @@ Presents a camera that scans a barcodes and QR codes using a native camera captu
 
 This component requires a real camera so it needs to be run on a physical device.
 
+![Barcode Scanner Component examples](/resources/screenshots/barcode-scanner.png)
+
 ## Additional requirements
 
 ### iOS

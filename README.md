@@ -2,13 +2,13 @@
 
 > by [Joe Masilotti](https://masilotti.com), the Hotwire Native guy
 
-[Hotwire Native](https://native.hotwired.dev) enables seamless communication between native Swift and Kotlin code and web views in hybrid mobile apps. [Bridge components](https://native.hotwired.dev/overview/bridge-components) extend this functionality by providing reusable, battle-tested native components that interact effortlessly with Hotwire Native-powered web views. Bridge components enable developers to break out of the web view container and **drive native features**.
+[Hotwire Native](https://native.hotwired.dev) enables seamless communication between native Swift and Kotlin code and web views in hybrid mobile apps. [Bridge components](https://native.hotwired.dev/overview/bridge-components) extend this functionality by providing reusable native components that interact your web views. They enable developers to break out of the web view container and **drive native features**.
 
-This repository contains generalized, production-ready bridge components extracted from [real-world client projects](https://masilotti.com/services/). Once configured, each component can be added to any page of your app and customized with HTML.
+This repository contains generalized, production-ready bridge components extracted from [real-world client projects](https://masilotti.com/services/). Once configured, each component can be added to any page of your app and customized with a bit of HTML.
 
 ## Free components
 
-The source code for these components is included in this repo.
+The source code for the iOS, Android, and web components are included in this repo.
 
 ### [Alert Component](components/alert/)
 
@@ -66,14 +66,10 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        configureHotwire()
-        return true
-    }
-
-    private func configureHotwire() {
         Hotwire.registerBridgeComponents([
             ExampleComponent.self
         ])
+        return true
     }
 }
 ```

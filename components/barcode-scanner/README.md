@@ -1,6 +1,6 @@
 # Barcode Scanner Component
 
-Presents a camera that scans a barcodes and QR codes using a native camera capture.
+Presents a camera that scans barcodes and QR codes using a native camera capture.
 
 This component requires a real camera so it needs to be run on a physical device.
 

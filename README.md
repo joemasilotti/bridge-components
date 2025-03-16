@@ -12,25 +12,37 @@ The source code for the iOS, Android, and web components are included in this re
 
 ### [Alert Component](components/alert/)
 
+Displays a native alert dialog to confirm an action.
+
 [![Alert Component examples](resources/screenshots/alert.png)](components/alert/)
 
 ### [Button Component](components/button/)
+
+Adds a native button to the navigation bar on iOS and action bar on Android. The button can contain either a text string or an image.
 
 [![Button Component examples](resources/screenshots/button.png)](components/button/)
 
 ### [Form Component](components/form/)
 
+Replaces a form's submit `<button>` with a native one that disables during submission.
+
 [![Form Component examples](resources/screenshots/form.png)](components/form/)
 
 ### [Menu Component](components/menu/)
+
+Adds a native button to the navigation bar that, when tapped, renders a native menu powered by `UIMenu` on iOS and `DropdownMenu` on Android.
 
 [![Menu Component examples](resources/screenshots/menu.png)](components/menu/)
 
 ### [Review Prompt Component](components/review-prompt/)
 
+Prompts the user for a review on the App Store on iOS and Google Play on Android.
+
 [![Review Prompt Component examples](resources/screenshots/review-prompt.png)](components/review-prompt/)
 
 ### [Toast Component](components/toast/)
+
+Render a native, floating message that disappears after a few seconds.
 
 [![Toast Component examples](resources/screenshots/toast.png)](components/toast/)
 
@@ -40,19 +52,27 @@ Gain access to these components by [purchasing a Pro license](https://buy.stripe
 
 ### [Barcode Scanner Component](components/barcode-scanner/)
 
+Presents a camera that scans barcodes and QR codes using a native camera capture.
+
 [![Barcode Scanner Component examples](resources/screenshots/barcode-scanner.png)](components/barcode-scanner/)
 
 ### [Location Component](components/location/)
 
+Prompts the user for their precise location with a single system dialog.
+
 [![Location Component examples](resources/screenshots/location.png)](components/location/)
 
 ### [Notification Token Component](components/notification-token/)
+
+Gets the user's push notification permission status and notification token.
 
 [![Notification Token Component examples](resources/screenshots/notification-token.png)](components/notification-token/)
 
 ## Installation
 
 To use a bridge component, copy the relevant Swift/Kotlin and JavaScript files from the [`components/` directory](components/) into your project and register the component.
+
+Check the [examples directoy](examples/) for full working example iOS, Android, and Rails apps.
 
 ### iOS (Swift)
 
@@ -126,8 +146,6 @@ application.register("bridge--example", Bridge__ExampleController)
 1. [Material Symbol](https://fonts.google.com/icons) font if using images
     * Unzip the downloaded font and copy the Outlined version `.ttf` to `app/src/main/res/font/material_symbols.ttf`
 
-Check the [example Android project](examples/android/) for a full working example app.
-
 ### Web
 
 1. [Hotwire Native Bridge](https://native.hotwired.dev/reference/bridge-installation)
@@ -141,3 +159,7 @@ Once installed, use a component by adding a `data-controller` attribute that mat
 ```
 
 Each component can then be configured further - check the README in each component's directory for more information.
+
+## Need help?
+
+If you need help installing, configuring, or using the components, feel free to [open a new discussion](https://github.com/joemasilotti/bridge-components/discussions/new?category=q-a) or [send me an email](mailto:joe@masilotti.com). I'd love to help!

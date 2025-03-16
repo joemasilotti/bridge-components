@@ -22,7 +22,7 @@ To access the user's location on iOS, add the `NSLocationWhenInUseUsageDescripti
 
 ### Android
 
-To access the user's location on Android, add the following permissions to your AndroidManifest.xml.
+To access the user's location on Android, add the following permissions to your `AndroidManifest.xml`.
 
 ```
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />

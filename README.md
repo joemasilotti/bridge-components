@@ -38,6 +38,10 @@ The source code for these components is included in this repo.
 
 Gain access to these components by [purchasing a Pro license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b). This is a **one-time payment** and not a subscription. It includes access to all bridge components available today, plus all future updates.
 
+### [Barcode Scanner Component](components/barcode-scanner/)
+
+[![Barcode Scanner examples](resources/screenshots/barcode-scanner.png)](components/barcode-scanner/)
+
 ### [Location Component](components/location/)
 
 [![Location Component examples](resources/screenshots/location.png)](components/location/)

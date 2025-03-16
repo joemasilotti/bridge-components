@@ -39,20 +39,22 @@ Enable the Push Notification capability in Xcode. See the [documentation](https:
 Then add the following to `AppDelegate.swift` to post new notification token data to the bridge component.
 
 ```swift
-func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-    NotificationCenter.default.post(name: .didReceiveDeviceToken, object: deviceToken)
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        NotificationCenter.default.post(name: .didReceiveDeviceToken, object: deviceToken)
+    }
 }
 ```
 
 ### Android
 
-First, sign up for a free [Firebase](https://console.firebase.google.com/) account and create a new project with an attached Android app.
+Sending notifications on Android is done through [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging). Sign up for a free [Firebase](https://console.firebase.google.com/) account and create a new project with an attached Android app.
 
-Download the `google-services.json` file and move it to your Android's project under the `App/` directory.
+Then download the `google-services.json` file and move it to your Android's project under the `App/` directory.
 
 #### Dependencies
 
-First, set the versions of each dependency by adding the following to `libs.versions.toml`.
+Set the versions of each dependency by adding the following to `libs.versions.toml`.
 
 ```toml
 [versions]

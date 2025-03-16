@@ -34,8 +34,6 @@ Android uses [Material Symbols](https://fonts.google.com/icons), set `bridge-and
 } %>
 ```
 
-For Android, download the [Material Symbols](https://fonts.google.com/icons) font and unzip the Outlined version to `app/src/main/res/font/material_symbols.ttf`.
-
 ## Hide the HTML button
 
 Hide the HTML button when the "button" component is registered with the following CSS.

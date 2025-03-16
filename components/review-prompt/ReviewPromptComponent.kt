@@ -4,18 +4,11 @@ import android.util.Log
 import androidx.fragment.app.Fragment
 import com.google.android.play.core.review.ReviewManager
 import com.google.android.play.core.review.ReviewManagerFactory
-import com.google.android.play.core.review.testing.FakeReviewManager
-import dev.hotwire.core.BuildConfig
 import dev.hotwire.core.bridge.BridgeComponent
 import dev.hotwire.core.bridge.BridgeDelegate
 import dev.hotwire.core.bridge.Message
 import dev.hotwire.navigation.destinations.HotwireDestination
 
-// Note that the UI for the review prompt will only appear when running an
-// app downloaded from Google Play. Otherwise, FakeReviewManager will
-// simulator the API calls.
-//
-// Requires the com.google.android.play.review-ktx dependency.
 class ReviewPromptComponent(
     name: String,
     private val bridgeDelegate: BridgeDelegate<HotwireDestination>
@@ -25,11 +18,7 @@ class ReviewPromptComponent(
 
     private val manager: ReviewManager? by lazy {
         fragment.context?.let {
-            if (BuildConfig.DEBUG) {
-                FakeReviewManager(it) // Use FakeReviewManager in debug mode
-            } else {
-                ReviewManagerFactory.create(it) // Use real ReviewManager in release mode
-            }
+            ReviewManagerFactory.create(it)
         }
     }
 

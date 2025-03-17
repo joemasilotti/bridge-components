@@ -44,6 +44,7 @@ class FormComponent(
 
     private fun addButton(message: Message) {
         val data = message.data<MessageData>() ?: return
+        removeButton()
 
         val composeView = ComposeView(fragment.requireContext()).apply {
             id = buttonId

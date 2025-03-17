@@ -34,11 +34,13 @@ class ShareComponent(
     override fun onReceive(message: Message) {
         when (message.event) {
             "connect" -> addButton(message)
+            "disconnect" -> removeButton()
             else -> Log.w("Share Component", "Unknown event for message: $message")
         }
     }
 
     private fun addButton(message: Message) {
+        removeButton()
         val data = message.data<MessageData>() ?: return
 
         val composeView = ComposeView(fragment.requireContext()).apply {
@@ -55,6 +57,12 @@ class ShareComponent(
 
         val toolbar = fragment.toolbarForNavigation()
         toolbar?.addView(composeView, layoutParams)
+    }
+
+    private fun removeButton() {
+        val toolbar = fragment.toolbarForNavigation()
+        val button = toolbar?.findViewById<ComposeView>(buttonId)
+        toolbar?.removeView(button)
     }
 
     private fun share(url: String) {

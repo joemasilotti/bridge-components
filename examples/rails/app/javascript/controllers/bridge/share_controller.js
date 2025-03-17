@@ -1,0 +1,1 @@
+../../../../../../components/share/share_controller.js

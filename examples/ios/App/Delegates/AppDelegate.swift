@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             FormComponent.self,
             MenuComponent.self,
             ReviewPromptComponent.self,
+            ShareComponent.self,
             ToastComponent.self
         ])
 

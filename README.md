@@ -40,6 +40,12 @@ Prompts the user for a review on the App Store on iOS and Google Play on Android
 
 [![Review Prompt Component examples](resources/screenshots/review-prompt.png)](components/review-prompt/)
 
+### [Share Component](components/share/)
+
+Adds a button that presents a native share sheet.
+
+[![Share Component examples](resources/screenshots/share.png)](components/share/)
+
 ### [Toast Component](components/toast/)
 
 Render a native, floating message that disappears after a few seconds.

@@ -18,6 +18,7 @@
 		84197B4F2D7CAA6D006BA4A3 /* AlertComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197B4E2D7CAA6D006BA4A3 /* AlertComponent.swift */; };
 		84197B532D7E43ED006BA4A3 /* ReviewPromptComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197B522D7E43ED006BA4A3 /* ReviewPromptComponent.swift */; };
 		84633BF52D7FF0AB00B527E7 /* ToastComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84633BF42D7FF0AB00B527E7 /* ToastComponent.swift */; };
+		849EEE3F2D8850A200D9F114 /* ShareComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EEE3E2D8850A200D9F114 /* ShareComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		84197B4E2D7CAA6D006BA4A3 /* AlertComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertComponent.swift; path = ../../components/alert/AlertComponent.swift; sourceTree = SOURCE_ROOT; };
 		84197B522D7E43ED006BA4A3 /* ReviewPromptComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewPromptComponent.swift; path = "/Users/joemasilotti/workspace/projects/bridge-components/components/review-prompt/ReviewPromptComponent.swift"; sourceTree = "<absolute>"; };
 		84633BF42D7FF0AB00B527E7 /* ToastComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToastComponent.swift; path = "/Users/joemasilotti/workspace/projects/bridge-components/components/toast/ToastComponent.swift"; sourceTree = "<absolute>"; };
+		849EEE3E2D8850A200D9F114 /* ShareComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShareComponent.swift; path = "/Users/joemasilotti/workspace/projects/bridge-components-pro/components/share/ShareComponent.swift"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				84197AF82D7A526B006BA4A3 /* FormComponent.swift */,
 				84197B4C2D7A6EF7006BA4A3 /* MenuComponent.swift */,
 				84197B522D7E43ED006BA4A3 /* ReviewPromptComponent.swift */,
+				849EEE3E2D8850A200D9F114 /* ShareComponent.swift */,
 				84633BF42D7FF0AB00B527E7 /* ToastComponent.swift */,
 			);
 			name = Components;
@@ -198,6 +201,7 @@
 				84197AF52D796CEB006BA4A3 /* ButtonComponent.swift in Sources */,
 				84633BF52D7FF0AB00B527E7 /* ToastComponent.swift in Sources */,
 				84197AF32D796CDA006BA4A3 /* SceneDelegate.swift in Sources */,
+				849EEE3F2D8850A200D9F114 /* ShareComponent.swift in Sources */,
 				84197B532D7E43ED006BA4A3 /* ReviewPromptComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

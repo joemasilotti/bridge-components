@@ -26,6 +26,8 @@ Rails.application.routes.draw do
 
     resource :review_prompt, only: :show
 
+    resource :share, only: :show
+
     resource :toast, only: :show
   end
 

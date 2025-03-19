@@ -6,7 +6,7 @@ Prompts the user for their precise location with a single system dialog.
 
 ```html
 <div data-controller="bridge--location">
-  <button data-action="bridge--location#retrieve">Retrieve location</button>
+  <button data-action="bridge--location#get">Get location</button>
 
   <p data-bridge--location-target="result"></p>
 </div>

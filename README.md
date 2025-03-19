@@ -70,7 +70,7 @@ Prompts the user for their precise location with a single system dialog.
 
 ### [Notification Token Component](components/notification-token/)
 
-Gets the user's push notification permission status and notification token.
+Gets the user's push notification token.
 
 [![Notification Token Component examples](resources/screenshots/notification-token.png)](components/notification-token/)
 

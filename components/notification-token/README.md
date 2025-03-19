@@ -1,32 +1,18 @@
 # Notification Token Component
 
-Gets the user's push notification permission status and notification token.
+Gets the user's push notification token.
 
 ![Notification Token Component examples](/resources/screenshots/notification-token.png)
 
 ```html
 <div data-controller="bridge--notification-token">
-  <button data-action="bridge--notification-token#getToken">
+  <button data-action="bridge--notification-token#get">
     Get notification token
   </button>
 
-  <p data-bridge--notification-token-target="status"></p>
   <p data-bridge--notification-token-target="token"></p>
 </div>
 ```
-
-## Notification permission status
-
-The following notification permission statuses are returned from the app. Use the status code to determine behavior in your app as needed.
-
-|Text|Code|[iOS status](https://developer.apple.com/documentation/usernotifications/unauthorizationstatus)|Android status|
-|---|---|---|---|
-|not determined|-1|`notDetermined`|N/A|
-|denied|0|`denied`|`PERMISSION_DENIED`|
-|authorized|1|`authorized`, `provisional`, or `ephemeral`|`PERMISSION_GRANTED`|
-|unknown|-2|(anything else)|N/A|
-
-Note that Android returns "denied" status even before asking the user for permission.
 
 ## Additional requirements
 
@@ -127,5 +113,3 @@ Finally, add the notification permissions to your `AndroidManifest.xml`.
     </application>
 </manifest>
 ```
-
-Check the [example Android app](/examples/android) for a working demo. You'll still need to bring your own `google-services.json` for it to work.

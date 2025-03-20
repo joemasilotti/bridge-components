@@ -74,6 +74,12 @@ Gets the user's push notification token.
 
 [![Notification Token Component examples](resources/screenshots/notification-token.png)](components/notification-token/)
 
+### [Permissions Component](components/permissions/)
+
+Gets the status of the user's granted permissions, like location and push notifications.
+
+[![Permissions Component examples](resources/screenshots/permissions.png)](components/permissions/)
+
 ## Installation
 
 To use a bridge component, copy the relevant Swift/Kotlin and JavaScript files from the [`components/` directory](components/) into your project and register the component.

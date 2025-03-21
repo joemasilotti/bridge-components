@@ -1,5 +1,8 @@
 # Notification Token Component
 
+> [!IMPORTANT]
+> This is a paid component. Gain access to the source code by [purchasing a Pro license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b).
+
 Gets the user's push notification token.
 
 ![Notification Token Component examples](/resources/screenshots/notification-token.png)

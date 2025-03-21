@@ -1,5 +1,8 @@
 # Permissions Component
 
+> [!IMPORTANT]
+> This is a paid component. Gain access to the source code by [purchasing a Pro license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b).
+
 Gets the status of the user's granted permissions, like location and push notifications.
 
 ![Permissions Component examples](/resources/screenshots/permissions.png)

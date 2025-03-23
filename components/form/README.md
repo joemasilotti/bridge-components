@@ -22,6 +22,26 @@ Make sure to wire up the two `data-action` attributes to ensure the button disab
 <% end %>
 ```
 
+<details>
+<summary>HTML version</summary>
+
+```html
+<form 
+    data-controller="bridge--form"
+    data-action="turbo:submit-start->bridge--form#submitStart turbo:submit-end->bridge--form#submitEnd"
+>
+    <!-- ... -->
+
+    <button
+        type="submit"
+        data-bridge--form-target="submit"
+        data-bridge-title="Submit"
+    >Submit form</button>
+</form>
+```
+
+</details>
+
 ## Hide the HTML submit button
 
 Hide the HTML submit button when the "form" component is registered with the following CSS.

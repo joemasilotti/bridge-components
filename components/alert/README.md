@@ -103,7 +103,6 @@ Override the default button titles, OK and Cancel, by setting `data-bridge-confi
 
 <details>
 <summary>HTML version</summary>
-
 ```html
 <a
     href="#"
@@ -113,5 +112,4 @@ Override the default button titles, OK and Cancel, by setting `data-bridge-confi
     data-bridge-dismiss="Cancel"
 >Customized button titles</a>
 ```
-
 </details>

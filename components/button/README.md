@@ -46,7 +46,6 @@ Android uses [Material Symbols](https://fonts.google.com/icons), set `bridge-and
 
 <details>
 <summary>HTML version</summary>
-
 ```html
 <a 
     href="#"
@@ -55,7 +54,6 @@ Android uses [Material Symbols](https://fonts.google.com/icons), set `bridge-and
     data-bridge-android-image="Image"
 >Button</a>
 ```
-
 </details>
 
 ## Hide the HTML button

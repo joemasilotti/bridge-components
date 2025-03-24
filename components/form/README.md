@@ -24,7 +24,6 @@ Make sure to wire up the two `data-action` attributes to ensure the button disab
 
 <details>
 <summary>HTML version</summary>
-
 ```html
 <form 
   data-controller="bridge--form"
@@ -41,7 +40,6 @@ Make sure to wire up the two `data-action` attributes to ensure the button disab
   </button>
 </form>
 ```
-
 </details>
 
 ## Hide the HTML submit button

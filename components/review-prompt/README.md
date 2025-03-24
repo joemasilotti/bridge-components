@@ -17,7 +17,6 @@ Also note that the prompt might not appear every time. More information can be f
 
 <details>
 <summary>HTML version</summary>
-
 ```html
 <a
   href="#"
@@ -27,6 +26,4 @@ Also note that the prompt might not appear every time. More information can be f
   Prompt for review
 </a>
 ```
-
 </details>
-

@@ -25,11 +25,13 @@ Set the title of the alert with `data-bridge-title`. If not set, the `innerText`
 
 ```html
 <a
-    href="#"
-    data-controller="bridge--alert"
-    data-action="bridge--alert#show"
-    data-bridge-title="Overridden Alert Title"
->Link title</a>
+  href="#"
+  data-controller="bridge--alert"
+  data-action="bridge--alert#show"
+  data-bridge-title="Overridden Alert Title"
+>
+  Link title
+</a>
 ```
 
 </details>

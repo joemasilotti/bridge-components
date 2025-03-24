@@ -19,11 +19,13 @@ Uses a native `Toast` on Android and a custom implementation on iOS. Feel free t
 
 ```html
 <a
-    href="#"
-    data-controller="bridge--toast"
-    data-action="bridge--toast#show"
-    data-bridge-message="This is a toast message."
->Show a toast</a>
+  href="#"
+  data-controller="bridge--toast"
+  data-action="bridge--toast#show"
+  data-bridge-message="This is a toast message."
+>
+  Show a toast
+</a>
 ```
 
 </details>

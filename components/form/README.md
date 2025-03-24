@@ -27,16 +27,18 @@ Make sure to wire up the two `data-action` attributes to ensure the button disab
 
 ```html
 <form 
-    data-controller="bridge--form"
-    data-action="turbo:submit-start->bridge--form#submitStart turbo:submit-end->bridge--form#submitEnd"
->
-    <!-- ... -->
+  data-controller="bridge--form"
+  data-action="turbo:submit-start->bridge--form#submitStart turbo:submit-end->bridge--form#submitEnd"
+  >
+  <!-- ... -->
 
-    <button
-        type="submit"
-        data-bridge--form-target="submit"
-        data-bridge-title="Submit"
-    >Submit form</button>
+  <button
+    type="submit"
+    data-bridge--form-target="submit"
+    data-bridge-title="Submit"
+  >
+    Submit form
+  </button>
 </form>
 ```
 

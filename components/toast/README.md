@@ -13,3 +13,19 @@ Uses a native `Toast` on Android and a custom implementation on iOS. Feel free t
   bridge_message: "This is a toast message."
 } %>
 ```
+
+<details>
+<summary>HTML version</summary>
+
+```html
+<a
+  href="#"
+  data-controller="bridge--toast"
+  data-action="bridge--toast#show"
+  data-bridge-message="This is a toast message."
+>
+  Show a toast
+</a>
+```
+
+</details>

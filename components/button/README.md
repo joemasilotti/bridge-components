@@ -18,6 +18,16 @@ Sets the content of the button to the title of the element it is attached. Here,
 } %>
 ```
 
+<details>
+<summary>HTML version</summary>
+
+```html
+<a href="#" data-controller="bridge--button">Button</a>
+```
+
+</details>
+
+
 ## Image button
 
 Sets the content of the button to an image.
@@ -33,6 +43,20 @@ Android uses [Material Symbols](https://fonts.google.com/icons), set `bridge-and
   bridge_android_image: "Image"
 } %>
 ```
+
+<details>
+<summary>HTML version</summary>
+
+```html
+<a 
+    href="#"
+    data-controller="bridge--button"
+    data-bridge-ios-image="photo"
+    data-bridge-android-image="Image"
+>Button</a>
+```
+
+</details>
 
 ## Hide the HTML button
 

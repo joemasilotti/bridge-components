@@ -14,3 +14,19 @@ Also note that the prompt might not appear every time. More information can be f
   action: "bridge--review-prompt#prompt"
 } %>
 ```
+
+<details>
+<summary>HTML version</summary>
+
+```html
+<a
+  href="#"
+  data-controller="bridge--review-prompt"
+  data-action="bridge--review-prompt#prompt"
+>
+  Prompt for review
+</a>
+```
+
+</details>
+

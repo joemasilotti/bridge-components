@@ -9,6 +9,18 @@ This component requires a real camera so it needs to be run on a physical device
 
 ![Barcode Scanner Component examples](/resources/screenshots/barcode-scanner.png)
 
+## Supported codes
+
+By default, the following codes are recognized:
+
+* [QR codes](https://en.wikipedia.org/wiki/QR_code)
+* [EAN-8](https://en.wikipedia.org/wiki/EAN-8)
+* [EAN-13](https://en.wikipedia.org/wiki/International_Article_Number)
+* [PDF417](https://en.wikipedia.org/wiki/PDF417)
+* [Code 128](https://en.wikipedia.org/wiki/Code_128)
+
+Additional codes can be added by updating one line of the native component. iOS 18 supports [15 symbologies](https://developer.apple.com/documentation/vision/vnbarcodesymbology/code93-2geph#Supported-Symbologies) and Android 15 supports [15 barcode formats](https://developers.google.com/android/reference/com/google/mlkit/vision/barcode/common/Barcode.BarcodeFormat).
+
 ## Additional requirements
 
 ### iOS

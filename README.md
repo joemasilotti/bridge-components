@@ -62,6 +62,12 @@ Presents a camera that scans barcodes and QR codes using a native camera capture
 
 [![Barcode Scanner Component examples](resources/screenshots/barcode-scanner.png)](components/barcode-scanner/)
 
+### [Document Scanner Component](components/document-scanner/)
+
+Presents a camera that digitizes physical documents.
+
+[![Document Scanner Component examples](resources/screenshots/document-scanner.png)](components/document-scanner/)
+
 ### [Location Component](components/location/)
 
 Prompts the user for their precise location with a single system dialog.

@@ -3,7 +3,7 @@
 > [!IMPORTANT]
 > This is a paid component. Gain access to the source code by [purchasing a Pro license](https://buy.https://buy.stripe.com/fZeaF6bn9b9d4Pm14b?prefilled_promo_code=EARLYACCESSstripe.com/fZeaF6bn9b9d4Pm14b).
 
-Presents a camera that digitizes physical documents and renders. The underlying native APIs on iOS and Android are configured to:
+Presents a camera that digitizes physical documents and renders the images. The underlying native APIs on iOS and Android are configured to:
 
 * automatically detect documents
 * trim, crop, and rotate captures
@@ -12,7 +12,7 @@ Presents a camera that digitizes physical documents and renders. The underlying 
 
 This component requires a real camera so it needs to be run on a physical device.
 
-![Document Scanner Component examples](/resources/screenshots/document-scanner.png)]
+![Document Scanner Component examples](/resources/screenshots/document-scanner.png)
 
 ## Additional requirements
 

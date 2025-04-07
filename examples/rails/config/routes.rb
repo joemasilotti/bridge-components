@@ -29,7 +29,9 @@ Rails.application.routes.draw do
     resource :share, only: :show
 
     resource :toast, only: :show
+
+    resource :haptic, only: :show
   end
 
-  root "components#index"
+  root 'components#index'
 end

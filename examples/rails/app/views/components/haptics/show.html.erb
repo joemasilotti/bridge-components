@@ -7,8 +7,25 @@
 </div>
 
 <div class="container d-flex flex-column gap-2 w-100">
-  <%= link_to "Vibrate", "#", class: "btn btn-lg btn-outline-primary", data: {
-    controller: "bridge--haptic",
-    action: "bridge--haptic#vibrate"
-  } %>
+  <button class="btn btn-lg btn-outline-primary" 
+        data-bridge-feedback="error" 
+        data-controller="bridge--haptic" 
+        data-action="bridge--haptic#vibrate">
+  Success
+</button>
+
+<button class="btn btn-lg btn-outline-secondary" 
+        data-bridge-feedback="warning" 
+        data-controller="bridge--haptic" 
+        data-action="bridge--haptic#vibrate">
+  Warning
+</button>
+
+<button class="btn btn-lg btn-outline-danger" 
+        data-bridge-feedback="error" 
+        data-controller="bridge--haptic" 
+        data-action="bridge--haptic#vibrate">
+  Error
+</button>
+
 </div>

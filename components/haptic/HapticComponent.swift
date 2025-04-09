@@ -1,5 +1,6 @@
 import HotwireNative
 import UIKit
+import CoreHaptics
 
 final class HapticComponent: BridgeComponent {
     override class var name: String { "haptic" }
@@ -9,6 +10,21 @@ final class HapticComponent: BridgeComponent {
 
         switch event {
         case .vibrate:
+            handleVibrateEvent(with: message)
+        }
+    }
+
+    private func handleVibrateEvent(with message: Message) {
+        guard let data: MessageData = message.data() else { return }
+
+        switch FeedbackType(rawValue: data.feedback) {
+        case .success:
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
+        case .warning:
+            UINotificationFeedbackGenerator().notificationOccurred(.warning)
+        case .error:
+            UINotificationFeedbackGenerator().notificationOccurred(.error)
+        default:
             UINotificationFeedbackGenerator().notificationOccurred(.success)
         }
     }
@@ -17,6 +33,18 @@ final class HapticComponent: BridgeComponent {
 private extension HapticComponent {
     enum Event: String {
         case vibrate
+    }
+}
+
+private extension HapticComponent {
+    struct MessageData: Decodable {
+        let feedback: String
+    }
+
+    enum FeedbackType: String {
+        case success
+        case warning
+        case error
     }
 }
 

@@ -1,1 +1,1 @@
-/Users/williamkennedy/projects/hotwire_open_source/bridge-components/components/haptic/haptic_controller.js
+components/haptic/haptic_controller.js

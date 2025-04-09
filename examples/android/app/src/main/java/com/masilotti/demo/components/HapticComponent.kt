@@ -1,1 +1,1 @@
-/Users/williamkennedy/projects/hotwire_open_source/bridge-components/components/haptic/HapticComponent.kt
+components/haptic/HapticComponent.kt

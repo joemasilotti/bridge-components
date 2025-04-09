@@ -4,6 +4,7 @@ import android.app.Application
 import com.masilotti.demo.components.AlertComponent
 import com.masilotti.demo.components.ButtonComponent
 import com.masilotti.demo.components.FormComponent
+import com.masilotti.demo.components.HapticComponent
 import com.masilotti.demo.components.MenuComponent
 import com.masilotti.demo.components.ReviewPromptComponent
 import com.masilotti.demo.components.ShareComponent
@@ -21,6 +22,7 @@ class DemoApplication : Application() {
             BridgeComponentFactory("alert", ::AlertComponent),
             BridgeComponentFactory("button", ::ButtonComponent),
             BridgeComponentFactory("form", ::FormComponent),
+            BridgeComponentFactory("haptic", ::HapticComponent),
             BridgeComponentFactory("menu", ::MenuComponent),
             BridgeComponentFactory("review-prompt", ::ReviewPromptComponent),
             BridgeComponentFactory("share", ::ShareComponent),

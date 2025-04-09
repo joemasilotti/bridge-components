@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             AlertComponent.self,
             ButtonComponent.self,
             FormComponent.self,
+            HapticComponent.self,
             MenuComponent.self,
             ReviewPromptComponent.self,
             ShareComponent.self,
@@ -21,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ])
 
         Hotwire.config.backButtonDisplayMode = .minimal
+        Hotwire.config.debugLoggingEnabled = true
     }
 
     private func configureAppearance() {

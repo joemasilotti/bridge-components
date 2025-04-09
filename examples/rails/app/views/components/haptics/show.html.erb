@@ -1,0 +1,31 @@
+<% content_for :title, "Haptic Component" %>
+
+<div class="container mt-3">
+  <h1 class="d-hotwire-native-none">Haptic Component</h1>
+  <p>Access the Haptic engine</p>
+  <p><%= link_to "View documentation", "https://github.com/joemasilotti/bridge-components/tree/main/components/haptic", class: "btn btn-outline-primary btn-sm" %></p>
+</div>
+
+<div class="container d-flex flex-column gap-2 w-100">
+  <button class="btn btn-lg btn-outline-primary" 
+        data-bridge-feedback="error" 
+        data-controller="bridge--haptic" 
+        data-action="bridge--haptic#vibrate">
+  Success
+</button>
+
+<button class="btn btn-lg btn-outline-secondary" 
+        data-bridge-feedback="warning" 
+        data-controller="bridge--haptic" 
+        data-action="bridge--haptic#vibrate">
+  Warning
+</button>
+
+<button class="btn btn-lg btn-outline-danger" 
+        data-bridge-feedback="error" 
+        data-controller="bridge--haptic" 
+        data-action="bridge--haptic#vibrate">
+  Error
+</button>
+
+</div>

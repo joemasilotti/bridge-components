@@ -1,1 +1,1 @@
-components/haptic/HapticComponent.kt
+../../../../../../../../../../components/haptic/HapticComponent.kt

@@ -4,13 +4,10 @@ Vibrate the device via the haptic engine.
 
 This component requires a physical device. Android requires Android 11 or later.
 
-![Menu Component examples](/resources/screenshots/menu.png)
+![Haptic Component examples](/resources/screenshots/haptic.png)
 
 ```html
-<button
-  data-controller="bridge--haptic"
-  data-action="bridge--haptic#vibrate"
->
+<button data-controller="bridge--haptic" data-action="bridge--haptic#vibrate">
   Vibrate
 </button>
 ```

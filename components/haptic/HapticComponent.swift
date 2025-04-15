@@ -1,6 +1,6 @@
+import CoreHaptics
 import HotwireNative
 import UIKit
-import CoreHaptics
 
 final class HapticComponent: BridgeComponent {
     override class var name: String { "haptic" }
@@ -47,4 +47,3 @@ private extension HapticComponent {
         case error
     }
 }
-

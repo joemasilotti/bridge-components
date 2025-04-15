@@ -30,7 +30,9 @@ Replaces a form's submit `<button>` with a native one that disables during submi
 
 ### [Haptic Component](components/haptic/)
 
-Access the phone's haptic engine.
+Vibrate the device via the haptic engine.
+
+[![Haptic Component examples](resources/screenshots/haptic.png)](components/haptic/)
 
 ### [Menu Component](components/menu/)
 

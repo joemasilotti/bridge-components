@@ -1,12 +1,26 @@
-
 # Haptic Component
 
-Allows you to access the haptics engine. Easily extend for your own needs.
+Vibrate the device via the haptic engine.
 
-```eruby
-  <%= link_to "Vibrate", "#", class: "btn btn-lg btn-outline-primary", data: {
-    bridge_feedback: 'success',
-    controller: "bridge--haptic",
-    action: "bridge--haptic#vibrate"
-  } %>
+This component requires a physical device. Android requires Android 11 or later.
+
+![Menu Component examples](/resources/screenshots/menu.png)
+
+```html
+<button
+  data-controller="bridge--haptic"
+  data-action="bridge--haptic#vibrate"
+>
+  Vibrate
+</button>
 ```
+
+## Haptic options
+
+Optionally, set `data-bridge-feedback` to set different haptic effects.
+
+|Value|[iOS haptic](https://developer.apple.com/documentation/uikit/uinotificationfeedbackgenerator)|[Android haptic](https://developer.android.com/reference/kotlin/android/view/HapticFeedbackConstants)|
+|---|---|---|
+|`success` (or empty)|`.success`|`.CONFIRM`|
+|`warning`|`.warning`|`.REJECT`|
+|`error`|`.error`|`.REJECT`|

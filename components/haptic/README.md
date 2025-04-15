@@ -16,7 +16,7 @@ This component requires a physical device. Android requires Android 11 or later.
 
 Optionally, set `data-bridge-feedback` to set different haptic effects.
 
-|Value|[iOS haptic](https://developer.apple.com/documentation/uikit/uinotificationfeedbackgenerator)|[Android haptic](https://developer.android.com/reference/kotlin/android/view/HapticFeedbackConstants)|
+|Value|[iOS haptic](https://developer.apple.com/documentation/uikit/uinotificationfeedbackgenerator/feedbacktype)|[Android haptic](https://developer.android.com/reference/kotlin/android/view/HapticFeedbackConstants)|
 |---|---|---|
 |`success` (or empty)|`.success`|`.CONFIRM`|
 |`warning`|`.warning`|`.REJECT`|

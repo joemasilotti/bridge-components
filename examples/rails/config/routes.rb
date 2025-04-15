@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
     resource :form, only: %i[new create show]
 
+    resource :haptic, only: :show
+
     resource :menu, only: :show do
       collection do
         get :result
@@ -31,5 +33,5 @@ Rails.application.routes.draw do
     resource :toast, only: :show
   end
 
-  root "components#index"
+  root 'components#index'
 end

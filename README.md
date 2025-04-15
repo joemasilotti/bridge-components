@@ -28,6 +28,12 @@ Replaces a form's submit `<button>` with a native one that disables during submi
 
 [![Form Component examples](resources/screenshots/form.png)](components/form/)
 
+### [Haptic Component](components/haptic/)
+
+Vibrate the device via the haptic engine.
+
+[![Haptic Component examples](resources/screenshots/haptic.png)](components/haptic/)
+
 ### [Menu Component](components/menu/)
 
 Adds a native button to the navigation bar that, when tapped, renders a native menu powered by `UIMenu` on iOS and `DropdownMenu` on Android.
@@ -150,7 +156,7 @@ import Bridge__ExampleController from "./bridge/example_controller"
 application.register("bridge--example", Bridge__ExampleController)
 ```
 
-## Prerequisites 
+## Prerequisites
 
 ### iOS
 

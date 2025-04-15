@@ -1,0 +1,22 @@
+<% content_for :title, "Haptic Component" %>
+
+<div class="container mt-3">
+  <h1 class="d-hotwire-native-none">Haptic Component</h1>
+  <p>Vibrate the device via the haptic engine.</p>
+  <p>This component requires a physical device. Android requires Android 11 or later.</p>
+  <p><%= link_to "View documentation", "https://github.com/joemasilotti/bridge-components/tree/main/components/haptic", class: "btn btn-outline-primary btn-sm" %></p>
+</div>
+
+<div class="container d-flex flex-column gap-2 w-100">
+  <button data-controller="bridge--haptic" data-action="bridge--haptic#vibrate" class="btn btn-lg btn-outline-primary">
+    Success
+  </button>
+
+  <button data-bridge-feedback="warning" data-controller="bridge--haptic" data-action="bridge--haptic#vibrate" class="btn btn-lg btn-outline-secondary">
+    Warning
+  </button>
+
+  <button data-bridge-feedback="error" data-controller="bridge--haptic" data-action="bridge--haptic#vibrate" class="btn btn-lg btn-outline-danger">
+    Error
+  </button>
+</div>

@@ -1,1 +1,1 @@
-components/haptic/haptic_controller.js
+../../../../../../components/haptic/haptic_controller.js

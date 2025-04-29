@@ -5,7 +5,7 @@ final class ShareComponent: BridgeComponent {
     override class var name: String { "share" }
 
     private var viewController: UIViewController? {
-        delegate.destination as? UIViewController
+        delegate?.destination as? UIViewController
     }
 
     override func onReceive(message: Message) {

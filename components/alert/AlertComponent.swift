@@ -5,7 +5,7 @@ final class AlertComponent: BridgeComponent {
     override class var name: String { "alert" }
 
     private var viewController: UIViewController? {
-        delegate.destination as? UIViewController
+        delegate?.destination as? UIViewController
     }
 
     override func onReceive(message: Message) {

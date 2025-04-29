@@ -6,7 +6,7 @@ final class FormComponent: BridgeComponent {
 
     private weak var submitBarButtonItem: UIBarButtonItem?
     private var viewController: UIViewController? {
-        delegate.destination as? UIViewController
+        delegate?.destination as? UIViewController
     }
 
     override func onReceive(message: Message) {

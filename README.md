@@ -6,6 +6,12 @@
 
 This repository contains generalized, production-ready bridge components extracted from [real-world client projects](https://masilotti.com/services/). Once configured, each component can be added to any page of your app and customized with a bit of HTML.
 
+## Requirements
+
+* Hotwire Native iOS v1.2 or later
+* Hotwire Native Android v1.0 or later
+* [Hotwire Native Bridge](https://native.hotwired.dev/reference/bridge-installation) on the web
+
 ## Free components
 
 The source code for the iOS, Android, and web components are included in this repo.

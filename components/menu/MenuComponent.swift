@@ -5,7 +5,7 @@ final class MenuComponent: BridgeComponent {
     override class var name: String { "menu" }
 
     private var viewController: UIViewController? {
-        delegate.destination as? UIViewController
+        delegate?.destination as? UIViewController
     }
 
     override func onReceive(message: Message) {

@@ -5,7 +5,7 @@ final class ButtonComponent: BridgeComponent {
     override class var name: String { "button" }
 
     private var viewController: UIViewController? {
-        delegate.destination as? UIViewController
+        delegate?.destination as? UIViewController
     }
 
     override func onReceive(message: Message) {

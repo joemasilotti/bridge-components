@@ -9,6 +9,13 @@ This component requires a real camera so it needs to be run on a physical device
 
 ![Barcode Scanner Component examples](/resources/screenshots/barcode-scanner.png)
 
+```html
+<div data-controller="bridge--barcode-scanner">
+  <button data-action="bridge--barcode-scanner#scan">Scan</button>
+  <p data-bridge--barcode-scanner-target="result"></p>
+</div>
+```
+
 ## Supported codes
 
 By default, the following codes are recognized:

@@ -14,6 +14,14 @@ This component requires a real camera so it needs to be run on a physical device
 
 ![Document Scanner Component examples](/resources/screenshots/document-scanner.png)
 
+```html
+<div data-controller="bridge--document-scanner">
+  <button data-action="bridge--document-scanner#scan">Scan</button>
+
+  <div data-bridge--document-scanner-target="result"></div>
+</div>
+```
+
 ## Additional requirements
 
 ### iOS

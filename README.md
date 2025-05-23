@@ -66,7 +66,8 @@ Render a native, floating message that disappears after a few seconds.
 
 ## Paid components
 
-Gain access to these components by [purchasing a Pro license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b). This is a **one-time payment** and not a subscription. It includes access to all bridge components available today, plus all future updates.
+> [!IMPORTANT]
+> Gain access to these components by [purchasing a Pro license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b). This is a **one-time payment** and not a subscription. It includes access to all bridge components available today, plus all future updates. View the [full pro license](PRO-LICENSE.md) before purchasing.
 
 ### [Barcode Scanner Component](components/barcode-scanner/)
 

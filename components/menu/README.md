@@ -36,7 +36,7 @@ Android uses [Material Symbols](https://fonts.google.com/icons), set `bridge-and
 
 For Android, download the [Material Symbols](https://fonts.google.com/icons) font and unzip the Outlined version to `app/src/main/res/font/material_symbols.ttf`.
 
-## Hide the HTML submit button
+## Hide the HTML
 
 Hide the HTML element when the "menu" component is registered with the following CSS.
 

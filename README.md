@@ -58,6 +58,12 @@ Adds a button that presents a native share sheet.
 
 [![Share Component examples](resources/screenshots/share.png)](components/share/)
 
+### [Theme Component](components/theme/)
+
+Toggle the device's dark/light mode appearance, styling native elements.
+
+[![Theme Component examples](resources/screenshots/theme.png)](components/theme/)
+
 ### [Toast Component](components/toast/)
 
 Render a native, floating message that disappears after a few seconds.

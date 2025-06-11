@@ -3,5 +3,13 @@
     <style name="Base.Theme.Demo" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <!-- Recommended for Theme Component. -->
+        <item name="toolbarNavigationButtonStyle">@style/Widget.AndroidDemo.Toolbar.Navigation.Tinted</item>
+    </style>
+
+    <!-- Recommended for Theme Component. -->
+    <style name="Widget.AndroidDemo.Toolbar.Navigation.Tinted" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="tint">?colorOnSurface</item>
     </style>
 </resources>

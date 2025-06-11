@@ -30,8 +30,10 @@ Rails.application.routes.draw do
 
     resource :share, only: :show
 
+    resource :theme, only: :show
+
     resource :toast, only: :show
   end
 
-  root 'components#index'
+  root "components#index"
 end

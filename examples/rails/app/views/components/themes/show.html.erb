@@ -1,0 +1,12 @@
+<% content_for :title, "Theme Component" %>
+
+<div class="container mt-3">
+  <h1 class="d-hotwire-native-none">Theme Component</h1>
+  <p>Toggle the device's dark/light mode appearance, styling native elements.</p>
+  <p><%= link_to "View documentation", "https://github.com/joemasilotti/bridge-components/tree/main/components/theme", class: "btn btn-outline-primary btn-sm" %></p>
+</div>
+
+<div class="container d-flex flex-column gap-2 w-100">
+  <%= link_to "Dark mode", "#", "data-action": "theme#dark", class: "btn btn-lg btn-outline-primary" %>
+  <%= link_to "Light mode", "#", "data-action": "theme#light", class: "btn btn-lg btn-outline-primary" %>
+</div>

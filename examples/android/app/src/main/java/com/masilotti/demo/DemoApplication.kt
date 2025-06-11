@@ -8,6 +8,7 @@ import com.masilotti.demo.components.HapticComponent
 import com.masilotti.demo.components.MenuComponent
 import com.masilotti.demo.components.ReviewPromptComponent
 import com.masilotti.demo.components.ShareComponent
+import com.masilotti.demo.components.ThemeComponent
 import com.masilotti.demo.components.ToastComponent
 import dev.hotwire.core.bridge.BridgeComponentFactory
 import dev.hotwire.core.bridge.KotlinXJsonConverter
@@ -26,6 +27,7 @@ class DemoApplication : Application() {
             BridgeComponentFactory("menu", ::MenuComponent),
             BridgeComponentFactory("review-prompt", ::ReviewPromptComponent),
             BridgeComponentFactory("share", ::ShareComponent),
+            BridgeComponentFactory("theme", ::ThemeComponent),
             BridgeComponentFactory("toast", ::ToastComponent)
         )
 

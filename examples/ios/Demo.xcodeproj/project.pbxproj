@@ -18,9 +18,9 @@
 		84197B4D2D7A6EF7006BA4A3 /* MenuComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197B4C2D7A6EF7006BA4A3 /* MenuComponent.swift */; };
 		84197B4F2D7CAA6D006BA4A3 /* AlertComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197B4E2D7CAA6D006BA4A3 /* AlertComponent.swift */; };
 		84197B532D7E43ED006BA4A3 /* ReviewPromptComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197B522D7E43ED006BA4A3 /* ReviewPromptComponent.swift */; };
+		8430283B2DF9E15A000F3027 /* ThemeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430283A2DF9E15A000F3027 /* ThemeComponent.swift */; };
 		84633BF52D7FF0AB00B527E7 /* ToastComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84633BF42D7FF0AB00B527E7 /* ToastComponent.swift */; };
 		849EEE3F2D8850A200D9F114 /* ShareComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EEE3E2D8850A200D9F114 /* ShareComponent.swift */; };
-/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		840717B42DAEE51D00861B81 /* HapticComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HapticComponent.swift; path = ../../components/haptic/HapticComponent.swift; sourceTree = SOURCE_ROOT; };
@@ -35,6 +35,7 @@
 		84197B4C2D7A6EF7006BA4A3 /* MenuComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuComponent.swift; path = ../../components/menu/MenuComponent.swift; sourceTree = SOURCE_ROOT; };
 		84197B4E2D7CAA6D006BA4A3 /* AlertComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertComponent.swift; path = ../../components/alert/AlertComponent.swift; sourceTree = SOURCE_ROOT; };
 		84197B522D7E43ED006BA4A3 /* ReviewPromptComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewPromptComponent.swift; path = "../../components/review-prompt/ReviewPromptComponent.swift"; sourceTree = SOURCE_ROOT; };
+		8430283A2DF9E15A000F3027 /* ThemeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThemeComponent.swift; path = ../../components/theme/ThemeComponent.swift; sourceTree = SOURCE_ROOT; };
 		84633BF42D7FF0AB00B527E7 /* ToastComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToastComponent.swift; path = ../../components/toast/ToastComponent.swift; sourceTree = SOURCE_ROOT; };
 		849EEE3E2D8850A200D9F114 /* ShareComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShareComponent.swift; path = ../../components/share/ShareComponent.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -77,6 +78,7 @@
 				84197B4C2D7A6EF7006BA4A3 /* MenuComponent.swift */,
 				84197B522D7E43ED006BA4A3 /* ReviewPromptComponent.swift */,
 				849EEE3E2D8850A200D9F114 /* ShareComponent.swift */,
+				8430283A2DF9E15A000F3027 /* ThemeComponent.swift */,
 				84633BF42D7FF0AB00B527E7 /* ToastComponent.swift */,
 			);
 			name = Components;
@@ -201,6 +203,7 @@
 				84197AF22D796CDA006BA4A3 /* AppDelegate.swift in Sources */,
 				840717B52DAEE51D00861B81 /* HapticComponent.swift in Sources */,
 				84197B4D2D7A6EF7006BA4A3 /* MenuComponent.swift in Sources */,
+				8430283B2DF9E15A000F3027 /* ThemeComponent.swift in Sources */,
 				84197AF92D7A526B006BA4A3 /* FormComponent.swift in Sources */,
 				84197AF52D796CEB006BA4A3 /* ButtonComponent.swift in Sources */,
 				84633BF52D7FF0AB00B527E7 /* ToastComponent.swift in Sources */,

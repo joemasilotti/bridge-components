@@ -81,6 +81,12 @@ Presents a camera that scans barcodes and QR codes using a native camera capture
 
 [![Barcode Scanner Component examples](resources/screenshots/barcode-scanner.png)](components/barcode-scanner/)
 
+### [Biometrics Lock Component](components/biometrics-lock/)
+
+When enabled, locks the app when it is backgrounded until the user authenticates via biometrics.
+
+[![Biometrics Lock Component examples](resources/screenshots/biometrics-lock.png)](components/biometrics-lock/)
+
 ### [Document Scanner Component](components/document-scanner/)
 
 Presents a camera that digitizes physical documents.

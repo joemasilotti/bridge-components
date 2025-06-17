@@ -1,0 +1,1 @@
+../../../../../../components/biometrics-lock/biometrics_lock_controller.js

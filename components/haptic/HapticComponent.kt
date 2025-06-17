@@ -21,9 +21,7 @@ class HapticComponent(
     override fun onReceive(message: Message) {
         when (message.event) {
             "vibrate" -> handleVibrateEvent(message)
-            else -> Log.w(
-                "Haptic Component", "Unknown event for message: $message"
-            )
+            else -> Log.w("HapticComponent", "Unknown event for message: $message")
         }
     }
 
@@ -31,7 +29,7 @@ class HapticComponent(
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             vibrate(message)
         } else {
-            Log.e("Haptic Component", "Access to the haptics engine requires Android 11 or later.")
+            Log.e("HapticComponent", "Access to the haptics engine requires Android 11 or later.")
         }
     }
 

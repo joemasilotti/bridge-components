@@ -44,7 +44,7 @@ class MenuComponent(
         when (message.event) {
             "connect" -> addMenuButton(message)
             "disconnect" -> removeMenuButton()
-            else -> Log.w("Menu Component", "Unknown event: ${message.event}")
+            else -> Log.w("MenuComponent", "Unknown event: ${message.event}")
         }
     }
 

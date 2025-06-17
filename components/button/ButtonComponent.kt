@@ -35,7 +35,7 @@ class ButtonComponent(
         when (message.event) {
             "connect" -> addButton(message)
             "disconnect" -> removeButton()
-            else -> Log.w("Button Component", "Unknown event for message: $message")
+            else -> Log.w("ButtonComponent", "Unknown event for message: $message")
         }
     }
 

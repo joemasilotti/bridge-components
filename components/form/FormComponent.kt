@@ -36,9 +36,7 @@ class FormComponent(
             "disconnect" -> removeButton()
             "enableSubmit" -> enableButton()
             "disableSubmit" -> disableButton()
-            else -> Log.w(
-                "Form Component", "Unknown event for message: $message"
-            )
+            else -> Log.w("FormComponent", "Unknown event for message: $message")
         }
     }
 

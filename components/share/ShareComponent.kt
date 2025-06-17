@@ -35,7 +35,7 @@ class ShareComponent(
         when (message.event) {
             "connect" -> addButton(message)
             "disconnect" -> removeButton()
-            else -> Log.w("Share Component", "Unknown event for message: $message")
+            else -> Log.w("ShareComponent", "Unknown event for message: $message")
         }
     }
 

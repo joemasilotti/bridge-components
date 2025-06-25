@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             HapticComponent.self,
             MenuComponent.self,
             ReviewPromptComponent.self,
+            SearchComponent.self,
             ShareComponent.self,
             ThemeComponent.self,
             ToastComponent.self

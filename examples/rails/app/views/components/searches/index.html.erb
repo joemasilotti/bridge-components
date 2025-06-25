@@ -1,0 +1,17 @@
+<% content_for :title, "Search Component" %>
+
+<div class="container mt-3">
+  <h1 class="d-hotwire-native-none">Search Component</h1>
+  <p>Displays a native search field that passes along queries to JavaScript for filtering logic.</p>
+  <p><%= link_to "View documentation", "https://github.com/joemasilotti/bridge-components/tree/main/components/search", class: "btn btn-outline-primary btn-sm" %></p>
+</div>
+
+<%= tag.div class: "list-group list-group-flush container-sm px-0", data: {
+  controller: "bridge--search",
+  "bridge--search-items-value": @items.to_json
+} do %>
+  <% @items.each do |item| %>
+    <%= link_to item, components_search_path(item),
+      class: "list-group-item list-group-item-action" %>
+  <% end %>
+<% end %>

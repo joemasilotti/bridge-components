@@ -28,6 +28,8 @@ Rails.application.routes.draw do
 
     resource :review_prompt, only: :show
 
+    resources :searches, only: %i[index show]
+
     resource :share, only: :show
 
     resource :theme, only: :show

@@ -22,6 +22,7 @@
 		84633BF52D7FF0AB00B527E7 /* ToastComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84633BF42D7FF0AB00B527E7 /* ToastComponent.swift */; };
 		849EEE3F2D8850A200D9F114 /* ShareComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EEE3E2D8850A200D9F114 /* ShareComponent.swift */; };
 		84CBBA362E0BA45B00566F0C /* SearchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBBA352E0BA45B00566F0C /* SearchComponent.swift */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		840717B42DAEE51D00861B81 /* HapticComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HapticComponent.swift; path = ../../components/haptic/HapticComponent.swift; sourceTree = SOURCE_ROOT; };
@@ -77,7 +78,6 @@
 				84197AF42D796CEB006BA4A3 /* ButtonComponent.swift */,
 				84197AF82D7A526B006BA4A3 /* FormComponent.swift */,
 				840717B42DAEE51D00861B81 /* HapticComponent.swift */,
-				84CA87372D823801002D4F15 /* LocationComponent.swift */,
 				84197B4C2D7A6EF7006BA4A3 /* MenuComponent.swift */,
 				84197B522D7E43ED006BA4A3 /* ReviewPromptComponent.swift */,
 				84CBBA352E0BA45B00566F0C /* SearchComponent.swift */,

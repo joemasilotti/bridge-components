@@ -7,6 +7,7 @@ import com.masilotti.demo.components.FormComponent
 import com.masilotti.demo.components.HapticComponent
 import com.masilotti.demo.components.MenuComponent
 import com.masilotti.demo.components.ReviewPromptComponent
+import com.masilotti.demo.components.SearchComponent
 import com.masilotti.demo.components.ShareComponent
 import com.masilotti.demo.components.ThemeComponent
 import com.masilotti.demo.components.ToastComponent
@@ -26,6 +27,7 @@ class DemoApplication : Application() {
             BridgeComponentFactory("haptic", ::HapticComponent),
             BridgeComponentFactory("menu", ::MenuComponent),
             BridgeComponentFactory("review-prompt", ::ReviewPromptComponent),
+            BridgeComponentFactory("search", ::SearchComponent),
             BridgeComponentFactory("share", ::ShareComponent),
             BridgeComponentFactory("theme", ::ThemeComponent),
             BridgeComponentFactory("toast", ::ToastComponent)

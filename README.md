@@ -6,6 +6,11 @@
 
 This repository contains generalized, production-ready bridge components extracted from [real-world client projects](https://masilotti.com/services/). Once installed, each component can be added to any page of your app and customized with a bit of HTML.
 
+![Bridge component examples](resources/screenshots/bridge-components.png)
+
+<details>
+<summary>View components</summary>
+
 ## Free components
 
 The source code for the iOS, Android, and web components are included in this repo.
@@ -110,6 +115,8 @@ Gets the user's push notification token.
 Gets the status of the user's granted permissions, like location and push notifications.
 
 [![Permissions Component examples](resources/screenshots/permissions.png)](components/permissions/)
+
+</details>
 
 ## Requirements
 

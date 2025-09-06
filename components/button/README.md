@@ -19,7 +19,7 @@ Sets the content of the button to the title of the element it is attached. Here,
 ```
 
 <details>
-<summary>HTML version</summary>
+<summary><h3>HTML version</h3></summary>
 
 ```html
 <a href="#" data-controller="bridge--button">Button</a>

@@ -29,7 +29,12 @@ let package = Package(
                     package: "hotwire-native-ios"
                 )
             ],
-            path: "components"
+            path: "components",
+            exclude: [
+                "../examples/android",
+                "../examples/rails",
+                "../resources",
+            ]
         )
     ]
 )

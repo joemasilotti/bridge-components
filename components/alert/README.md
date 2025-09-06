@@ -22,7 +22,6 @@ Set the title of the alert with `data-bridge-title`. If not set, the `innerText`
 
 <details>
 <summary>HTML version</summary>
-
 ```html
 <a
   href="#"
@@ -33,7 +32,6 @@ Set the title of the alert with `data-bridge-title`. If not set, the `innerText`
   Link title
 </a>
 ```
-
 </details>
 
 ## Description
@@ -50,7 +48,6 @@ An optional description can be set with `data-bridge-description`. This appears 
 
 <details>
 <summary>HTML version</summary>
-
 ```html
 <a
     href="#"
@@ -59,7 +56,6 @@ An optional description can be set with `data-bridge-description`. This appears 
     data-bridge-description="Custom alert description"
 >Link title</a>
 ```
-
 </details>
 
 ## Destructive
@@ -76,7 +72,6 @@ Set `data-bridge-destructive="true"` to show a red confirmation button on iOS.
 
 <details>
 <summary>HTML version</summary>
-
 ```html
 <a
     href="#"
@@ -85,7 +80,6 @@ Set `data-bridge-destructive="true"` to show a red confirmation button on iOS.
     data-bridge-destructive="true"
 >Delete this record?</a>
 ```
-
 </details>
 
 ## Confirm and dismiss button titles

@@ -1,7 +1,7 @@
 # Document Scanner Component
 
 > [!IMPORTANT]
-> This is a paid component. Gain access to the Swift and Kotlin code by [purchasing a Pro license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b).
+> This is a PRO component. Gain access to the Swift and Kotlin code by [purchasing a PRO license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b).
 
 Presents a camera that digitizes physical documents and renders the images. The underlying native APIs on iOS and Android are configured to:
 

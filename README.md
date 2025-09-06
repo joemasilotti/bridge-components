@@ -70,7 +70,7 @@ Render a native, floating message that disappears after a few seconds.
 
 [![Toast Component examples](resources/screenshots/toast.png)](components/toast/)
 
-## Paid components
+## PRO components
 
 > [!IMPORTANT]
 > Gain access to these components by [purchasing a Pro license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b). This is a **one-time payment** and not a subscription. It includes access to all bridge components available today, plus all future updates. View the [full pro license](PRO-LICENSE.md) before purchasing.
@@ -130,6 +130,8 @@ Each component requires a Stimulus controller and a Swift/Kotlin component.
 
 ### Web - Stimulus controllers
 
+#### 1. Install the bridge-components package
+
 Add the `bridge-components` module via yarn:
 
 ```bash
@@ -148,9 +150,11 @@ or with Rails importmaps:
 bin/importmap pin @joemasilotti/bridge-components
 ```
 
-Then register the controllers after starting your Stimulus application.
+#### 2. Register the Stimulus controllers
 
-You can register all the controllers at once:
+Register the Stimulus controllers after starting your Stimulus application.
+
+Register all the available controllers:
 
 ```javascript
 import { Application } from "@hotwired/stimulus"
@@ -173,9 +177,17 @@ application.register("bridge--button", ButtonBridgeController)
 
 ### iOS - Swift components
 
-Register the native components in `AppDelegate.swift`.
+#### 1. Add the Swift package dependency
 
-You can register all the components at once:
+In Xcode, select File → Add Packages Dependencies… and enter `https://github.com/joemasilotti/bridge-components` in the search field. Make sure your project is set under "Add to Project" and click Add Package.
+
+![Add the Swift package dependency](resources/screenshots/add-swift-package.png)
+
+Then click Add Package again.
+
+#### 2. Register the native components
+
+Register all the available components:
 
 ```swift
 import BridgeComponents
@@ -212,8 +224,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ### Android - Kotlin components
 
-> [!NOTE]
-> An official Gradle package is coming soon. Stay tuned!
+> [!WARNING]
+> Android usage still requires manual installation. An official Gradle package is coming soon!
 
 1. Copy the Kotlin file (`ExampleComponent.kt`) into your Android Studio project.
 1. Register the component inside your `Application` subclass.

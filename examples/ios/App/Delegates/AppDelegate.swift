@@ -11,6 +11,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func configureHotwire() {
+        Hotwire.loadPathConfiguration(from: [
+            .server(rootURL.appending(components: "configurations", "ios.json"))
+        ])
+
         Hotwire.registerBridgeComponents([
             AlertComponent.self,
             ButtonComponent.self,

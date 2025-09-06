@@ -3,4 +3,8 @@
 <div class="container mt-3">
   <h1 class="d-hotwire-native-none">Result</h1>
   <p>You clicked a Button Component. This page was visited because it was the <code>href</code> of the link.</p>
+
+  <% if @side.present? %>
+    <p>Button side: <b><%= @side %></b></p>
+  <% end %>
 </div>

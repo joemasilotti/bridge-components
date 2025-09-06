@@ -8,12 +8,12 @@ public final class ButtonComponent: BridgeComponent {
         guard let event = Event(rawValue: message.event) else { return }
 
         switch event {
-        case .connect:
-            addButton(via: message)
+        case .left, .right:
+            addButton(via: message, side: event)
         }
     }
 
-    private func addButton(via message: Message) {
+    private func addButton(via message: Message, side: Event) {
         guard let data: MessageData = message.data() else { return }
 
         let image = UIImage(systemName: data.image ?? "")
@@ -21,13 +21,20 @@ public final class ButtonComponent: BridgeComponent {
             self?.reply(to: message.event)
         }
         let item = UIBarButtonItem(title: data.title, image: image, primaryAction: action)
-        viewController?.navigationItem.rightBarButtonItem = item
+
+        switch side {
+        case .left:
+            viewController?.navigationItem.leftBarButtonItem = item
+        case .right:
+            viewController?.navigationItem.rightBarButtonItem = item
+        }
     }
 }
 
 private extension ButtonComponent {
     enum Event: String {
-        case connect
+        case left
+        case right
     }
 }
 

@@ -10,6 +10,7 @@ module Components
     end
 
     def result
+      @side = params[:side]
     end
   end
 end

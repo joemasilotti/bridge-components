@@ -1,0 +1,17 @@
+<% content_for :title, "Two Buttons" %>
+
+<div class="container mt-3">
+  <h1 class="d-hotwire-native-none">Two Buttons</h1>
+  <p>Render a button on both the left and the right of the navigation bar on iOS and action bar on Android.</p>
+</div>
+
+<div class="container">
+  <%= link_to "Left Button", result_components_button_path(side: "left"), class: "btn btn-primary", data: {
+    controller: "bridge--button",
+    bridge_side: "left"
+  } %>
+
+  <%= link_to "Right Button", result_components_button_path(side: "right"), class: "btn btn-primary", data: {
+    controller: "bridge--button"
+  } %>
+</div>

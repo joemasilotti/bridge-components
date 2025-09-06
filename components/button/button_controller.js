@@ -15,11 +15,12 @@ export default class extends BridgeComponent {
 
   #addButton() {
     const element = this.bridgeElement
+    const side = element.bridgeAttribute("side") || "right"
     const iosImage = element.bridgeAttribute("ios-image")
     const androidImage = element.bridgeAttribute("android-image")
     const data = {title: element.title, iosImage, androidImage}
 
-    this.send("connect", data, () => {
+    this.send(side, data, () => {
       this.element.click()
     })
   }

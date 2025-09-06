@@ -1,10 +1,13 @@
 # Changelog
 
-## v0.6.0 - September 6, 2025
+## v0.6.2
+
+* Official [NPM package](https://www.npmjs.com/package/@joemasilotti/bridge-components)
+
+## v0.6.0
 
 * `ButtonComponent` now supports buttons on both the left and right side.
-* Official Swift package
-* Official NPM package
+* Official [Swift package](https://swiftpackageindex.com/joemasilotti/bridge-components)
 
 ### Breaking changes
 

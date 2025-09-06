@@ -11,18 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func configureHotwire() {
-        Hotwire.registerBridgeComponents([
-            AlertComponent.self,
-            ButtonComponent.self,
-            FormComponent.self,
-            HapticComponent.self,
-            MenuComponent.self,
-            ReviewPromptComponent.self,
-            SearchComponent.self,
-            ShareComponent.self,
-            ThemeComponent.self,
-            ToastComponent.self
-        ])
+        Hotwire.registerBridgeComponents(BridgeComponent.all)
 
         Hotwire.config.backButtonDisplayMode = .minimal
         Hotwire.config.debugLoggingEnabled = true

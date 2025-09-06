@@ -1,14 +1,14 @@
 import HotwireNative
 import UIKit
 
-final class ButtonComponent: BridgeComponent {
-    override class var name: String { "button" }
+public final class ButtonComponent: BridgeComponent {
+    override public class var name: String { "button" }
 
     private var viewController: UIViewController? {
         delegate?.destination as? UIViewController
     }
 
-    override func onReceive(message: Message) {
+    override public func onReceive(message: Message) {
         guard let event = Event(rawValue: message.event) else { return }
 
         switch event {

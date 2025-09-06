@@ -2,10 +2,10 @@ import CoreHaptics
 import HotwireNative
 import UIKit
 
-final class HapticComponent: BridgeComponent {
-    override class var name: String { "haptic" }
+public final class HapticComponent: BridgeComponent {
+    override public class var name: String { "haptic" }
 
-    override func onReceive(message: Message) {
+    override public func onReceive(message: Message) {
         guard let event = Event(rawValue: message.event) else { return }
 
         switch event {

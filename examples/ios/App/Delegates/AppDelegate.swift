@@ -1,3 +1,4 @@
+import BridgeComponents
 import HotwireNative
 import UIKit
 

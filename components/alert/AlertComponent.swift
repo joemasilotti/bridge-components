@@ -1,14 +1,14 @@
 import HotwireNative
 import UIKit
 
-final class AlertComponent: BridgeComponent {
-    override class var name: String { "alert" }
+public final class AlertComponent: BridgeComponent {
+    override public class var name: String { "alert" }
 
     private var viewController: UIViewController? {
         delegate?.destination as? UIViewController
     }
 
-    override func onReceive(message: Message) {
+    override public func onReceive(message: Message) {
         guard let event = Event(rawValue: message.event) else { return }
 
         switch event {
@@ -26,17 +26,21 @@ final class AlertComponent: BridgeComponent {
             preferredStyle: .alert
         )
 
-        alert.addAction(UIAlertAction(
-            title: data.confirm,
-            style: data.confirmActionStyle
-        ) { [unowned self] _ in
-            reply(to: message.event)
-        })
+        alert.addAction(
+            UIAlertAction(
+                title: data.confirm,
+                style: data.confirmActionStyle
+            ) { [unowned self] _ in
+                reply(to: message.event)
+            }
+        )
 
-        alert.addAction(UIAlertAction(
-            title: data.dismiss,
-            style: .cancel
-        ) { _ in })
+        alert.addAction(
+            UIAlertAction(
+                title: data.dismiss,
+                style: .cancel
+            ) { _ in }
+        )
 
         viewController?.present(alert, animated: true)
     }
@@ -56,6 +60,8 @@ private extension AlertComponent {
         let confirm: String
         let dismiss: String
 
-        var confirmActionStyle: UIAlertAction.Style { destructive ? .destructive : .default }
+        var confirmActionStyle: UIAlertAction.Style {
+            destructive ? .destructive : .default
+        }
     }
 }

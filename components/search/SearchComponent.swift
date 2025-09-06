@@ -1,8 +1,8 @@
 import HotwireNative
 import UIKit
 
-final class SearchComponent: BridgeComponent {
-    override class var name: String { "search" }
+public final class SearchComponent: BridgeComponent {
+    override public class var name: String { "search" }
 
     private let searchController = UISearchController(searchResultsController: nil)
     private lazy var searchResultsUpdater = SearchResultsUpdater(component: self)
@@ -11,7 +11,7 @@ final class SearchComponent: BridgeComponent {
         delegate?.destination as? UIViewController
     }
 
-    override func onReceive(message: Message) {
+    override public func onReceive(message: Message) {
         guard let event = Event(rawValue: message.event) else { return }
 
         switch event {

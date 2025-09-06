@@ -1,1 +1,0 @@
-../../../../../../components/search/search_controller.js

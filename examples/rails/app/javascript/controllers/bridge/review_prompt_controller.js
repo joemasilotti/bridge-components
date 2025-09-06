@@ -1,1 +1,0 @@
-../../../../../../components/review-prompt/review_prompt_controller.js

@@ -4,13 +4,7 @@
 
 [Hotwire Native](https://native.hotwired.dev) enables seamless communication between native Swift and Kotlin code and web views in hybrid mobile apps. [Bridge components](https://native.hotwired.dev/overview/bridge-components) extend this functionality by providing reusable native components that interact your web views. They enable developers to break out of the web view container and **drive native features**.
 
-This repository contains generalized, production-ready bridge components extracted from [real-world client projects](https://masilotti.com/services/). Once configured, each component can be added to any page of your app and customized with a bit of HTML.
-
-## Requirements
-
-* Hotwire Native iOS v1.2 or later
-* Hotwire Native Android v1.0 or later
-* [Hotwire Native Bridge](https://native.hotwired.dev/reference/bridge-installation) on the web
+This repository contains generalized, production-ready bridge components extracted from [real-world client projects](https://masilotti.com/services/). Once installed, each component can be added to any page of your app and customized with a bit of HTML.
 
 ## Free components
 
@@ -111,18 +105,90 @@ Gets the status of the user's granted permissions, like location and push notifi
 
 [![Permissions Component examples](resources/screenshots/permissions.png)](components/permissions/)
 
+## Requirements
+
+* Web: [Hotwire Native Bridge](https://native.hotwired.dev/reference/bridge-installation)
+* iOS: [Hotwire Native iOS](https://github.com/hotwired/hotwire-native-ios) v1.2 or later
+* Android:
+    * [Hotwire Native Android](https://github.com/hotwired/hotwire-native-android) v1.0 or later
+    * [Jetpack Compose](https://developer.android.com/develop/ui/compose/setup)
+    * A serialization library, like [kotlinx.serialization](https://github.com/Kotlin/kotlinx.serialization?tab=readme-ov-file#setup)
+    * [Material Symbol](https://fonts.google.com/icons) font if using images
+        * Unzip the downloaded font and copy the Outlined version `.ttf` to `app/src/main/res/font/material_symbols.ttf`
+
+Check the [`examples/` directoy](examples/) for demo iOS, Android, and Rails apps.
+
 ## Installation
 
-To use a bridge component, copy the relevant Swift/Kotlin and JavaScript files from the [`components/` directory](components/) into your project and register the component.
+Each component requires a Stimulus controller and a Swift/Kotlin component.
 
-Check the [examples directoy](examples/) for full working example iOS, Android, and Rails apps.
+### Web - Stimulus controllers
 
-### iOS (Swift)
+Add the `bridge-components` module via yarn:
 
-1. Copy the Swift file (`ExampleComponent.swift`) into your Xcode project.
-1. Register the component in `AppDelegate.swift`.
+```bash
+yarn add @joemasilotti/bridge-components
+```
+
+or npm:
+
+```bash
+npm install @joemasilotti/bridge-components
+```
+
+or with Rails importmaps:
+
+```bash
+bin/importmap pin @joemasilotti/bridge-components
+```
+
+Then register the controllers after starting your Stimulus application.
+
+You can register all the controllers at once:
+
+```javascript
+import { Application } from "@hotwired/stimulus"
+import { controllers } from "@joemasilotti/bridge-components"
+
+const application = Application.start()
+application.load(controllers)
+```
+
+or manually register individual controllers:
+
+```javascript
+import { Application } from "@hotwired/stimulus"
+import { AlertBridgeController, ButtonBridgeController } from "@joemasilotti/bridge-components"
+
+const application = Application.start()
+application.register("bridge--alert", AlertBridgeController)
+application.register("bridge--button", ButtonBridgeController)
+```
+
+### iOS - Swift components
+
+Register the native components in `AppDelegate.swift`.
+
+You can register all the components at once:
 
 ```swift
+import BridgeComponents
+import HotwireNative
+import UIKit
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        Hotwire.registerBridgeComponents(BridgeComponent.all)
+        return true
+    }
+}
+```
+
+or manually register individual components:
+
+```swift
+import BridgeComponents
 import HotwireNative
 import UIKit
 
@@ -130,14 +196,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Hotwire.registerBridgeComponents([
-            ExampleComponent.self
+            AlertComponent.self,
+            ButtonComponent.self,
         ])
         return true
     }
 }
 ```
 
-### Android (Kotlin)
+### Android - Kotlin components
+
+> [!NOTE]
+> An official Gradle package is coming soon. Stay tuned!
 
 1. Copy the Kotlin file (`ExampleComponent.kt`) into your Android Studio project.
 1. Register the component inside your `Application` subclass.
@@ -163,45 +233,17 @@ class DemoApplication : Application() {
 }
 ```
 
-### Web (JavaScript)
-
-1. Copy the JavaScript file (`example_controller.js`) into `app/javascript/controllers/bridge/`.
-1. Import and initialize (if you aren't dynamically importing Stimulus controllers).
-
-```javascript
-import { application } from "./application"
-
-import Bridge__ExampleController from "./bridge/example_controller"
-application.register("bridge--example", Bridge__ExampleController)
-```
-
-## Prerequisites
-
-### iOS
-
-1. [Hotwire Native iOS](https://native.hotwired.dev/ios/getting-started)
-
-### Android
-
-1. [Hotwire Native Android](https://native.hotwired.dev/android/getting-started)
-1. [Jetpack Compose](https://developer.android.com/develop/ui/compose/setup)
-1. A serialization library, like [kotlinx.serialization](https://github.com/Kotlin/kotlinx.serialization?tab=readme-ov-file#setup)
-1. [Material Symbol](https://fonts.google.com/icons) font if using images
-    * Unzip the downloaded font and copy the Outlined version `.ttf` to `app/src/main/res/font/material_symbols.ttf`
-
-### Web
-
-1. [Hotwire Native Bridge](https://native.hotwired.dev/reference/bridge-installation)
-
 ## Usage
 
 Once installed, use a component by adding a `data-controller` attribute that matches the name of the Stimulus controller.
 
+For example, to use the [Button Component](components/button/):
+
 ```html
-<div data-controller="bridge--example"></div>
+<a href="#" data-controller="bridge--button">Button</a>
 ```
 
-Each component can then be configured further - check the README in each component's directory for more information.
+Each component can then be configured further. Check the component's README in the [`components/` directory](components/) for more information.
 
 ## Need help?
 

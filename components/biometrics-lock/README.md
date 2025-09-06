@@ -1,7 +1,7 @@
 # Biometrics Lock Component
 
 > [!IMPORTANT]
-> This is a paid component. Gain access to the source code by [purchasing a Pro license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b).
+> This is a paid component. Gain access to the Swift and Kotlin code by [purchasing a Pro license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b).
 
 When enabled, locks the app when it is backgrounded until the user authenticates via biometrics.
 

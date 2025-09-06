@@ -1,7 +1,7 @@
 # Barcode Scanner Component
 
 > [!IMPORTANT]
-> This is a paid component. Gain access to the source code by [purchasing a Pro license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b).
+> This is a paid component. Gain access to the Swift and Kotlin code by [purchasing a Pro license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b).
 
 Presents a camera that scans barcodes and QR codes using a native camera capture.
 

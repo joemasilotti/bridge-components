@@ -4,10 +4,6 @@ import UIKit
 public final class MenuComponent: BridgeComponent {
     override public class var name: String { "menu" }
 
-    private var viewController: UIViewController? {
-        delegate?.destination as? UIViewController
-    }
-
     override public func onReceive(message: Message) {
         guard let event = Event(rawValue: message.event) else { return }
 
@@ -23,8 +19,8 @@ public final class MenuComponent: BridgeComponent {
         var actions = [UIAction]()
         for (index, item) in data.items.enumerated() {
             let image = UIImage(systemName: item.image ?? "")
-            let action = UIAction(title: item.title, image: image) { [unowned self] _ in
-                reply(to: message.event, with: SelectionMessageData(index: index))
+            let action = UIAction(title: item.title, image: image) { [weak self] _ in
+                self?.reply(to: message.event, with: SelectionMessageData(index: index))
             }
             actions.append(action)
         }

@@ -5,9 +5,6 @@ public final class FormComponent: BridgeComponent {
     override public class var name: String { "form" }
 
     private weak var submitBarButtonItem: UIBarButtonItem?
-    private var viewController: UIViewController? {
-        delegate?.destination as? UIViewController
-    }
 
     override public func onReceive(message: Message) {
         guard let event = Event(rawValue: message.event) else { return }
@@ -25,8 +22,8 @@ public final class FormComponent: BridgeComponent {
     private func addButton(via message: Message) {
         guard let data: MessageData = message.data() else { return }
 
-        let action = UIAction { [unowned self] _ in
-            reply(to: message.event)
+        let action = UIAction { [weak self] _ in
+            self?.reply(to: message.event)
         }
 
         let item = UIBarButtonItem(title: data.title, primaryAction: action)

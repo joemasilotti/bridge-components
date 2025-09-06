@@ -4,10 +4,6 @@ import UIKit
 public final class ToastComponent: BridgeComponent {
     override public class var name: String { "toast" }
 
-    private var viewController: UIViewController? {
-        delegate?.destination as? UIViewController
-    }
-
     override public func onReceive(message: Message) {
         guard let event = Event(rawValue: message.event) else { return }
 

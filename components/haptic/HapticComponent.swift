@@ -24,7 +24,7 @@ public final class HapticComponent: BridgeComponent {
             UINotificationFeedbackGenerator().notificationOccurred(.warning)
         case .error:
             UINotificationFeedbackGenerator().notificationOccurred(.error)
-        default:
+        case nil:
             UINotificationFeedbackGenerator().notificationOccurred(.success)
         }
     }

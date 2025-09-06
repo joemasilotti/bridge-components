@@ -1,16 +1,10 @@
 import HotwireNative
 import StoreKit
 
-import struct HotwireNative.Message
-
 public final class ReviewPromptComponent: BridgeComponent {
     override public class var name: String { "review-prompt" }
 
-    private var viewController: UIViewController? {
-        delegate?.destination as? UIViewController
-    }
-
-    override public func onReceive(message: Message) {
+    override public func onReceive(message: HotwireNative.Message) {
         guard let event = Event(rawValue: message.event) else { return }
 
         switch event {

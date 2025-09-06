@@ -4,10 +4,6 @@ import UIKit
 public final class AlertComponent: BridgeComponent {
     override public class var name: String { "alert" }
 
-    private var viewController: UIViewController? {
-        delegate?.destination as? UIViewController
-    }
-
     override public func onReceive(message: Message) {
         guard let event = Event(rawValue: message.event) else { return }
 
@@ -26,21 +22,16 @@ public final class AlertComponent: BridgeComponent {
             preferredStyle: .alert
         )
 
-        alert.addAction(
-            UIAlertAction(
-                title: data.confirm,
-                style: data.confirmActionStyle
-            ) { [unowned self] _ in
-                reply(to: message.event)
-            }
-        )
+        let confirmAction = UIAlertAction(
+            title: data.confirm,
+            style: data.confirmActionStyle
+        ) { [weak self] _ in
+            self?.reply(to: message.event)
+        }
+        alert.addAction(confirmAction)
 
-        alert.addAction(
-            UIAlertAction(
-                title: data.dismiss,
-                style: .cancel
-            ) { _ in }
-        )
+        let dismissAction = UIAlertAction(title: data.dismiss, style: .cancel)
+        alert.addAction(dismissAction)
 
         viewController?.present(alert, animated: true)
     }

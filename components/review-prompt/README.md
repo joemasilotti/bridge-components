@@ -17,6 +17,7 @@ Also note that the prompt might not appear every time. More information can be f
 
 <details>
 <summary>HTML version</summary>
+
 ```html
 <a
   href="#"

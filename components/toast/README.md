@@ -16,6 +16,7 @@ Uses a native `Toast` on Android and a custom implementation on iOS. Feel free t
 
 <details>
 <summary>HTML version</summary>
+
 ```html
 <a
   href="#"

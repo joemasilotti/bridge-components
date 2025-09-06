@@ -20,6 +20,7 @@ Sets the content of the button to the title of the element it is attached. Here,
 
 <details>
 <summary>HTML version</summary>
+
 ```html
 <a href="#" data-controller="bridge--button">Button</a>
 ```
@@ -44,6 +45,7 @@ Android uses [Material Symbols](https://fonts.google.com/icons), set `bridge-and
 
 <details>
 <summary>HTML version</summary>
+
 ```html
 <a 
     href="#"
@@ -67,6 +69,7 @@ Set `data-bridge-side="left"` to add a button to the *left* side of the navigati
 
 <details>
 <summary>HTML version</summary>
+
 ```html
 <a
     href="#"

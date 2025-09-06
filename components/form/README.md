@@ -24,6 +24,7 @@ Make sure to wire up the two `data-action` attributes to ensure the button disab
 
 <details>
 <summary>HTML version</summary>
+
 ```html
 <form 
   data-controller="bridge--form"

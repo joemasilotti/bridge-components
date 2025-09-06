@@ -22,6 +22,7 @@ Set the title of the alert with `data-bridge-title`. If not set, the `innerText`
 
 <details>
 <summary>HTML version</summary>
+
 ```html
 <a
   href="#"
@@ -48,6 +49,7 @@ An optional description can be set with `data-bridge-description`. This appears 
 
 <details>
 <summary>HTML version</summary>
+
 ```html
 <a
     href="#"
@@ -72,6 +74,7 @@ Set `data-bridge-destructive="true"` to show a red confirmation button on iOS.
 
 <details>
 <summary>HTML version</summary>
+
 ```html
 <a
     href="#"
@@ -97,6 +100,7 @@ Override the default button titles, OK and Cancel, by setting `data-bridge-confi
 
 <details>
 <summary>HTML version</summary>
+
 ```html
 <a
     href="#"

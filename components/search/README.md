@@ -15,6 +15,7 @@ Note that all filtering is implemented in the bridge component. When copy-pastin
 
 <details>
 <summary>HTML version</summary>
+
 ```html
 <div
   data-controller="bridge--search"

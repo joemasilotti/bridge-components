@@ -23,5 +23,8 @@
   },
   "peerDependencies": {
     "@hotwired/stimulus": ">=3.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -46,6 +46,12 @@ Prompts the user for a review on the App Store on iOS and Google Play on Android
 
 [![Review Prompt Component examples](resources/screenshots/review-prompt.png)](components/review-prompt/)
 
+### [Search Component](components/search/)
+
+Displays a native search field that passes along queries to JavaScript for filtering logic.
+
+[![Search Component examples](resources/screenshots/search.png)](components/search/)
+
 ### [Share Component](components/share/)
 
 Adds a button that presents a native share sheet.

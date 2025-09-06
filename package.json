@@ -14,7 +14,7 @@
     "controllers/index.js",
     "LICENSE*",
     "PRO-LICENSE*",
-    "README*"
+    "/README*"
   ],
   "main": "index.js",
   "module": "index.js",

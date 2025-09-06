@@ -20,11 +20,9 @@ Sets the content of the button to the title of the element it is attached. Here,
 
 <details>
 <summary>HTML version</summary>
-
 ```html
 <a href="#" data-controller="bridge--button">Button</a>
 ```
-
 </details>
 
 
@@ -52,6 +50,28 @@ Android uses [Material Symbols](https://fonts.google.com/icons), set `bridge-and
     data-controller="bridge--button"
     data-bridge-ios-image="photo"
     data-bridge-android-image="Image"
+>Button</a>
+```
+</details>
+
+## Left buttons
+
+Set `data-bridge-side="left"` to add a button to the *left* side of the navigation bar on iOS and action bar on Android. It correctly will not override the back button.
+
+```erb
+<%= link_to "Button", "#", data: {
+  controller: "bridge--button",
+  bridge_side: "left"
+} %>
+```
+
+<details>
+<summary>HTML version</summary>
+```html
+<a
+    href="#"
+    data-controller="bridge--button"
+    data-bridge-side="left"
 >Button</a>
 ```
 </details>

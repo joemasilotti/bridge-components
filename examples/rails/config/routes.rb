@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
   resources :components, only: :index
 
-  resources :configurations, only: [] do
-    get :ios, on: :collection
-  end
-
   namespace :components do
     resource :alert, only: :show do
       collection do
@@ -16,7 +12,7 @@ Rails.application.routes.draw do
       collection do
         get :text
         get :image
-        get :two
+        get :left
         get :result
       end
     end

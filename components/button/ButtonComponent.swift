@@ -24,6 +24,7 @@ public final class ButtonComponent: BridgeComponent {
 
         switch side {
         case .left:
+            viewController?.navigationItem.leftItemsSupplementBackButton = true
             viewController?.navigationItem.leftBarButtonItem = item
         case .right:
             viewController?.navigationItem.rightBarButtonItem = item

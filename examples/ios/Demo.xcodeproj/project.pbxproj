@@ -12,7 +12,7 @@
 		84197AF12D796CDA006BA4A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84197AEC2D796CDA006BA4A3 /* LaunchScreen.storyboard */; };
 		84197AF22D796CDA006BA4A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197AE72D796CDA006BA4A3 /* AppDelegate.swift */; };
 		84197AF32D796CDA006BA4A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197AE82D796CDA006BA4A3 /* SceneDelegate.swift */; };
-		843FB1502E6C461A0079B69A /* BridgeComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 843FB14F2E6C461A0079B69A /* BridgeComponents */; };
+		84B7609E2E6CF31800BCA3B9 /* BridgeComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 84B7609D2E6CF31800BCA3B9 /* BridgeComponents */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +22,7 @@
 		84197AE82D796CDA006BA4A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		84197AEA2D796CDA006BA4A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84197AEB2D796CDA006BA4A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84B7609A2E6CF30100BCA3B9 /* BridgeComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = BridgeComponents; path = ../..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +31,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84197ABF2D7969A7006BA4A3 /* HotwireNative in Frameworks */,
-				843FB1502E6C461A0079B69A /* BridgeComponents in Frameworks */,
+				84B7609E2E6CF31800BCA3B9 /* BridgeComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +42,7 @@
 			isa = PBXGroup;
 			children = (
 				84197AEE2D796CDA006BA4A3 /* App */,
+				84B760962E6CF2F900BCA3B9 /* Frameworks */,
 				84197AA32D796953006BA4A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +91,14 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		84B760962E6CF2F900BCA3B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84B7609A2E6CF30100BCA3B9 /* BridgeComponents */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,7 +117,7 @@
 			name = Demo;
 			packageProductDependencies = (
 				84197ABE2D7969A7006BA4A3 /* HotwireNative */,
-				843FB14F2E6C461A0079B69A /* BridgeComponents */,
+				84B7609D2E6CF31800BCA3B9 /* BridgeComponents */,
 			);
 			productName = Demo;
 			productReference = 84197AA22D796953006BA4A3 /* Demo.app */;
@@ -139,7 +149,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				84197ABD2D7969A7006BA4A3 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */,
-				843FB14E2E6C461A0079B69A /* XCLocalSwiftPackageReference "../../../free" */,
+				84B7609C2E6CF31800BCA3B9 /* XCLocalSwiftPackageReference "../../" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 84197AA32D796953006BA4A3 /* Products */;
@@ -382,9 +392,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		843FB14E2E6C461A0079B69A /* XCLocalSwiftPackageReference "../../../free" */ = {
+		84B7609C2E6CF31800BCA3B9 /* XCLocalSwiftPackageReference "../../" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../../free;
+			relativePath = ../../;
 		};
 /* End XCLocalSwiftPackageReference section */
 
@@ -405,7 +415,7 @@
 			package = 84197ABD2D7969A7006BA4A3 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */;
 			productName = HotwireNative;
 		};
-		843FB14F2E6C461A0079B69A /* BridgeComponents */ = {
+		84B7609D2E6CF31800BCA3B9 /* BridgeComponents */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BridgeComponents;
 		};

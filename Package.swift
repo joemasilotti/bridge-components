@@ -31,8 +31,7 @@ let package = Package(
             ],
             path: "components",
             exclude: [
-                "../examples/android",
-                "../examples/rails",
+                "../examples",
                 "../resources",
             ]
         )

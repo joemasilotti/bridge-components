@@ -1,4 +1,4 @@
-# Swift package
-.build/
+# iOS
 *.xcworkspace
+.build/
 xcuserdata/

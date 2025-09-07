@@ -12,22 +12,22 @@ This repository contains generalized, production-ready bridge components extract
 
 [See all the components](https://masilotti.com/bridge-components/#components)
 
-* [Alert](components/alert/)
-* [Barcode Scanner](components/barcode-scanner/)
-* [Biometrics Lock](components/biometrics-lock/)
-* [Button](components/button/)
-* [Document Scanner](components/document-scanner/)
-* [Form](components/form/)
-* [Haptic](components/haptic/)
-* [Location](components/location/)
-* [Menu](components/menu/)
-* [Notification Token](components/notification-token/)
-* [Permissions](components/permissions/)
-* [Review Prompt](components/review-prompt/)
-* [Search](components/search/)
-* [Share](components/share/)
-* [Theme](components/theme/)
-* [Toast](components/toast/)
+* [Alert](docs/alert.md)
+* [Barcode Scanner](docs/barcode-scanner.md)
+* [Biometrics Lock](docs/biometrics-lock.md)
+* [Button](docs/button.md)
+* [Document Scanner](docs/document-scanner.md)
+* [Form](docs/form.md)
+* [Haptic](docs/haptic.md)
+* [Location](docs/location.md)
+* [Menu](docs/menu.md)
+* [Notification Token](docs/notification-token.md)
+* [Permissions](docs/permissions.md)
+* [Review Prompt](docs/review-prompt.md)
+* [Search](docs/search.md)
+* [Share](docs/share.md)
+* [Theme](docs/theme.md)
+* [Toast](docs/toast.md)
 
 ## Requirements
 
@@ -173,13 +173,13 @@ class DemoApplication : Application() {
 
 Once installed, use a component by adding a `data-controller` attribute that matches the name of the Stimulus controller.
 
-For example, to use the [Button Component](components/button/):
+For example, to use the [Button Component](docs/button.md):
 
 ```html
 <a href="#" data-controller="bridge--button">Button</a>
 ```
 
-Each component can then be configured further. Check the component's README in the [`components/` directory](components/) for more information.
+Each component can then be configured further. Check the [`docs/` directory](docs/) for more information.
 
 ## Need help?
 

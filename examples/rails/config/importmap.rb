@@ -8,4 +8,4 @@ pin "@hotwired/hotwire-native-bridge", to: "@hotwired--hotwire-native-bridge.js"
 
 pin_all_from "app/javascript/controllers", under: "controllers"
 
-pin "@joemasilotti/bridge-components", to: "/bridge-components/controllers/index.js"
+pin "@joemasilotti/bridge-components", to: "/bridge-components/web/controllers/index.js"

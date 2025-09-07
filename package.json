@@ -1,6 +1,6 @@
 {
   "name": "@joemasilotti/bridge-components",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "description": "A collection of bridge components for Hotwire Native apps (Stimulus controllers).",
   "license": "MIT",
   "repository": {
@@ -10,16 +10,12 @@
   "type": "module",
   "sideEffects": false,
   "files": [
-    "components/**/*.js",
-    "controllers/index.js",
-    "LICENSE*",
-    "PRO-LICENSE*",
-    "/README*"
+    "web/controllers/*.js"
   ],
   "main": "index.js",
   "module": "index.js",
   "exports": {
-    ".": "./controllers/index.js"
+    ".": "./web/controllers/index.js"
   },
   "peerDependencies": {
     "@hotwired/stimulus": ">=3.2.0",

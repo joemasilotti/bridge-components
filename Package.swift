@@ -9,10 +9,7 @@ let package = Package(
         .iOS(.v16)
     ],
     products: [
-        .library(
-            name: "BridgeComponents",
-            targets: ["BridgeComponents"]
-        )
+        .library(name: "BridgeComponents", targets: ["BridgeComponents"])
     ],
     dependencies: [
         .package(
@@ -29,11 +26,7 @@ let package = Package(
                     package: "hotwire-native-ios"
                 )
             ],
-            path: "components",
-            exclude: [
-                "../examples",
-                "../resources",
-            ]
+            path: "ios/components"
         )
     ]
 )

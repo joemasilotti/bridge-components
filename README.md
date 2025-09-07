@@ -8,115 +8,26 @@ This repository contains generalized, production-ready bridge components extract
 
 ![Bridge component examples](resources/screenshots/bridge-components.png)
 
-<details>
-<summary>View components</summary>
+## Components
 
-## Free components
+[See all the components](https://masilotti.com/bridge-components/#components)
 
-The source code for the iOS, Android, and web components are included in this repo.
-
-### [Alert Component](components/alert/)
-
-Displays a native alert dialog to confirm an action.
-
-[![Alert Component examples](resources/screenshots/alert.png)](components/alert/)
-
-### [Button Component](components/button/)
-
-Adds a native button to the navigation bar on iOS and action bar on Android. The button can contain either a text string or an image.
-
-[![Button Component examples](resources/screenshots/button.png)](components/button/)
-
-### [Form Component](components/form/)
-
-Replaces a form's submit `<button>` with a native one that disables during submission.
-
-[![Form Component examples](resources/screenshots/form.png)](components/form/)
-
-### [Haptic Component](components/haptic/)
-
-Vibrate the device via the haptic engine.
-
-[![Haptic Component examples](resources/screenshots/haptic.png)](components/haptic/)
-
-### [Menu Component](components/menu/)
-
-Adds a native button to the navigation bar that, when tapped, renders a native menu powered by `UIMenu` on iOS and `DropdownMenu` on Android.
-
-[![Menu Component examples](resources/screenshots/menu.png)](components/menu/)
-
-### [Review Prompt Component](components/review-prompt/)
-
-Prompts the user for a review on the App Store on iOS and Google Play on Android.
-
-[![Review Prompt Component examples](resources/screenshots/review-prompt.png)](components/review-prompt/)
-
-### [Search Component](components/search/)
-
-Displays a native search field that passes along queries to JavaScript for filtering logic.
-
-[![Search Component examples](resources/screenshots/search.png)](components/search/)
-
-### [Share Component](components/share/)
-
-Adds a button that presents a native share sheet.
-
-[![Share Component examples](resources/screenshots/share.png)](components/share/)
-
-### [Theme Component](components/theme/)
-
-Toggle the device's dark/light mode appearance, styling native elements.
-
-[![Theme Component examples](resources/screenshots/theme.png)](components/theme/)
-
-### [Toast Component](components/toast/)
-
-Render a native, floating message that disappears after a few seconds.
-
-[![Toast Component examples](resources/screenshots/toast.png)](components/toast/)
-
-## PRO components
-
-> [!IMPORTANT]
-> Gain access to these components by [purchasing a Pro license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b). This is a **one-time payment** and not a subscription. It includes access to all bridge components available today, plus all future updates. View the [full pro license](PRO-LICENSE.md) before purchasing.
-
-### [Barcode Scanner Component](components/barcode-scanner/)
-
-Presents a camera that scans barcodes and QR codes using a native camera capture.
-
-[![Barcode Scanner Component examples](resources/screenshots/barcode-scanner.png)](components/barcode-scanner/)
-
-### [Biometrics Lock Component](components/biometrics-lock/)
-
-When enabled, locks the app when it is backgrounded until the user authenticates via biometrics.
-
-[![Biometrics Lock Component examples](resources/screenshots/biometrics-lock.png)](components/biometrics-lock/)
-
-### [Document Scanner Component](components/document-scanner/)
-
-Presents a camera that digitizes physical documents.
-
-[![Document Scanner Component examples](resources/screenshots/document-scanner.png)](components/document-scanner/)
-
-### [Location Component](components/location/)
-
-Prompts the user for their precise location with a single system dialog.
-
-[![Location Component examples](resources/screenshots/location.png)](components/location/)
-
-### [Notification Token Component](components/notification-token/)
-
-Gets the user's push notification token.
-
-[![Notification Token Component examples](resources/screenshots/notification-token.png)](components/notification-token/)
-
-### [Permissions Component](components/permissions/)
-
-Gets the status of the user's granted permissions, like location and push notifications.
-
-[![Permissions Component examples](resources/screenshots/permissions.png)](components/permissions/)
-
-</details>
+* [Alert](components/alert/)
+* [Barcode Scanner](components/barcode-scanner/)
+* [Biometrics Lock](components/biometrics-lock/)
+* [Button](components/button/)
+* [Document Scanner](components/document-scanner/)
+* [Form](components/form/)
+* [Haptic](components/haptic/)
+* [Location](components/location/)
+* [Menu](components/menu/)
+* [Notification Token](components/notification-token/)
+* [Permissions](components/permissions/)
+* [Review Prompt](components/review-prompt/)
+* [Search](components/search/)
+* [Share](components/share/)
+* [Theme](components/theme/)
+* [Toast](components/toast/)
 
 ## Requirements
 

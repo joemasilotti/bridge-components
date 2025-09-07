@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.7.0
+
+* Reorganize project structure to better support packages
+
 ## v0.6.2
 
 * Official [NPM package](https://www.npmjs.com/package/@joemasilotti/bridge-components)

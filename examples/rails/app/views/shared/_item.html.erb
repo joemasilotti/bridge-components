@@ -4,7 +4,13 @@
   </div>
 
   <div class="w-100 mx-auto">
-    <p class="fs-5 mb-0"><%= name %></p>
+    <p class="fs-5 d-flex align-items-middle mb-0">
+      <% if local_assigns[:pro] %>
+        <small><span class="badge bg-primary-subtle text-primary-emphasis me-2">PRO</span></small>
+      <% end %>
+
+      <span><%= name %></span>
+    </p>
     <p class="mb-0 text-muted"><%= description %></p>
   </div>
 

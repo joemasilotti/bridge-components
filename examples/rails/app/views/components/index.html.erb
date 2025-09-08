@@ -9,104 +9,102 @@
   <%= render "shared/item",
     path: components_alert_path,
     icon: "bi-exclamation-triangle",
-    name: "Alert component",
+    name: "Alert",
     description: "Render a native, customizable dialog." %>
 
   <%= render "shared/item",
-    path: components_button_path,
-    icon: "bi-app",
-    name: "Button component",
-    description: "Render a native button in the nav bar." %>
-
-  <%= render "shared/item",
-    path: new_components_form_path,
-    icon: "bi-input-cursor",
-    name: "Form component",
-    description: "Render a native form submit button." %>
-
-  <%= render "shared/item",
-    path: components_haptic_path,
-    icon: "bi-phone-vibrate",
-    name: "Haptic component",
-    description: "Vibrate the device." %>
-
-  <%= render "shared/item",
-    path: components_menu_path,
-    icon: "bi-list",
-    name: "Menu component",
-    description: "Render a native hamburger menu." %>
-
-  <%= render "shared/item",
-    path: components_review_prompt_path,
-    icon: "bi-star-half",
-    name: "Review prompt component",
-    description: "Request a rating in the app store." %>
-
-  <%= render "shared/item",
-    path: components_searches_path,
-    icon: "bi-search",
-    name: "Search component",
-    description: "Search via a native input." %>
-
-  <%= render "shared/item",
-    path: components_share_path,
-    icon: "bi-box-arrow-up",
-    name: "Share component",
-    description: "Present a native share sheet." %>
-
-  <%= render "shared/item",
-    path: components_theme_path,
-    icon: "bi-palette",
-    name: "Theme component",
-    description: "Toggle native dark/light mode." %>
-
-  <%= render "shared/item",
-    path: components_toast_path,
-    icon: "bi-megaphone",
-    name: "Toast component",
-    description: "Render a native, floating message." %>
-</div>
-
-<div class="container mt-3 px-0">
-  <h2 class="h6 text-uppercase fw-semibold mb-0 bg-body-secondary px-3 py-2">
-    Pro components
-  </h2>
-</div>
-
-<div class="list-group list-group-flush container-sm px-0">
-  <%= render "shared/item",
     path: components_barcode_scanner_path,
     icon: "bi-upc-scan",
-    name: "Barcode scanner component",
+    pro: true,
+    name: "Barcode Scanner",
     description: "Scan barcodes and QR codes natively." %>
 
   <%= render "shared/item",
     path: components_biometrics_lock_path,
     icon: "bi-lock-fill",
-    name: "Biometrics lock component",
+    pro: true,
+    name: "Biometrics lock",
     description: "Unlock app with face or fingerprint." %>
+
+  <%= render "shared/item",
+    path: components_button_path,
+    icon: "bi-app",
+    name: "Button",
+    description: "Render a native button in the nav bar." %>
 
   <%= render "shared/item",
     path: components_document_scanner_path,
     icon: "bi-file-earmark-break",
-    name: "Document scanner component",
+    pro: true,
+    name: "Document scanner",
     description: "Digitize physical documents natively." %>
 
   <%= render "shared/item",
-    path: components_notification_token_path,
-    icon: "bi-bell",
-    name: "Notification token component",
-    description: "Get the permission status and token." %>
+    path: new_components_form_path,
+    icon: "bi-input-cursor",
+    name: "Form",
+    description: "Render a native form submit button." %>
+
+  <%= render "shared/item",
+    path: components_haptic_path,
+    icon: "bi-phone-vibrate",
+    name: "Haptic",
+    description: "Vibrate the device." %>
 
   <%= render "shared/item",
     path: components_location_path,
     icon: "bi-crosshair",
-    name: "Location component",
+    pro: true,
+    name: "Location",
     description: "Get the user's precise location." %>
+
+  <%= render "shared/item",
+    path: components_menu_path,
+    icon: "bi-list",
+    name: "Menu",
+    description: "Render a native hamburger menu." %>
+
+  <%= render "shared/item",
+    path: components_notification_token_path,
+    icon: "bi-bell",
+    pro: true,
+    name: "Notification token",
+    description: "Get the permission status and token." %>
 
   <%= render "shared/item",
     path: components_permissions_path,
     icon: "bi-unlock",
-    name: "Permissions component",
+    pro: true,
+    name: "Permissions",
     description: "Get the status of granted permissions." %>
+
+  <%= render "shared/item",
+    path: components_review_prompt_path,
+    icon: "bi-star-half",
+    name: "Review prompt",
+    description: "Request a rating in the app store." %>
+
+  <%= render "shared/item",
+    path: components_searches_path,
+    icon: "bi-search",
+    name: "Search",
+    description: "Search via a native input." %>
+
+  <%= render "shared/item",
+    path: components_share_path,
+    icon: "bi-box-arrow-up",
+    name: "Share",
+    description: "Present a native share sheet." %>
+
+  <%= render "shared/item",
+    path: components_theme_path,
+    icon: "bi-palette",
+    name: "Theme",
+    description: "Toggle native dark/light mode." %>
+
+  <%= render "shared/item",
+    path: components_toast_path,
+    icon: "bi-megaphone",
+    name: "Toast",
+    description: "Render a native, floating message." %>
 </div>

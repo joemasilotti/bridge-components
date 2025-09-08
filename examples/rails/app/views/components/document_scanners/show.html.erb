@@ -1,0 +1,16 @@
+<% content_for :title, "Document Scanner Component" %>
+
+<div class="container mt-3">
+  <h1 class="d-hotwire-native-none">Document Scanner Component</h1>
+  <p>Presents a camera that scans physical documents and renders the captured images in <code>&lt;img&gt;</code> elements.</p>
+  <p>This component requires a real camera so it needs to be run on a physical device.</p>
+  <p><%= link_to "View documentation", "https://github.com/joemasilotti/bridge-components/tree/main/components/document-scanner", class: "btn btn-outline-primary btn-sm" %></p>
+</div>
+
+<div data-controller="bridge--document-scanner" class="container d-flex flex-column gap-2 w-100">
+  <button data-action="bridge--document-scanner#scan" class="btn btn-lg btn-outline-primary">
+    Scan
+  </button>
+
+  <div data-bridge--document-scanner-target="result" class="row row-cols-2 row-gap-1 align-items-center"></div>
+</div>

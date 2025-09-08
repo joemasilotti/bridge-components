@@ -66,3 +66,47 @@
     name: "Toast component",
     description: "Render a native, floating message." %>
 </div>
+
+<div class="container mt-3 px-0">
+  <h2 class="h6 text-uppercase fw-semibold mb-0 bg-body-secondary px-3 py-2">
+    Pro components
+  </h2>
+</div>
+
+<div class="list-group list-group-flush container-sm px-0">
+  <%= render "shared/item",
+    path: components_barcode_scanner_path,
+    icon: "bi-upc-scan",
+    name: "Barcode scanner component",
+    description: "Scan barcodes and QR codes natively." %>
+
+  <%= render "shared/item",
+    path: components_biometrics_lock_path,
+    icon: "bi-lock-fill",
+    name: "Biometrics lock component",
+    description: "Unlock app with face or fingerprint." %>
+
+  <%= render "shared/item",
+    path: components_document_scanner_path,
+    icon: "bi-file-earmark-break",
+    name: "Document scanner component",
+    description: "Digitize physical documents natively." %>
+
+  <%= render "shared/item",
+    path: components_notification_token_path,
+    icon: "bi-bell",
+    name: "Notification token component",
+    description: "Get the permission status and token." %>
+
+  <%= render "shared/item",
+    path: components_location_path,
+    icon: "bi-crosshair",
+    name: "Location component",
+    description: "Get the user's precise location." %>
+
+  <%= render "shared/item",
+    path: components_permissions_path,
+    icon: "bi-unlock",
+    name: "Permissions component",
+    description: "Get the status of granted permissions." %>
+</div>

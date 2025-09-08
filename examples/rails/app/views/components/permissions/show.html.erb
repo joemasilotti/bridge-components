@@ -1,0 +1,42 @@
+<% content_for :title, "Permissions Component" %>
+
+<div class="container mt-3">
+  <h1 class="d-hotwire-native-none">Permissions Component</h1>
+  <p>Gets the status of the user's granted permissions, like location and push notifications.</p>
+  <p>iOS and Android require additional configuration for this component to work. See the documentation or demo apps for more details.</p>
+  <p><%= link_to "View documentation", "https://github.com/joemasilotti/bridge-components/tree/main/components/permissions", class: "btn btn-outline-primary btn-sm" %></p>
+</div>
+
+<table data-controller="bridge--permissions" class="table mt-2">
+  <thead>
+    <tr>
+      <th>Permission</th>
+      <th>Status</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th>Camera</th>
+      <td data-bridge--permissions-target="cameraStatus"></td>
+      <td data-bridge--permissions-target="cameraCode"></td>
+    </tr>
+
+    <tr>
+      <th>Location</th>
+      <td data-bridge--permissions-target="locationStatus"></td>
+      <td data-bridge--permissions-target="locationCode"></td>
+    </tr>
+
+    <tr>
+      <th>Notifications</th>
+      <td data-bridge--permissions-target="notificationsStatus"></td>
+      <td data-bridge--permissions-target="notificationsCode"></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="container">
+  <p><small><strong>Note</strong>: There is no "not determined" status on Android - "denied" is returned even before asking the user for permission.</small></p>
+</div>

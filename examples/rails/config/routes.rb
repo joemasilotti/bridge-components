@@ -8,6 +8,10 @@ Rails.application.routes.draw do
       end
     end
 
+    resource :barcode_scanner, only: :show
+
+    resource :biometrics_lock, only: :show
+
     resource :button, only: :show do
       collection do
         get :text
@@ -17,15 +21,23 @@ Rails.application.routes.draw do
       end
     end
 
+    resource :document_scanner, only: :show
+
     resource :form, only: %i[new create show]
 
     resource :haptic, only: :show
+
+    resource :location, only: :show
 
     resource :menu, only: :show do
       collection do
         get :result
       end
     end
+
+    resource :notification_token, only: :show
+
+    resource :permissions, only: :show
 
     resource :review_prompt, only: :show
 

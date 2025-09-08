@@ -49,7 +49,3 @@ The following notification permission statuses are returned from the app. Use th
 |denied|0|`denied` or `restricted`|`PERMISSION_DENIED`|
 |not determined|-1|`notDetermined`|N/A|
 |unknown|-2|(anything else)|N/A|
-
-## Additional requirements
-
-Note that statuses might not be accurate until you configure the additional [location requirements](/components/location/README.md) and additional [notification token requirements](/components/notification-token/README.md).

@@ -1,4 +1,4 @@
-package com.masilotti.demo.components // Replace with your package name.
+package com.masilotti.bridgecomponents.alert
 
 import android.util.Log
 import androidx.appcompat.app.AlertDialog

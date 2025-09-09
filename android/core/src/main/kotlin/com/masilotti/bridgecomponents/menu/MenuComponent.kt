@@ -1,4 +1,4 @@
-package com.masilotti.demo.components // Replace with your package name.
+package com.masilotti.bridgecomponents.menu
 
 import android.util.Log
 import android.view.Gravity
@@ -22,7 +22,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.sp
-import com.masilotti.demo.R // Replace with your package name.
+import com.masilotti.bridgecomponents.R
 import dev.hotwire.core.bridge.BridgeComponent
 import dev.hotwire.core.bridge.BridgeDelegate
 import dev.hotwire.core.bridge.Message
@@ -52,7 +52,6 @@ class MenuComponent(
         val actionBar = fragment.requireActivity().actionBar
         actionBar?.setDisplayShowHomeEnabled(true)
         actionBar?.setHomeButtonEnabled(true)
-        actionBar?.setHomeAsUpIndicator(R.drawable.ic_launcher_foreground)
 
         val data = message.data<MessageData>() ?: return
 

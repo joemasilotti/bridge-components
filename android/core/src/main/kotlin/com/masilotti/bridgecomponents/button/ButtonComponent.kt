@@ -1,6 +1,5 @@
-package com.masilotti.demo.components // Replace with your package name.
+package com.masilotti.bridgecomponents.button
 
-import android.content.Intent
 import android.util.Log
 import android.view.Gravity
 import android.view.ViewGroup
@@ -15,15 +14,16 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.sp
-import com.masilotti.demo.R // Replace with your package name.
+import com.masilotti.bridgecomponents.R
 import dev.hotwire.core.bridge.BridgeComponent
 import dev.hotwire.core.bridge.BridgeDelegate
 import dev.hotwire.core.bridge.Message
 import dev.hotwire.navigation.destinations.HotwireDestination
 import dev.hotwire.navigation.fragments.HotwireFragment
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-class ShareComponent(
+class ButtonComponent(
     name: String,
     private val bridgeDelegate: BridgeDelegate<HotwireDestination>
 ) : BridgeComponent<HotwireDestination>(name, bridgeDelegate) {
@@ -33,21 +33,24 @@ class ShareComponent(
 
     override fun onReceive(message: Message) {
         when (message.event) {
-            "connect" -> addButton(message)
+            "right" -> addButton(message)
+            // TODO: Add "left" button handling like on iOS.
             "disconnect" -> removeButton()
-            else -> Log.w("ShareComponent", "Unknown event for message: $message")
+            else -> Log.w("ButtonComponent", "Unknown event for message: $message")
         }
     }
 
     private fun addButton(message: Message) {
-        removeButton()
         val data = message.data<MessageData>() ?: return
+        removeButton()
 
         val composeView = ComposeView(fragment.requireContext()).apply {
             id = buttonId
             setContent {
                 ToolbarButton(
-                    onClick = { share(data.url) })
+                    title = data.title,
+                    imageName = data.imageName,
+                    onClick = { replyTo(message.event) })
             }
         }
         val layoutParams = Toolbar.LayoutParams(
@@ -65,22 +68,15 @@ class ShareComponent(
         toolbar?.removeView(button)
     }
 
-    private fun share(url: String) {
-        val intent = Intent(Intent.ACTION_SEND).apply {
-            type = "text/plain"
-            putExtra(Intent.EXTRA_TEXT, url)
-        }
-        fragment.requireActivity().startActivity(Intent.createChooser(intent, "Share via"))
-    }
-
     @Serializable
     data class MessageData(
-        val url: String
+        val title: String,
+        @SerialName("androidImage") val imageName: String?
     )
 }
 
 @Composable
-private fun ToolbarButton(onClick: () -> Unit) {
+private fun ToolbarButton(title: String, imageName: String?, onClick: () -> Unit) {
     Button(
         onClick = onClick,
         colors = ButtonDefaults.buttonColors(
@@ -88,11 +84,13 @@ private fun ToolbarButton(onClick: () -> Unit) {
             contentColor = Color.Black
         )
     ) {
-        Text(
-            text = "share",
-            fontFamily = FontFamily(Font(R.font.material_symbols)),
-            fontSize = 28.sp,
-            style = TextStyle(fontFeatureSettings = "liga")
-        )
+        imageName?.let {
+            Text(
+                text = it,
+                fontFamily = FontFamily(Font(R.font.material_symbols)),
+                fontSize = 28.sp,
+                style = TextStyle(fontFeatureSettings = "liga")
+            )
+        } ?: Text(title)
     }
 }

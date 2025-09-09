@@ -19,6 +19,13 @@ dependencyResolutionManagement {
     }
 }
 
+includeBuild("/Users/joemasilotti/workspace/projects/bridge-components/free/android") {
+    dependencySubstitution {
+        substitute(module("com.masilotti.bridgecomponents:core"))
+            .using(project(":core"))
+    }
+}
+
 rootProject.name = "Demo"
 include(":app")
  

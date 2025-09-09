@@ -12,22 +12,22 @@ This repository contains generalized, production-ready bridge components extract
 
 [See all the components](https://masilotti.com/bridge-components/#components)
 
-* [Alert](docs/alert.md)
-* [Barcode Scanner](docs/barcode-scanner.md)
-* [Biometrics Lock](docs/biometrics-lock.md)
-* [Button](docs/button.md)
-* [Document Scanner](docs/document-scanner.md)
-* [Form](docs/form.md)
-* [Haptic](docs/haptic.md)
-* [Location](docs/location.md)
-* [Menu](docs/menu.md)
-* [Notification Token](docs/notification-token.md)
-* [Permissions](docs/permissions.md)
-* [Review Prompt](docs/review-prompt.md)
-* [Search](docs/search.md)
-* [Share](docs/share.md)
-* [Theme](docs/theme.md)
-* [Toast](docs/toast.md)
+* [Alert](docs/components/alert.md)
+* [Barcode Scanner](docs/components/barcode-scanner.md)
+* [Biometrics Lock](docs/components/biometrics-lock.md)
+* [Button](docs/components/button.md)
+* [Document Scanner](docs/components/document-scanner.md)
+* [Form](docs/components/form.md)
+* [Haptic](docs/components/haptic.md)
+* [Location](docs/components/location.md)
+* [Menu](docs/components/menu.md)
+* [Notification Token](docs/components/notification-token.md)
+* [Permissions](docs/components/permissions.md)
+* [Review Prompt](docs/components/review-prompt.md)
+* [Search](docs/components/search.md)
+* [Share](docs/components/share.md)
+* [Theme](docs/components/theme.md)
+* [Toast](docs/components/toast.md)
 
 ## Requirements
 
@@ -173,13 +173,13 @@ class DemoApplication : Application() {
 
 Once installed, use a component by adding a `data-controller` attribute that matches the name of the Stimulus controller.
 
-For example, to use the [Button Component](docs/button.md):
+For example, to use the [Button Component](docs/components/button.md):
 
 ```html
 <a href="#" data-controller="bridge--button">Button</a>
 ```
 
-Each component can then be configured further. Check the [`docs/` directory](docs/) for more information.
+Each component can then be configured further. Check the [`docs/components/` directory](docs/components/) for more information.
 
 ## Need help?
 

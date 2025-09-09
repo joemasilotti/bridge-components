@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.masilotti.demo"
+    namespace = "com.masilotti.bridgecomponents.demo"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.masilotti.demo"
+        applicationId = "com.masilotti.bridgecomponents.demo"
         minSdk = 28
         targetSdk = 35
         versionCode = 1

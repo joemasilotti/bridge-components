@@ -1,9 +1,8 @@
-package com.masilotti.demo.activities
+package com.masilotti.bridgecomponents.demo
 
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
-import com.masilotti.demo.R
 import dev.hotwire.navigation.activities.HotwireActivity
 import dev.hotwire.navigation.navigator.NavigatorConfiguration
 import dev.hotwire.navigation.util.applyDefaultImeWindowInsets

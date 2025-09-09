@@ -70,9 +70,7 @@ bin/importmap pin @joemasilotti/bridge-components
 
 #### 2. Register the Stimulus controllers
 
-Register the Stimulus controllers after starting your Stimulus application.
-
-Register all the available controllers:
+Register the Stimulus controllers after starting your Stimulus application:
 
 ```javascript
 import { Application } from "@hotwired/stimulus"
@@ -82,30 +80,15 @@ const application = Application.start()
 application.load(controllers)
 ```
 
-or manually register individual controllers:
-
-```javascript
-import { Application } from "@hotwired/stimulus"
-import { AlertBridgeController, ButtonBridgeController } from "@joemasilotti/bridge-components"
-
-const application = Application.start()
-application.register("bridge--alert", AlertBridgeController)
-application.register("bridge--button", ButtonBridgeController)
-```
-
 ### iOS - Swift components
 
 #### 1. Add the Swift package dependency
 
-In Xcode, select File → Add Packages Dependencies… and enter `https://github.com/joemasilotti/bridge-components` in the search field. Make sure your project is set under "Add to Project" and click Add Package.
-
-![Add the Swift package dependency](resources/screenshots/add-swift-package.png)
-
-Then click Add Package again.
+In Xcode, select File → Add Packages Dependencies… and enter `https://github.com/joemasilotti/bridge-components` in the search field. Make sure your project is set under "Add to Project" and click Add Package. Then click Add Package again.
 
 #### 2. Register the native components
 
-Register all the available components:
+Import the framework and register all the available components in `AppDelegate.swift`:
 
 ```swift
 import BridgeComponents
@@ -116,25 +99,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Hotwire.registerBridgeComponents(BridgeComponent.all)
-        return true
-    }
-}
-```
-
-or manually register individual components:
-
-```swift
-import BridgeComponents
-import HotwireNative
-import UIKit
-
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Hotwire.registerBridgeComponents([
-            AlertComponent.self,
-            ButtonComponent.self,
-        ])
         return true
     }
 }

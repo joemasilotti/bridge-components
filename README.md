@@ -31,14 +31,9 @@ This repository contains generalized, production-ready bridge components extract
 
 ## Requirements
 
-* Web: [Hotwire Native Bridge](https://native.hotwired.dev/reference/bridge-installation)
-* iOS: [Hotwire Native iOS](https://github.com/hotwired/hotwire-native-ios) v1.2 or later
-* Android:
-    * [Hotwire Native Android](https://github.com/hotwired/hotwire-native-android) v1.0 or later
-    * [Jetpack Compose](https://developer.android.com/develop/ui/compose/setup)
-    * A serialization library, like [kotlinx.serialization](https://github.com/Kotlin/kotlinx.serialization?tab=readme-ov-file#setup)
-    * [Material Symbol](https://fonts.google.com/icons) font if using images
-        * Unzip the downloaded font and copy the Outlined version `.ttf` to `app/src/main/res/font/material_symbols.ttf`
+* [Hotwire Native Bridge](https://native.hotwired.dev/reference/bridge-installation)
+* [Hotwire Native iOS](https://github.com/hotwired/hotwire-native-ios) v1.2 or later
+* [Hotwire Native Android](https://github.com/hotwired/hotwire-native-android) v1.0 or later
 
 Check the [`examples/` directoy](examples/) for demo iOS, Android, and Rails apps.
 
@@ -91,14 +86,14 @@ In Xcode, select File → Add Packages Dependencies… and enter `https://github
 Import the framework and register all the available components in `AppDelegate.swift`:
 
 ```swift
-import BridgeComponents
+import BridgeComponents // THIS LINE
 import HotwireNative
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Hotwire.registerBridgeComponents(BridgeComponent.all)
+        Hotwire.registerBridgeComponents(BridgeComponent.all) // THIS LINE
         return true
     }
 }
@@ -106,29 +101,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ### Android - Kotlin components
 
-> [!WARNING]
-> Android usage still requires manual installation. An official Gradle package is coming soon!
+#### 1. Add the JitPack repository to your build file
 
-1. Copy the Kotlin file (`ExampleComponent.kt`) into your Android Studio project.
-1. Register the component inside your `Application` subclass.
+In Android Studio, add the following line to `settings.gradle.kts`:
 
 ```kotlin
-package com.masilotti.demo // Change to your package name.
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") } // THIS LINE
+    }
+}
+```
+
+#### 2. Add the dependency 
+
+Add the following line to the bottom of `build.gradle.kts` (Module :app), replacing `<latest-version>` with the [latest release](/releases):
+
+```kotlin
+dependencies {
+    // ...
+
+    implementation("dev.hotwire:core:<hotwire-native-version>")
+    implementation("dev.hotwire:navigation-fragments:<hotwire-native-version>")
+
+    implementation("com.github.joemasilotti:bridge-components:<latest-verison>") // THIS LINE
+}
+```
+
+#### 3. Register the native components
+
+In your `Application()` subclass add the following:
+
+```kotlin
+package com.your.package.name
 
 import android.app.Application
-import com.masilotti.demo.components.ExampleComponent // Import component here.
-import dev.hotwire.core.bridge.BridgeComponentFactory
-import dev.hotwire.core.bridge.KotlinXJsonConverter
+import com.masilotti.bridgecomponents.BridgeComponents // THIS LINE
+import dev.hotwire.core.bridge.KotlinXJsonConverter // THIS LINE
 import dev.hotwire.core.config.Hotwire
-import dev.hotwire.navigation.config.registerBridgeComponents
+import dev.hotwire.navigation.config.registerBridgeComponents // THIS LINE
 
-class DemoApplication : Application() {
+class YourApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        Hotwire.registerBridgeComponents(
-            BridgeComponentFactory("example", ::ExampleComponent)
-        )
+        Hotwire.config.jsonConverter = KotlinXJsonConverter() // THIS LINE
+        Hotwire.registerBridgeComponents(*BridgeComponents.all) // THIS LINE
     }
 }
 ```

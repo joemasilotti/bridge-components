@@ -1,10 +1,12 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import java.util.Properties
 
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.compose.compiler)
+    id("maven-publish")
 }
 
 android {
@@ -18,21 +20,27 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+          isMinifyEnabled = false
         }
 
         debug {
-            isMinifyEnabled = false
+          isMinifyEnabled = false
         }
     }
 
     buildFeatures {
-        compose = true
+      compose = true
     }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
     }
 }
 
@@ -56,4 +64,36 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.review.ktx)
     implementation(platform(libs.androidx.compose.bom))
+}
+
+group = "com.github.joemasilotti"
+version = "unspecified"
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                artifactId = "bridge-components-android"
+                pom {
+                    name.set("Bridge Components")
+                    description.set("A collection of bridge components for Hotwire Native apps (Kotlin components).")
+                    url.set("https://github.com/joemasilotti/bridge-components")
+                    licenses {
+                        license {
+                            name.set("MIT License")
+                            url.set("https://opensource.org/licenses/MIT")
+                        }
+                    }
+                    scm { url.set("https://github.com/joemasilotti/bridge-components") }
+                    developers {
+                        developer {
+                            id.set("joemasilotti")
+                            name.set("Joe Masilotti")
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

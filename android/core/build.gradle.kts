@@ -66,7 +66,7 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
 }
 
-group = "com.github.joemasilotti"
+group = "com.masilotti.bridgecomponents"
 version = "unspecified"
 
 afterEvaluate {
@@ -74,7 +74,7 @@ afterEvaluate {
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
-                artifactId = "bridge-components-android"
+                artifactId = "core"
                 pom {
                     name.set("Bridge Components")
                     description.set("A collection of bridge components for Hotwire Native apps (Kotlin components).")

@@ -118,7 +118,7 @@ dependencyResolutionManagement {
 
 #### 2. Add the dependency 
 
-Add the following line to the bottom of `build.gradle.kts` (Module :app), replacing `<latest-version>` with the [latest release](/releases):
+Add the following line to the bottom of `build.gradle.kts` (Module :app), replacing `<latest-version>` with the [latest release](https://github.com/joemasilotti/bridge-components/releases):
 
 ```kotlin
 dependencies {

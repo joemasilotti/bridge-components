@@ -33,7 +33,9 @@ This repository contains generalized, production-ready bridge components extract
 
 * [Hotwire Native Bridge](https://native.hotwired.dev/reference/bridge-installation)
 * [Hotwire Native iOS](https://github.com/hotwired/hotwire-native-ios) v1.2 or later
-* [Hotwire Native Android](https://github.com/hotwired/hotwire-native-android) v1.0 or later
+* Android
+    * [Hotwire Native Android](https://github.com/hotwired/hotwire-native-android) v1.0 or later
+    * Kotlin v2.2.0
 
 Check the [`examples/` directoy](examples/) for demo iOS, Android, and Rails apps.
 

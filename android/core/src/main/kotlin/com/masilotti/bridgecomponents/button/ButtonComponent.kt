@@ -78,7 +78,12 @@ class ButtonComponent(
 }
 
 @Composable
-private fun ToolbarButton(title: String, imageName: String?, contentColor: Color, onClick: () -> Unit) {
+private fun ToolbarButton(
+    title: String,
+    imageName: String?,
+    contentColor: Color,
+    onClick: () -> Unit
+) {
     Button(
         onClick = onClick,
         colors = ButtonDefaults.buttonColors(

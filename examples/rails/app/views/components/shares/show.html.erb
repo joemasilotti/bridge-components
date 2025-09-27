@@ -6,4 +6,16 @@
   <p><%= link_to "View documentation", "https://github.com/joemasilotti/bridge-components/tree/main/components/share", class: "btn btn-outline-primary btn-sm" %></p>
 </div>
 
-<meta data-controller="bridge--share">
+<div class="list-group list-group-flush container-sm px-0">
+  <%= render "shared/item",
+    path: current_components_share_path,
+    icon: "bi-globe",
+    name: "Current URL",
+    description: "Share the current URL." %>
+
+  <%= render "shared/item",
+    path: custom_components_share_path,
+    icon: "bi-link-45deg",
+    name: "Custom URL",
+    description: "Share a custom URL." %>
+</div>

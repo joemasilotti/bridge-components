@@ -1,5 +1,10 @@
 package com.masilotti.bridgecomponents
 
+ import androidx.annotation.ColorInt
+ import androidx.appcompat.widget.Toolbar
+ import androidx.compose.ui.graphics.Color
+ import com.google.android.material.R
+ import com.google.android.material.color.MaterialColors
  import com.masilotti.bridgecomponents.alert.AlertComponent
  import com.masilotti.bridgecomponents.button.ButtonComponent
  import com.masilotti.bridgecomponents.form.FormComponent
@@ -25,4 +30,10 @@ object BridgeComponents {
          BridgeComponentFactory("theme", ::ThemeComponent),
          BridgeComponentFactory("toast", ::ToastComponent),
      ).toTypedArray()
+}
+
+@ColorInt
+fun colorOnSurface(view: Toolbar): Color {
+    val white = 0xFFFFFFFF.toInt()
+    return Color(MaterialColors.getColor(view, R.attr.colorOnSurface, white))
 }

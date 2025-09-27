@@ -16,6 +16,7 @@
  import androidx.compose.ui.text.font.FontFamily
  import androidx.compose.ui.unit.sp
  import com.masilotti.bridgecomponents.R
+ import com.masilotti.bridgecomponents.colorOnSurface
  import dev.hotwire.core.bridge.BridgeComponent
  import dev.hotwire.core.bridge.BridgeDelegate
  import dev.hotwire.core.bridge.Message
@@ -40,13 +41,15 @@
      }
 
      private fun addButton(message: Message) {
-         removeButton()
          val data = message.data<MessageData>() ?: return
+         val toolbar = fragment.toolbarForNavigation() ?: return
+         removeButton()
 
          val composeView = ComposeView(fragment.requireContext()).apply {
              id = buttonId
              setContent {
                  ToolbarButton(
+                     contentColor = colorOnSurface(toolbar),
                      onClick = { share(data.url) })
              }
          }
@@ -55,8 +58,7 @@
              ViewGroup.LayoutParams.WRAP_CONTENT
          ).apply { gravity = Gravity.END }
 
-         val toolbar = fragment.toolbarForNavigation()
-         toolbar?.addView(composeView, layoutParams)
+         toolbar.addView(composeView, layoutParams)
      }
 
      private fun removeButton() {
@@ -80,12 +82,12 @@
  }
 
  @Composable
- private fun ToolbarButton(onClick: () -> Unit) {
+ private fun ToolbarButton(contentColor: Color, onClick: () -> Unit) {
      Button(
          onClick = onClick,
          colors = ButtonDefaults.buttonColors(
              containerColor = Color.Transparent,
-             contentColor = Color.Black
+             contentColor = contentColor
          )
      ) {
          Text(

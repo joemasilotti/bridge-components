@@ -14,6 +14,7 @@
  import androidx.compose.ui.graphics.Color
  import androidx.compose.ui.platform.ComposeView
  import androidx.compose.ui.platform.ViewCompositionStrategy
+ import com.masilotti.bridgecomponents.colorOnSurface
  import dev.hotwire.core.bridge.BridgeComponent
  import dev.hotwire.core.bridge.BridgeDelegate
  import dev.hotwire.core.bridge.Message
@@ -42,6 +43,7 @@
 
      private fun addButton(message: Message) {
          val data = message.data<MessageData>() ?: return
+         val toolbar = fragment.toolbarForNavigation() ?: return
          removeButton()
 
          val composeView = ComposeView(fragment.requireContext()).apply {
@@ -54,6 +56,7 @@
                  SubmitButton(
                      title = data.title,
                      enabled = enabledState.value,
+                     contentColor = colorOnSurface(toolbar),
                      onClick = { replyTo(message.event) }
                  )
              }
@@ -63,8 +66,7 @@
              ViewGroup.LayoutParams.WRAP_CONTENT
          ).apply { gravity = Gravity.END }
 
-         val toolbar = fragment.toolbarForNavigation()
-         toolbar?.addView(composeView, layoutParams)
+         toolbar.addView(composeView, layoutParams)
      }
 
      private fun removeButton() {
@@ -88,14 +90,14 @@
  }
 
  @Composable
- private fun SubmitButton(
-     title: String, enabled: Boolean, onClick: () -> Unit
- ) {
+ private fun SubmitButton(title: String, enabled: Boolean, contentColor: Color, onClick: () -> Unit) {
      Button(
          onClick = onClick,
          enabled = enabled,
          colors = ButtonDefaults.buttonColors(
-             containerColor = Color.Transparent, contentColor = Color.Black
+             containerColor = Color.Transparent,
+             contentColor = contentColor,
+             disabledContentColor = contentColor.copy(0.6f)
          )
      ) {
          Text(title)

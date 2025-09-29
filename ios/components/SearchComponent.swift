@@ -32,8 +32,6 @@ public final class SearchComponent: BridgeComponent {
         viewController?.navigationItem.searchController = searchController
         viewController?.navigationItem.hidesSearchBarWhenScrolling = false
         viewController?.definesPresentationContext = true
-
-        updateSearchResults(with: searchController.searchBar.text)
     }
 }
 

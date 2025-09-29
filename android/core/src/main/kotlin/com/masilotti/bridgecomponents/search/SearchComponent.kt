@@ -22,19 +22,20 @@ class SearchComponent(
 
     override fun onReceive(message: Message) {
         when (message.event) {
-            "connect" -> addSearchView()
+            "connect" -> addSearchView(message)
             else -> Log.w("SearchComponent", "Unknown event for message: $message")
         }
     }
 
-    private fun addSearchView() {
+    private fun addSearchView(message: Message) {
+        val data = message.data<MessageData>() ?: return
         if (fragment.toolbarForNavigation()?.findViewById<SearchView>(searchId) != null) return
 
         val toolbar = fragment.toolbarForNavigation()
         val searchView = SearchView(fragment.requireContext()).apply {
             id = searchId
 
-            queryHint = "Search"
+            queryHint = data.placeholder ?: "Search"
             isFocusable = true
             isFocusableInTouchMode = true
 
@@ -72,6 +73,9 @@ class SearchComponent(
 
         toolbar?.addView(searchView, layoutParams)
     }
+
+    @Serializable
+    private data class MessageData(val placeholder: String?)
 
     @Serializable
     private data class QueryMessageData(val query: String?)

@@ -9,7 +9,7 @@ public final class SearchComponent: BridgeComponent {
 
         switch event {
         case .connect:
-            addSearchController()
+            addSearchController(via: message)
         }
     }
 
@@ -21,8 +21,14 @@ public final class SearchComponent: BridgeComponent {
     private let searchController = UISearchController(searchResultsController: nil)
     private lazy var searchResultsUpdater = SearchResultsUpdater(component: self)
 
-    private func addSearchController() {
+    private func addSearchController(via message: Message) {
+        guard let message: MessageData = message.data() else { return }
+
         searchController.searchResultsUpdater = searchResultsUpdater
+        if let placeholder = message.placeholder {
+            searchController.searchBar.placeholder = placeholder
+        }
+
         viewController?.navigationItem.searchController = searchController
         viewController?.navigationItem.hidesSearchBarWhenScrolling = false
         viewController?.definesPresentationContext = true
@@ -34,6 +40,10 @@ public final class SearchComponent: BridgeComponent {
 private extension SearchComponent {
     enum Event: String {
         case connect
+    }
+
+    struct MessageData: Decodable {
+        let placeholder: String?
     }
 
     struct QueryMessageData: Encodable {

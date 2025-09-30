@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/hotwired/hotwire-native-ios.git",
-            .upToNextMinor(from: "1.2.0")
+            revision: "e1026cbef049bb3e1bd296e13dc5a965746c9e82"
         )
     ],
     targets: [

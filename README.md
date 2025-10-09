@@ -95,7 +95,7 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Hotwire.registerBridgeComponents(BridgeComponent.all) // THIS LINE
+        Hotwire.registerBridgeComponents(Bridgework.coreComponents) // THIS LINE
         return true
     }
 }
@@ -141,7 +141,7 @@ In your `Application()` subclass add the following:
 package com.your.package.name
 
 import android.app.Application
-import com.masilotti.bridgecomponents.BridgeComponents // THIS LINE
+import com.masilotti.bridgecomponents.shared.Bridgework // THIS LINE
 import dev.hotwire.core.bridge.KotlinXJsonConverter // THIS LINE
 import dev.hotwire.core.config.Hotwire
 import dev.hotwire.navigation.config.registerBridgeComponents // THIS LINE
@@ -151,7 +151,7 @@ class YourApplication : Application() {
         super.onCreate()
 
         Hotwire.config.jsonConverter = KotlinXJsonConverter() // THIS LINE
-        Hotwire.registerBridgeComponents(*BridgeComponents.all) // THIS LINE
+        Hotwire.registerBridgeComponents(*Bridgework.coreComponents) // THIS LINE
     }
 }
 ```

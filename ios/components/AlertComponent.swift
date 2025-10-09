@@ -2,7 +2,7 @@ import HotwireNative
 import UIKit
 
 public final class AlertComponent: BridgeComponent {
-    override public class var name: String { "alert" }
+    override public nonisolated class var name: String { "alert" }
 
     override public func onReceive(message: Message) {
         guard let event = Event(rawValue: message.event) else { return }

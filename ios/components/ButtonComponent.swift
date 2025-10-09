@@ -2,7 +2,7 @@ import HotwireNative
 import UIKit
 
 public final class ButtonComponent: BridgeComponent {
-    override public class var name: String { "button" }
+    override public nonisolated class var name: String { "button" }
 
     override public func onReceive(message: Message) {
         guard let event = Event(rawValue: message.event) else { return }

@@ -2,7 +2,7 @@ import HotwireNative
 import UIKit
 
 public final class SearchComponent: BridgeComponent {
-    override public class var name: String { "search" }
+    override public nonisolated class var name: String { "search" }
 
     override public func onReceive(message: Message) {
         guard let event = Event(rawValue: message.event) else { return }

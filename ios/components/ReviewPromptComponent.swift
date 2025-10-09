@@ -2,7 +2,7 @@ import HotwireNative
 import StoreKit
 
 public final class ReviewPromptComponent: BridgeComponent {
-    override public class var name: String { "review-prompt" }
+    override public nonisolated class var name: String { "review-prompt" }
 
     override public func onReceive(message: HotwireNative.Message) {
         guard let event = Event(rawValue: message.event) else { return }

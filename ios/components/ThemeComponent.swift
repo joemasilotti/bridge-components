@@ -1,8 +1,8 @@
 import HotwireNative
 import UIKit
 
-public class ThemeComponent: BridgeComponent {
-    override public static var name: String { "theme" }
+public final class ThemeComponent: BridgeComponent {
+    override public nonisolated class var name: String { "theme" }
 
     private var window: UIWindow? {
         let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene

@@ -26,7 +26,7 @@ let package = Package(
                     package: "hotwire-native-ios"
                 )
             ],
-            path: "ios/components"
+            path: "ios"
         )
     ]
 )

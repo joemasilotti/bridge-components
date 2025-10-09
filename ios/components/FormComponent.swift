@@ -2,7 +2,7 @@ import HotwireNative
 import UIKit
 
 public final class FormComponent: BridgeComponent {
-    override public class var name: String { "form" }
+    override public nonisolated class var name: String { "form" }
 
     private weak var submitBarButtonItem: UIBarButtonItem?
 

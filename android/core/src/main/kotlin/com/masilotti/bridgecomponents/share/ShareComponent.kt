@@ -16,7 +16,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.sp
 import com.masilotti.bridgecomponents.R
-import com.masilotti.bridgecomponents.colorOnSurface
+import com.masilotti.bridgecomponents.shared.colorOnSurface
 import dev.hotwire.core.bridge.BridgeComponent
 import dev.hotwire.core.bridge.BridgeDelegate
 import dev.hotwire.core.bridge.Message

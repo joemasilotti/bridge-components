@@ -2,7 +2,7 @@ import HotwireNative
 import UIKit
 
 public final class ToastComponent: BridgeComponent {
-    override public class var name: String { "toast" }
+    override public nonisolated class var name: String { "toast" }
 
     override public func onReceive(message: Message) {
         guard let event = Event(rawValue: message.event) else { return }

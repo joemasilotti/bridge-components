@@ -3,7 +3,6 @@ package com.masilotti.bridgecomponents
 import androidx.annotation.ColorInt
 import androidx.appcompat.widget.Toolbar
 import androidx.compose.ui.graphics.Color
-import com.google.android.material.R
 import com.google.android.material.color.MaterialColors
 import com.masilotti.bridgecomponents.alert.AlertComponent
 import com.masilotti.bridgecomponents.button.ButtonComponent
@@ -17,8 +16,8 @@ import com.masilotti.bridgecomponents.theme.ThemeComponent
 import com.masilotti.bridgecomponents.toast.ToastComponent
 import dev.hotwire.core.bridge.BridgeComponentFactory
 
-object BridgeComponents {
-    val all = listOf(
+object Bridgework {
+    val coreComponents = listOf(
         BridgeComponentFactory("alert", ::AlertComponent),
         BridgeComponentFactory("button", ::ButtonComponent),
         BridgeComponentFactory("form", ::FormComponent),

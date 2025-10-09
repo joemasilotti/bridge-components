@@ -2,6 +2,8 @@ package com.masilotti.bridgecomponents.theme
 
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
+import com.masilotti.bridgecomponents.shared.Bridgework
+import com.masilotti.bridgecomponents.shared.Events
 import dev.hotwire.core.bridge.BridgeComponent
 import dev.hotwire.core.bridge.BridgeDelegate
 import dev.hotwire.core.bridge.Message
@@ -17,9 +19,16 @@ class ThemeComponent(
     override fun onReceive(message: Message) {
         val data = message.data<MessageData>() ?: return
         when (data.theme) {
-            Theme.LIGHT -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            Theme.DARK -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            null -> AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_FOLLOW_SYSTEM)
+            Theme.LIGHT -> apply(AppCompatDelegate.MODE_NIGHT_NO)
+            Theme.DARK -> apply(AppCompatDelegate.MODE_NIGHT_YES)
+            null -> apply(MODE_NIGHT_FOLLOW_SYSTEM)
+        }
+    }
+
+    private fun apply(@AppCompatDelegate.NightMode theme: Int) {
+        if (AppCompatDelegate.getDefaultNightMode() != theme) {
+            AppCompatDelegate.setDefaultNightMode(theme)
+            Bridgework.post(Events.themeDidChange, theme)
         }
     }
 
@@ -30,10 +39,7 @@ class ThemeComponent(
 
     @Serializable
     private enum class Theme {
-        @SerialName("light")
-        LIGHT,
-
-        @SerialName("dark")
-        DARK
+        @SerialName("light") LIGHT,
+        @SerialName("dark") DARK
     }
 }

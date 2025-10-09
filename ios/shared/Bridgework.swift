@@ -1,8 +1,9 @@
 import HotwireNative
-import UIKit
 
-extension BridgeComponent {
-    public static var all = [
+public enum Bridgework {}
+
+public extension Bridgework {
+    static let coreComponents = [
         AlertComponent.self,
         ButtonComponent.self,
         FormComponent.self,
@@ -12,10 +13,6 @@ extension BridgeComponent {
         SearchComponent.self,
         ShareComponent.self,
         ThemeComponent.self,
-        ToastComponent.self
+        ToastComponent.self,
     ]
-
-    var viewController: UIViewController? {
-        delegate?.destination as? UIViewController
-    }
 }

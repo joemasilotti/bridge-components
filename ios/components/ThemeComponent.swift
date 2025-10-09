@@ -13,12 +13,16 @@ public final class ThemeComponent: BridgeComponent {
         guard let data: MessageData = message.data() else { return }
 
         switch data.theme {
-        case .light:
-            window?.overrideUserInterfaceStyle = .light
-        case .dark:
-            window?.overrideUserInterfaceStyle = .dark
-        case .none:
-            window?.overrideUserInterfaceStyle = .unspecified
+        case .light: apply(theme: .light)
+        case .dark: apply(theme: .dark)
+        default: apply(theme: .unspecified)
+        }
+    }
+
+    private func apply(theme: UIUserInterfaceStyle) {
+        if window?.overrideUserInterfaceStyle != theme {
+            window?.overrideUserInterfaceStyle = theme
+            Bridgework.post(.themeDidChange, theme)
         }
     }
 }

@@ -54,7 +54,7 @@ export default class extends BridgeComponent {
 ```
 
 ```erb
-<%= form_with url: "/search/results", method: :get, "data-controller": "bridge--search" do |form| %>
+<%= form_with url: "/search/results", method: :get, data: { controller: "bridge--search" } do |form| %>
   <%= form.search_field :query, "data-bridge--search-target": "input", placeholder: "Search..." %>
   <%= form.submit "Search" %>
 <% end %>

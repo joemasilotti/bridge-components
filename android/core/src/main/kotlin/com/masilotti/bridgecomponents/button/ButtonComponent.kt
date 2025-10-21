@@ -42,9 +42,10 @@ class ButtonComponent(
     }
 
     private fun addButton(message: Message) {
+        removeButton()
+
         val data = message.data<MessageData>() ?: return
         val toolbar = fragment.toolbarForNavigation() ?: return
-        removeButton()
 
         val composeView = ComposeView(fragment.requireContext()).apply {
             id = buttonId

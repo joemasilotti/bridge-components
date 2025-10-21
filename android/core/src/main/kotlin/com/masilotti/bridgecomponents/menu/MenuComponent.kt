@@ -49,6 +49,8 @@ class MenuComponent(
     }
 
     private fun addMenuButton(message: Message) {
+        removeMenuButton()
+
         val actionBar = fragment.requireActivity().actionBar
         actionBar?.setDisplayShowHomeEnabled(true)
         actionBar?.setHomeButtonEnabled(true)

@@ -19,6 +19,7 @@ class SearchComponent(
     private val searchId = 9918
     private val fragment: HotwireFragment
         get() = bridgeDelegate.destination.fragment as HotwireFragment
+    private var lastQuery: String? = null
 
     override fun onReceive(message: Message) {
         when (message.event) {
@@ -56,11 +57,13 @@ class SearchComponent(
 
             setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(query: String?): Boolean {
+                    lastQuery = query
                     replyTo("connect", QueryMessageData(query))
                     return true
                 }
 
                 override fun onQueryTextChange(newText: String?): Boolean {
+                    lastQuery = newText
                     replyTo("connect", QueryMessageData(newText))
                     return true
                 }
@@ -72,6 +75,12 @@ class SearchComponent(
         ).apply { gravity = Gravity.END }
 
         toolbar?.addView(searchView, layoutParams)
+
+        lastQuery?.let {
+            searchView.setQuery(it, false)
+            searchView.isIconified = false
+            searchView.requestFocus()
+        }
     }
 
     @Serializable

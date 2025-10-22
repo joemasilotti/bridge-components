@@ -35,6 +35,10 @@ Rails.application.routes.draw do
       end
     end
 
+    resource :nfc, only: :show do
+      get :read, on: :collection
+    end
+
     resource :notification_token, only: :show
 
     resource :permissions, only: :show

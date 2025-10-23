@@ -30,4 +30,4 @@ This component requires a real camera so it needs to be run on a physical device
 
 ### Android
 
-To use the [document scanner with ML Kit](https://developers.google.com/ml-kit/vision/doc-scanner/android),add the `com.google.android.gms:play-services-mlkit-document-scanner` dependency.
+To use the [document scanner with ML Kit](https://developers.google.com/ml-kit/vision/doc-scanner/android), add the `com.google.android.gms:play-services-mlkit-document-scanner` dependency.

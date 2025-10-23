@@ -24,4 +24,17 @@ Then add the `NFCReaderUsageDescription` key as an array item to your Info.plist
 
 ### Android
 
-TODO
+Add the following meta data to your `<application>` in `AndroidManifest.xml`.
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-feature android:name="android.hardware.nfc" android:required="false" />
+
+    <application>
+        <!-- ... -->
+    </application>
+</manifest>
+```

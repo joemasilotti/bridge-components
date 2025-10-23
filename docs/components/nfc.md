@@ -24,7 +24,30 @@ Then add the `NFCReaderUsageDescription` key as an array item to your Info.plist
 
 ### Android
 
-Add the following meta data to your `<application>` in `AndroidManifest.xml`.
+#### `WebFragment`
+
+To use `NfcAdapter` we need to hook into the fragment presenting the web view.
+
+Register `WebFragment` in your `Application` subclass.
+
+```kt
+package com.masilotti.demo
+
+import android.app.Application
+
+class DemoApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+
+        Hotwire.registerFragmentDestinations(WebFragment::class)
+        Hotwire.defaultFragmentDestination = WebFragment::class
+    }
+}
+```
+
+#### Permissions
+
+Then add the following meta data to your `<application>` in `AndroidManifest.xml`.
 
 ```
 <?xml version="1.0" encoding="utf-8"?>

@@ -17,6 +17,29 @@ Gets the user's push notification token.
 </div>
 ```
 
+## JavaScript events
+
+The `result` target is optional. `bridge--notification-token:retrieved` is dispatched when a notification token is retrieved.
+
+```html
+<div data-controller="my-controller"
+    data-action="bridge--notification-token:retrieved@window->my-controller#retrieved">
+</div>
+```
+
+```javascript
+// my_controller.js
+
+import { Controller } from "@hotwired/stimulus"
+
+export default class extends Controller {
+  retrieved(event) {
+    const token = event.detail.token
+    console.debug(`Retrieved notification token: ${token}.`)
+  }
+}
+```
+
 ## Additional requirements
 
 Accessing the user's notification token requires additional steps for each platform. Check the example apps for a full working version of each.

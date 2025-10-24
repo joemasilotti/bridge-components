@@ -15,6 +15,33 @@ Prompts the user for their precise location with a single system dialog.
 </div>
 ```
 
+## JavaScript events
+
+The `result` target is optional. `bridge--location:retrieved` is dispatched when the user's location is successfully retrieved. `bridge--location:error` is dispatched when something goes wrong.
+
+```html
+<div data-controller="my-location"
+     data-action="bridge--location:retrieved@window->my-location#retrieved bridge--location:error@window->my-location#error">
+</div>
+```
+
+```javascript
+// my_location_controller.js
+
+import { Controller } from "@hotwired/stimulus"
+
+export default class extends Controller {
+  retrieved(event) {
+    const {latitude, longitude} = event.detail
+    console.debug(`Retrieved location: ${latitude}, ${longitude}.`)
+  }
+
+  error() {
+    console.debug("Error getting location.")
+  }
+}
+```
+
 ## Additional requirements
 
 Accessing the user's location requires an additional step for each platform. Check the example apps for a full working version of each.

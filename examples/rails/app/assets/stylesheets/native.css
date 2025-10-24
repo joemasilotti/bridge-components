@@ -27,6 +27,7 @@ html:not([data-bridge-components~="barcode-scanner"]),
 html:not([data-bridge-components~="biometrics-lock"]),
 html:not([data-bridge-components~="document-scanner"]),
 html:not([data-bridge-components~="location"]),
+html:not([data-bridge-components~="nfc"]),
 html:not([data-bridge-components~="notification-token"]),
 html:not([data-bridge-components~="permissions"])
 [data-pro-cta] {

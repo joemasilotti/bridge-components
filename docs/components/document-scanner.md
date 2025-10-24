@@ -30,4 +30,27 @@ This component requires a real camera so it needs to be run on a physical device
 
 ### Android
 
-To use the [document scanner with ML Kit](https://developers.google.com/ml-kit/vision/doc-scanner/android),add the `com.google.android.gms:play-services-mlkit-document-scanner` dependency.
+#### Dependencies
+
+To use the [document scanner with ML Kit](https://developers.google.com/ml-kit/vision/doc-scanner/android), add the `com.google.android.gms:play-services-mlkit-document-scanner` dependency.
+
+#### `WebFragment`
+
+To use `GmsDocumentScanning` we need to hook into the fragment presenting the web view.
+
+Register `WebFragment` in your `Application` subclass.
+
+```kt
+package com.masilotti.demo
+
+import android.app.Application
+
+class DemoApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+
+        Hotwire.registerFragmentDestinations(WebFragment::class)
+        Hotwire.defaultFragmentDestination = WebFragment::class
+    }
+}
+```

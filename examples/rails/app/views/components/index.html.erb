@@ -65,6 +65,13 @@
     description: "Render a native hamburger menu." %>
 
   <%= render "shared/item",
+    path: components_nfc_path,
+    icon: "bi-wifi",
+    pro: true,
+    name: "NFCs",
+    description: "Read data from NFC tags." %>
+
+  <%= render "shared/item",
     path: components_notification_token_path,
     icon: "bi-bell",
     pro: true,

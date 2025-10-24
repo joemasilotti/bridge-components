@@ -21,6 +21,7 @@ This repository contains generalized, production-ready bridge components extract
 * [Haptic](docs/components/haptic.md)
 * [Location](docs/components/location.md)
 * [Menu](docs/components/menu.md)
+* [NFC](docs/components/nfc.md)
 * [Notification Token](docs/components/notification-token.md)
 * [Permissions](docs/components/permissions.md)
 * [Review Prompt](docs/components/review-prompt.md)

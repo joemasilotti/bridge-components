@@ -79,9 +79,7 @@ dependencies {
 
 To register for notifications we need to hook into the fragment presenting the web view.
 
-Copy-paste `WebFragment.kt` from [components/shared/](/components/shared/) into your app.
-
-Register the new fragment and kick off the Firebase integration by adding the following to your `Application` subclass.
+Register `WebFragment` and kick off the Firebase integration by adding the following to your `Application` subclass.
 
 ```kt
 package com.masilotti.demo

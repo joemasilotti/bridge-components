@@ -7,6 +7,7 @@ import FormBridgeController from "./form_controller.js"
 import HapticBridgeController from "./haptic_controller.js"
 import LocationBridgeController from "./location_controller.js"
 import MenuBridgeController from "./menu_controller.js"
+import NFCBridgeController from "./nfc_controller.js"
 import NotificationTokenBridgeController from "./notification_token_controller.js"
 import PermissionsBridgeController from "./permissions_controller.js"
 import ReviewPromptBridgeController from "./review_prompt_controller.js"
@@ -25,6 +26,7 @@ export {
   HapticBridgeController,
   LocationBridgeController,
   MenuBridgeController,
+  NFCBridgeController,
   NotificationTokenBridgeController,
   PermissionsBridgeController,
   ReviewPromptBridgeController,
@@ -45,6 +47,7 @@ export const controllers = [
   { identifier: "bridge--haptic", controllerConstructor: HapticBridgeController },
   { identifier: "bridge--location", controllerConstructor: LocationBridgeController },
   { identifier: "bridge--menu",   controllerConstructor: MenuBridgeController },
+  { identifier: "bridge--nfc",   controllerConstructor: NFCBridgeController },
   { identifier: "bridge--notification-token",   controllerConstructor: NotificationTokenBridgeController },
   { identifier: "bridge--permissions", controllerConstructor: PermissionsBridgeController },
   { identifier: "bridge--review-prompt", controllerConstructor: ReviewPromptBridgeController },

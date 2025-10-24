@@ -169,6 +169,15 @@ For example, to use the [Button Component](docs/components/button.md):
 
 Each component can then be configured further. Check the [`docs/components/` directory](docs/components/) for more information.
 
+### JavaScript events
+
+A few controllers fire custom JavaScript events prefixed with the `bridge--` namespace. You can listen for these to perform custom handling when:
+
+* A [search query](docs/components/search.md) is executed
+* A [notification token](docs/components/notification-token.md) is retrieved
+* A [location](docs/components/location.md) is retrieved
+* A [barcode](docs/components/barcode-scanner.md) is scanned
+
 ## Need help?
 
 If you need help installing, configuring, or using the components, feel free to [open a new discussion](https://github.com/joemasilotti/bridge-components/discussions/new?category=q-a) or [send me an email](mailto:joe@masilotti.com). I'd love to help!

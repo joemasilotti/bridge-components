@@ -171,7 +171,7 @@ Each component can then be configured further. Check the [`docs/components/` dir
 
 ### JavaScript events
 
-A few controllers fire custom JavaScript events prefixed with the `bridge--` namespace. You can listen for these to perform custom handling when:
+A few controllers fire [custom JavaScript events](https://stimulus.hotwired.dev/reference/controllers#cross-controller-coordination-with-events) prefixed with the `bridge--` namespace. You can listen for these to perform custom handling when:
 
 * A [search query](docs/components/search.md) is executed
 * A [notification token](docs/components/notification-token.md) is retrieved

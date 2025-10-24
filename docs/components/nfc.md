@@ -16,6 +16,8 @@ This component requires a real NFC chip so it needs to be run on a physical devi
 </div>
 ```
 
+## Additional requirements
+
 ### iOS
 
 Enable the NFC capability and entitlement in Xcode. See the [documentation](https://developer.apple.com/documentation/corenfc/building-an-nfc-tag-reader-app#Configure-the-App-to-Detect-NFC-Tags) for more details.

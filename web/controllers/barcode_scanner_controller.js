@@ -11,7 +11,9 @@ export default class extends BridgeComponent {
   }
 
   #scan() {
-    this.resultTarget.innerHTML = ""
+    if (this.hasResultTarget) {
+      this.resultTarget.innerHTML = ""
+    }
 
     this.send("scan", {}, message => {
       const barcode = message.data.barcode

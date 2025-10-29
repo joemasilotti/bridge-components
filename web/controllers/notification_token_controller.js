@@ -18,7 +18,13 @@ export default class extends BridgeComponent {
   #getToken() {
     this.send("get", {}, message => {
       const token = message.data.token
-      this.tokenTarget.innerText = `Your notification token is: ${token}.`
+      const detail = {token}
+
+      this.dispatch("retrieved", {detail})
+
+      if (this.hasTokenTarget) {
+        this.tokenTarget.innerText = `Your notification token is: ${token}.`
+      }
     })
   }
 }

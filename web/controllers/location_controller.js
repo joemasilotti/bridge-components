@@ -13,10 +13,19 @@ export default class extends BridgeComponent {
   #getLocation() {
     this.send("get", {}, message => {
       const {latitude, longitude} = message.data
+
       if (latitude === undefined || longitude === undefined) {
-        this.resultTarget.innerText = `Your location could not be found. Did you grant location permission?`
+        this.dispatch("error")
+
+        if (this.hasResultTarget) {
+          this.resultTarget.innerText = `Your location could not be found. Did you grant location permission?`
+        }
       } else {
-        this.resultTarget.innerText = `Your location is ${latitude}, ${longitude}.`
+        this.dispatch("retrieved", {detail: {latitude, longitude}})
+
+        if (this.hasResultTarget) {
+          this.resultTarget.innerText = `Your location is ${latitude}, ${longitude}.`
+        }
       }
     })
   }

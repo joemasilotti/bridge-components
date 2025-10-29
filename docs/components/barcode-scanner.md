@@ -16,6 +16,29 @@ This component requires a real camera so it needs to be run on a physical device
 </div>
 ```
 
+## JavaScript events
+
+The `result` target is optional. `bridge--barcode-scanner:scanned` is dispatched when a successful barcode scan occurs.
+
+```html
+<div data-controller="my-controller" 
+    data-action="bridge--barcode-scanner:scanned@window->my-controller#scanned">
+</div>
+```
+
+```javascript
+// my_controller.js
+
+import { Controller } from "@hotwired/stimulus"
+
+export default class extends Controller {
+  scanned(event) {
+    const barcode = event.detail.barcode
+    console.debug(`Scanned barcode: ${barcode}.`)
+  }
+}
+```
+
 ## Supported codes
 
 By default, the following codes are recognized:

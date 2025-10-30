@@ -9,9 +9,17 @@
 </div>
 
 <div data-controller="bridge--nfc" class="container d-flex flex-column gap-2 w-100">
-  <button data-action="bridge--nfc#scan" class="btn btn-lg btn-outline-primary">
-    Scan
+  <button data-action="bridge--nfc#read" class="btn btn-lg btn-outline-primary">
+    Read
   </button>
 
   <p data-bridge--nfc-target="result" class="lead mt-4"></p>
+</div>
+
+<div data-controller="bridge--nfc" class="container d-flex flex-column gap-2 w-100">
+  <input type="text" data-bridge--nfc-target="value" value="Hello, world!" class="form-control">
+
+  <button data-action="bridge--nfc#write" class="btn btn-lg btn-outline-primary">
+    Write
+  </button>
 </div>

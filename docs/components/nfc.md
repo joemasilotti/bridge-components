@@ -3,7 +3,7 @@
 > [!IMPORTANT]
 > This is a PRO component. Gain access to the Swift and Kotlin code by [purchasing a PRO license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b).
 
-Read text and URLs from NFC tags.
+Read and write text and URLs to NFC tags.
 
 This component requires a real NFC chip so it needs to be run on a physical device.
 
@@ -11,8 +11,11 @@ This component requires a real NFC chip so it needs to be run on a physical devi
 
 ```html
 <div data-controller="bridge--nfc">
-  <button data-action="bridge--nfc#scan">Scan</button>
+  <button data-action="bridge--nfc#read">Read</button>
   <p data-bridge--nfc-target="result"></p>
+
+  <input data-bridge--nfc-target="value" value="Hello, world!" type="text">
+  <button data-action="bridge--nfc#write">Write</button>
 </div>
 ```
 

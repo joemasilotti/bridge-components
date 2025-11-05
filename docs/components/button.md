@@ -87,6 +87,16 @@ On Android, ...
 
 These defaults can be overridden for individual buttons by setting a HEX code for `data-bridge-color` in the HTML.
 
+```erb
+<%= link_to "Button", "#", data: {
+  controller: "bridge--button",
+  bridge_color: "#804F9F"
+} %>
+```
+
+<details>
+<summary>HTML version</summary>
+
 ```html
 <a
     href="#"
@@ -94,6 +104,7 @@ These defaults can be overridden for individual buttons by setting a HEX code fo
     data-bridge-color="#804F9F"
 >Button</a>
 ```
+</details>
 
 ## Hide the HTML button
 

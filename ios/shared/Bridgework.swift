@@ -1,4 +1,5 @@
 import HotwireNative
+import UIKit
 
 public enum Bridgework {}
 
@@ -15,4 +16,10 @@ public extension Bridgework {
         ThemeComponent.self,
         ToastComponent.self,
     ]
+
+    static func color(_ named: String) -> UIColor {
+        UIColor(named: "Bridgework\(named)Color") ??
+            UIColor(named: "BridgeworkColor") ??
+            .tintColor
+    }
 }

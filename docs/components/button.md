@@ -79,6 +79,22 @@ Set `data-bridge-side="left"` to add a button to the *left* side of the navigati
 ```
 </details>
 
+## Customizing button colors
+
+On iOS, the color of the button will default to your [app's tint color](https://developer.apple.com/documentation/xcode/specifying-your-apps-color-scheme), set via `AccentColor` in Assets.xcassets. Override this by adding a new color named `BridgeworkButtonColor`. Or set all UI elements provided by this library with a new color named `BridgeworkColor`.
+
+On Android, ...
+
+These defaults can be overridden for individual buttons by setting a HEX code for `data-bridge-color` in the HTML.
+
+```html
+<a
+    href="#"
+    data-controller="bridge--button"
+    data-bridge-color="#804F9F"
+>Button</a>
+```
+
 ## Hide the HTML button
 
 Hide the HTML button when the "button" component is registered with the following CSS.

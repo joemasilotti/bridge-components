@@ -17,9 +17,10 @@ public extension Bridgework {
         ToastComponent.self,
     ]
 
-    static func color(_ named: String) -> UIColor {
-        UIColor(named: "Bridgework\(named)Color") ??
+    static func color(_ named: String, hex: String? = nil) -> UIColor {
+        UIColor(hex: hex) ??
+            UIColor(named: "Bridgework\(named)Color") ??
             UIColor(named: "BridgeworkColor") ??
-            .tintColor
+            UIColor.tintColor
     }
 }

@@ -27,8 +27,9 @@ export default class extends BridgeComponent {
 
   #addButton() {
     const submit = new BridgeElement(this.submitTarget)
+    const color = this.bridgeElement.bridgeAttribute("color")
 
-    this.send("connect", {title: submit.title}, () => {
+    this.send("connect", {title: submit.title, color}, () => {
       this.submitTarget.click()
     })
   }

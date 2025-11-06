@@ -14,12 +14,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
+import com.masilotti.bridgecomponents.shared.Colors
 import com.masilotti.bridgecomponents.shared.colorOnSurface
 import dev.hotwire.core.bridge.BridgeComponent
 import dev.hotwire.core.bridge.BridgeDelegate
 import dev.hotwire.core.bridge.Message
 import dev.hotwire.navigation.destinations.HotwireDestination
 import dev.hotwire.navigation.fragments.HotwireFragment
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 class FormComponent(
@@ -56,7 +58,7 @@ class FormComponent(
                 SubmitButton(
                     title = data.title,
                     enabled = enabledState.value,
-                    contentColor = colorOnSurface(toolbar),
+                    contentColor =  Colors.bridgeworkColor("form", hex = data.colorCode),
                     onClick = { replyTo(message.event) }
                 )
             }
@@ -85,7 +87,8 @@ class FormComponent(
 
     @Serializable
     data class MessageData(
-        val title: String
+        val title: String,
+        @SerialName("color") val colorCode: String?
     )
 }
 

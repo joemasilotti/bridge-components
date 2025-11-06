@@ -21,7 +21,7 @@ public final class ButtonComponent: BridgeComponent {
             self?.reply(to: message.event)
         }
         let item = UIBarButtonItem(title: data.title, image: image, primaryAction: action)
-        item.tintColor = UIColor(hex: data.colorCode) ?? Bridgework.color("Button")
+        item.tintColor = Bridgework.color("Button", hex: data.colorCode)
 
         switch side {
         case .left:

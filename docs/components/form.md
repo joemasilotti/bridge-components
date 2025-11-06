@@ -43,6 +43,33 @@ Make sure to wire up the two `data-action` attributes to ensure the button disab
 ```
 </details>
 
+## Customizing submit button colors
+
+On iOS, the color of the submit button will default to your [app's tint color](https://developer.apple.com/documentation/xcode/specifying-your-apps-color-scheme), set via `AccentColor` in Assets.xcassets. Override this by adding a new color named `BridgeworkFormColor`. Or set all UI elements provided by this library with a new color named `BridgeworkColor`.
+
+On Android, the color of the submit button will default to Material's `colorOnSurface`. Override this by adding a new color to `colors.xml` named `bridgework_form_color`. Or set all UI elements provided by this library with a new color named `bridgework_color`.
+
+These defaults can be overridden (on both platforms) for individual submit buttons by setting a HEX code for `data-bridge-color` in the HTML.
+
+```erb
+<%= form_with model: @model, data: {
+  controller: "bridge--form",
+  bridge_color: "#804F9F"
+} do |form| %>
+  <%# ... %>
+<% end %>
+```
+
+<details>
+<summary>HTML version</summary>
+
+```html
+<form data-controller="bridge--form" data-bridge-color="#804F9F">
+  <!-- ... -->
+</form>
+```
+</details>
+
 ## Hide the HTML submit button
 
 Hide the HTML submit button when the "form" component is registered with the following CSS.

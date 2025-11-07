@@ -25,7 +25,8 @@ export default class extends BridgeComponent {
       }
     })
 
-    this.send("connect", {items}, message => {
+    const color = this.bridgeElement.bridgeAttribute("color")
+    this.send("connect", {items, color}, message => {
       const item = this.itemTargets[message.data.index]
       new BridgeElement(item).click()
     })

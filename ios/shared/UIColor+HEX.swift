@@ -10,18 +10,14 @@ extension UIColor {
         }
 
         var hexNumber: UInt64 = 0
-        guard Scanner(string: hexString).scanHexInt64(&hexNumber) else { return nil }
+        guard
+            Scanner(string: hexString).scanHexInt64(&hexNumber),
+            hexString.count == 6
+        else { return nil }
 
-        let r, g, b: CGFloat
-        switch hexString.count {
-        case 6:
-            r = CGFloat((hexNumber & 0xFF0000) >> 16) / 255
-            g = CGFloat((hexNumber & 0x00FF00) >> 8) / 255
-            b = CGFloat(hexNumber & 0x0000FF) / 255
-        default:
-            return nil
-        }
-
+        let r = CGFloat((hexNumber & 0xFF0000) >> 16) / 255
+        let g = CGFloat((hexNumber & 0x00FF00) >> 8) / 255
+        let b = CGFloat(hexNumber & 0x0000FF) / 255
         self.init(red: r, green: g, blue: b, alpha: 1.0)
     }
 }

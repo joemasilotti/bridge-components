@@ -11,6 +11,7 @@ export default class extends BridgeComponent {
   #addButton() {
     const element = this.bridgeElement
     const url = element.bridgeAttribute("url") || window.location.href
-    this.send("connect", {url}, () => {})
+    const color = element.bridgeAttribute("color")
+    this.send("connect", {url, color}, () => {})
   }
 }

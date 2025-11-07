@@ -16,12 +16,13 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.sp
 import com.masilotti.bridgecomponents.R
-import com.masilotti.bridgecomponents.shared.colorOnSurface
+import com.masilotti.bridgecomponents.shared.Colors
 import dev.hotwire.core.bridge.BridgeComponent
 import dev.hotwire.core.bridge.BridgeDelegate
 import dev.hotwire.core.bridge.Message
 import dev.hotwire.navigation.destinations.HotwireDestination
 import dev.hotwire.navigation.fragments.HotwireFragment
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 class ShareComponent(
@@ -49,7 +50,7 @@ class ShareComponent(
             id = buttonId
             setContent {
                 ToolbarButton(
-                    contentColor = colorOnSurface(toolbar),
+                    contentColor = Colors.bridgeworkColor("share", hex = data.colorCode),
                     onClick = { share(data.url) })
             }
         }
@@ -77,7 +78,8 @@ class ShareComponent(
 
     @Serializable
     data class MessageData(
-        val url: String
+        val url: String,
+        @SerialName("color") val colorCode: String?
     )
 }
 

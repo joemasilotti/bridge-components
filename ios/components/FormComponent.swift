@@ -27,6 +27,7 @@ public final class FormComponent: BridgeComponent {
         }
 
         let item = UIBarButtonItem(title: data.title, primaryAction: action)
+        item.tintColor = Bridgework.color("Form", hex: data.colorCode)
         viewController?.navigationItem.rightBarButtonItem = item
         submitBarButtonItem = item
     }
@@ -51,5 +52,11 @@ private extension FormComponent {
 private extension FormComponent {
     struct MessageData: Decodable {
         let title: String
+        let colorCode: String?
+
+        enum CodingKeys: String, CodingKey {
+            case title
+            case colorCode = "color"
+        }
     }
 }

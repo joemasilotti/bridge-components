@@ -20,11 +20,14 @@ public final class ShareComponent: BridgeComponent {
             self?.share(url)
         }
 
-        viewController?.navigationItem.rightBarButtonItem = UIBarButtonItem(
+        let button = UIBarButtonItem(
             title: "Share",
             image: UIImage(systemName: "square.and.arrow.up"),
             primaryAction: action
         )
+        button.tintColor = Bridgework.color("Share", hex: data.colorCode)
+        
+        viewController?.navigationItem.rightBarButtonItem = button
     }
 
     private func share(_ url: URL) {
@@ -45,6 +48,7 @@ private extension ShareComponent {
 private extension ShareComponent {
     struct MessageData: Decodable {
         let urlString: String
+        let colorCode: String?
 
         var url: URL? {
             URL(string: urlString)
@@ -52,6 +56,7 @@ private extension ShareComponent {
 
         enum CodingKeys: String, CodingKey {
             case urlString = "url"
+            case colorCode = "color"
         }
     }
 }

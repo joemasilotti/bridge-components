@@ -30,6 +30,7 @@ public final class MenuComponent: BridgeComponent {
             image: UIImage(systemName: "ellipsis"),
             menu: UIMenu(children: actions)
         )
+        button.tintColor = Bridgework.color("Menu", hex: data.colorCode)
 
         viewController?.navigationItem.rightBarButtonItem = button
     }
@@ -44,6 +45,12 @@ private extension MenuComponent {
 private extension MenuComponent {
     struct MessageData: Decodable {
         let items: [Item]
+        let colorCode: String?
+
+        enum CodingKeys: String, CodingKey {
+            case items
+            case colorCode = "color"
+        }
     }
 
     struct Item: Decodable {

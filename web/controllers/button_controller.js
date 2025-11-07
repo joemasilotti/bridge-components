@@ -18,7 +18,8 @@ export default class extends BridgeComponent {
     const side = element.bridgeAttribute("side") || "right"
     const iosImage = element.bridgeAttribute("ios-image")
     const androidImage = element.bridgeAttribute("android-image")
-    const data = {title: element.title, iosImage, androidImage}
+    const color = element.bridgeAttribute("color")
+    const data = {title: element.title, iosImage, androidImage, color}
 
     this.send(side, data, () => {
       this.element.click()

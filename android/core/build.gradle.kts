@@ -11,7 +11,7 @@ plugins {
 
 android {
     namespace = "com.masilotti.bridgecomponents"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 28
@@ -62,6 +62,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling)
     implementation(libs.hotwire.navigation.fragments)
     implementation(libs.kotlinx.serialization.json)
+    implementation(libs.material)
     implementation(libs.review.ktx)
     implementation(platform(libs.androidx.compose.bom))
 }

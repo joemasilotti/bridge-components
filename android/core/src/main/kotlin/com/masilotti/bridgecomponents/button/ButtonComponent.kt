@@ -15,6 +15,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.sp
 import com.masilotti.bridgecomponents.R
+import com.masilotti.bridgecomponents.shared.Colors
 import com.masilotti.bridgecomponents.shared.colorOnSurface
 import dev.hotwire.core.bridge.BridgeComponent
 import dev.hotwire.core.bridge.BridgeDelegate
@@ -53,7 +54,7 @@ class ButtonComponent(
                 ToolbarButton(
                     title = data.title,
                     imageName = data.imageName,
-                    contentColor = colorOnSurface(toolbar),
+                    contentColor = Colors.bridgeworkColor("button", hex = data.colorCode),
                     onClick = { replyTo(message.event) })
             }
         }
@@ -74,7 +75,8 @@ class ButtonComponent(
     @Serializable
     data class MessageData(
         val title: String,
-        @SerialName("androidImage") val imageName: String?
+        @SerialName("androidImage") val imageName: String?,
+        @SerialName("color") val colorCode: String?
     )
 }
 

@@ -10,12 +10,14 @@ import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.compose.ui.text.TextStyle
@@ -23,6 +25,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.sp
 import com.masilotti.bridgecomponents.R
+import com.masilotti.bridgecomponents.shared.Colors
 import dev.hotwire.core.bridge.BridgeComponent
 import dev.hotwire.core.bridge.BridgeDelegate
 import dev.hotwire.core.bridge.Message
@@ -63,6 +66,7 @@ class MenuComponent(
             setContent {
                 MenuDropdown(
                     data = data,
+                    contentColor = Colors.bridgeworkColor("menu", hex = data.colorCode),
                     onItemSelected = { index ->
                         replyTo(message.event, SelectionMessageData(index))
                     }
@@ -89,7 +93,8 @@ class MenuComponent(
 
     @Serializable
     data class MessageData(
-        val items: List<Item>
+        val items: List<Item>,
+        @SerialName("color") val colorCode: String?
     )
 
     @Serializable
@@ -104,11 +109,18 @@ class MenuComponent(
 
 @Composable
 private fun MenuDropdown(
-    data: MenuComponent.MessageData, onItemSelected: (Int) -> Unit
+    data: MenuComponent.MessageData,
+    contentColor: Color,
+    onItemSelected: (Int) -> Unit
 ) {
     var expanded by remember { mutableStateOf(false) }
 
-    IconButton(onClick = { expanded = !expanded }) {
+    IconButton(
+        onClick = { expanded = !expanded },
+        colors = IconButtonDefaults.iconButtonColors(
+            contentColor = contentColor
+        )
+    ) {
         Icon(
             imageVector = Icons.Default.MoreVert,
             contentDescription = "Menu"

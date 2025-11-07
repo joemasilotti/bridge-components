@@ -36,6 +36,20 @@ Android uses [Material Symbols](https://fonts.google.com/icons), set `bridge-and
 
 For Android, download the [Material Symbols](https://fonts.google.com/icons) font and unzip the Outlined version to `app/src/main/res/font/material_symbols.ttf`.
 
+## Customizing menu button colors
+
+On iOS, the color of the menu button will default to your [app's tint color](https://developer.apple.com/documentation/xcode/specifying-your-apps-color-scheme), set via `AccentColor` in Assets.xcassets. Override this by adding a new color named `BridgeworkMenuColor`. Or set all UI elements provided by this library with a new color named `BridgeworkColor`.
+
+On Android, the color of the menu button will default to Material's `colorOnSurface`. Override this by adding a new color to `colors.xml` named `bridgework_menu_color`. Or set all UI elements provided by this library with a new color named `bridgework_color`.
+
+These defaults can be overridden (on both platforms) for individual menu buttons by setting a HEX code for `data-bridge-color` in the HTML.
+
+```html
+<div data-controller="bridge--menu" data-bridge-color="#804F9F">
+  <!-- ... -->
+</div>
+```
+
 ## Hide the HTML
 
 Hide the HTML element when the "menu" component is registered with the following CSS.

@@ -10,6 +10,8 @@ public final class ButtonComponent: BridgeComponent {
         switch event {
         case .left, .right:
             addButton(via: message, side: event)
+        case .disconnect:
+            removeButton()
         }
     }
 
@@ -29,7 +31,15 @@ public final class ButtonComponent: BridgeComponent {
             viewController?.navigationItem.leftBarButtonItem = item
         case .right:
             viewController?.navigationItem.rightBarButtonItem = item
+        default:
+            return
         }
+    }
+    
+    private func removeButton() {
+        guard let navItem = viewController?.navigationItem else { return }
+        navItem.leftBarButtonItem = nil
+        navItem.rightBarButtonItem = nil
     }
 }
 
@@ -37,6 +47,7 @@ private extension ButtonComponent {
     enum Event: String {
         case left
         case right
+        case disconnect
     }
 }
 

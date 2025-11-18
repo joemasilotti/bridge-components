@@ -52,9 +52,16 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :tabs, except: :show
+
     resource :theme, only: :show
 
     resource :toast, only: :show
+  end
+
+  resource :configurations, only: [] do
+    get "ios"
+    get "android"
   end
 
   root "components#index"

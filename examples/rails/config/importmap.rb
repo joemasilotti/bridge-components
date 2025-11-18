@@ -7,4 +7,6 @@ pin "@hotwired/stimulus-loading", to: "stimulus-loading.js"
 pin "@hotwired/hotwire-native-bridge", to: "@hotwired--hotwire-native-bridge.js" # @1.2.2
 pin_all_from "app/javascript/controllers", under: "controllers"
 
-pin "@joemasilotti/bridge-components", to: "/bridge-components/web/controllers/index.js"
+# NOTE: Query param "v" added to bust cache in development.
+pin "@joemasilotti/bridge-components",
+  to: "/bridge-components/web/controllers/index.js?v=#{Time.now.to_i}"

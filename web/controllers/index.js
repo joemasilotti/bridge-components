@@ -13,6 +13,7 @@ import PermissionsBridgeController from "./permissions_controller.js"
 import ReviewPromptBridgeController from "./review_prompt_controller.js"
 import SearchBridgeController from "./search_controller.js"
 import ShareBridgeController from "./share_controller.js"
+import TabBarBridgeController from "./tab_bar_controller.js"
 import ThemeBridgeController from "./theme_controller.js"
 import ToastBridgeController from "./toast_controller.js"
 
@@ -32,6 +33,7 @@ export {
   ReviewPromptBridgeController,
   SearchBridgeController,
   ShareBridgeController,
+  TabBarBridgeController,
   ThemeBridgeController,
   ToastBridgeController
 }
@@ -53,6 +55,7 @@ export const controllers = [
   { identifier: "bridge--review-prompt", controllerConstructor: ReviewPromptBridgeController },
   { identifier: "bridge--search", controllerConstructor: SearchBridgeController },
   { identifier: "bridge--share",  controllerConstructor: ShareBridgeController },
+  { identifier: "bridge--tab-bar",  controllerConstructor: TabBarBridgeController },
   { identifier: "bridge--theme",  controllerConstructor: ThemeBridgeController },
   { identifier: "bridge--toast",  controllerConstructor: ToastBridgeController }
 ]

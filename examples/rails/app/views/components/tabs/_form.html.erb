@@ -1,0 +1,37 @@
+<% if tab.errors.any? %>
+  <div class="container">
+    <div class="alert alert-danger" role="alert">
+      <ul class="list-unstyled mb-0">
+        <% tab.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
+
+<div class="container">
+  <%= form_with model: [:components, tab] do |form| %>
+    <div class="mb-3">
+      <%= form.label :title, class: "form-label" %>
+      <%= form.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :path, class: "form-label" %>
+      <%= form.text_field :path, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :ios_image, "iOS image", class: "form-label" %>
+      <%= form.text_field :ios_image, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :android_image, "Android image", class: "form-label" %>
+      <%= form.text_field :android_image, class: "form-control" %>
+    </div>
+
+    <%= form.submit class: "btn btn-primary btn-lg w-100" %>
+  <% end %>
+</div>

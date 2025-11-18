@@ -16,6 +16,10 @@
   </head>
 
   <body data-controller="theme bridge--theme bridge--biometrics-lock">
+    <%= tag.meta data: {
+      controller: "bridge--tab-bar",
+      "bridge--tab-bar-tabs-value": ([Tab.components_tab, Tab.tabs_tab] + Tab.all).to_json
+    } %>
     <main class="mb-5">
       <%= yield %>
     </main>

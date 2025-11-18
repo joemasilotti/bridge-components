@@ -1,0 +1,45 @@
+<% content_for :title, "Tab Bar Component" %>
+
+<div class="container mt-3">
+  <h1 class="d-hotwire-native-none mb-3">Tab Bar Component</h1>
+
+  <% @tabs.each_with_index do |tab, i| %>
+    <div class="d-flex align-items-baseline">
+      <h2 class="h4">Tab <%= i + 1 %></h2>
+
+      <% if tab.persisted? %>
+        <%= link_to "Edit", edit_components_tab_path(tab), class: "btn btn-sm btn-link" %>
+      <% end %>
+    </div>
+
+    <dl class="small">
+      <div class="row">
+        <div class="col">
+          <dt class="">Title:</dt>
+          <dd class=""><%= tab.title %></dd>
+        </div>
+
+        <div class="col">
+          <dt class="">Path:</dt>
+          <dd class=""><code><%= tab.path %></code></dd>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <dt class="">iOS image:</dt>
+          <dd class=""><code><%= tab.ios_image %></code></dd>
+        </div>
+
+        <div class="col">
+          <dt class="">Android image:</dt>
+          <dd class=""><code><%= tab.android_image %></code></dd>
+        </div>
+      </div>
+    </dl>
+  <% end %>
+
+  <% if @tabs.count < 5 %>
+    <%= link_to "Add a tab", new_components_tab_path, class: "btn btn-outline-primary btn-lg w-100" %>
+  <% end %>
+</div>

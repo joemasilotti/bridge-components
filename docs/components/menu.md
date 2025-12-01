@@ -36,6 +36,18 @@ Android uses [Material Symbols](https://fonts.google.com/icons), set `bridge-and
 
 For Android, download the [Material Symbols](https://fonts.google.com/icons) font and unzip the Outlined version to `app/src/main/res/font/material_symbols.ttf`.
 
+Items (text and image) can also be colored red by setting `bridge-destructive` to `true` to indicate destructive actions.
+
+```html
+<div data-controller="bridge--menu">
+  <a href="/one"
+    data-bridge--menu-target="item"
+    data-bridge-destructive="true">
+      One
+  </a>
+</div>
+```
+
 ## Customizing menu button colors
 
 On iOS, the color of the menu button will default to your [app's tint color](https://developer.apple.com/documentation/xcode/specifying-your-apps-color-scheme), set via `AccentColor` in Assets.xcassets. Override this by adding a new color named `BridgeworkMenuColor`. Or set all UI elements provided by this library with a new color named `BridgeworkColor`.

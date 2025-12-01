@@ -19,7 +19,8 @@ public final class MenuComponent: BridgeComponent {
         var actions = [UIAction]()
         for (index, item) in data.items.enumerated() {
             let image = UIImage(systemName: item.image ?? "")
-            let action = UIAction(title: item.title, image: image) { [weak self] _ in
+            let attributes: UIMenuElement.Attributes = item.isDestructive ? .destructive : []
+            let action = UIAction(title: item.title, image: image, attributes: attributes) { [weak self] _ in
                 self?.reply(to: message.event, with: SelectionMessageData(index: index))
             }
             actions.append(action)
@@ -56,10 +57,14 @@ private extension MenuComponent {
     struct Item: Decodable {
         let title: String
         let image: String?
+        var isDestructive: Bool { destructive ?? false }
+
+        private let destructive: Bool?
 
         enum CodingKeys: String, CodingKey {
             case title
             case image = "iosImage"
+            case destructive
         }
     }
 

@@ -1,7 +1,7 @@
 # Notification Token Component
 
 > [!IMPORTANT]
-> This is a PRO component. Gain access to the Swift and Kotlin code by [purchasing a PRO license](https://buy.stripe.com/fZeaF6bn9b9d4Pm14b).
+> This is a PRO component. Gain access to the Swift and Kotlin code by [purchasing a PRO license](https://masilotti.com/bridge-components/pro).
 
 Gets the user's push notification token.
 

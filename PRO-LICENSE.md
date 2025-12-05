@@ -1,4 +1,4 @@
-# Bridge Components Pro License (Single-User)
+# Bridge Components PRO License (Individual, Single-User)
 
 ## 1. Definitions
 - **“Software”** refers to the Bridge Components Pro package (including all components, code, templates, documentation, and other related materials) provided by Joseph Masilotti.

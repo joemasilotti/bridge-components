@@ -10,7 +10,7 @@ This repository contains generalized, production-ready bridge components extract
 
 ## Components
 
-[See all the components](https://masilotti.com/bridge-components/#components)
+[See all the components](https://masilotti.com/bridge-components/)
 
 * [Alert](docs/components/alert.md)
 * [Barcode Scanner](docs/components/barcode-scanner.md)

@@ -25,4 +25,11 @@
     bridge_ios_image: "3.circle",
     bridge_android_image: "counter_3"
   } %>
+  <%= link_to "Destructive", result_components_menu_path(item: "Destructive"), class: "list-group-item list-group-item-action", data: {
+    bridge__menu_target: "item",
+    bridge_title: "Destructive",
+    bridge_ios_image: "trash",
+    bridge_android_image: "delete",
+    bridge_destructive: true
+  } %>
 </ul>

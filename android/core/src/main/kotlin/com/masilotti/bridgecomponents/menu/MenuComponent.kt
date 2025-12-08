@@ -11,6 +11,7 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -100,7 +101,8 @@ class MenuComponent(
     @Serializable
     data class Item(
         val title: String,
-        @SerialName("androidImage") val imageName: String?
+        @SerialName("androidImage") val imageName: String?,
+        val destructive: Boolean?
     )
 
     @Serializable
@@ -132,6 +134,11 @@ private fun MenuDropdown(
         onDismissRequest = { expanded = false }
     ) {
         data.items.forEachIndexed { index, item ->
+            val color = if (item.destructive == true) {
+                MaterialTheme.colorScheme.error
+            } else {
+                MaterialTheme.colorScheme.onSurface
+            }
             DropdownMenuItem(
                 trailingIcon = {
                     item.imageName?.let {
@@ -141,11 +148,17 @@ private fun MenuDropdown(
                             fontSize = 20.sp,
                             style = TextStyle(
                                 fontFeatureSettings = "liga"
-                            )
+                            ),
+                            color = color
                         )
                     }
                 },
-                text = { Text(item.title) },
+                text = {
+                    Text(
+                        text = item.title,
+                        color = color
+                    )
+                },
                 onClick = {
                     expanded = false
                     onItemSelected(index)

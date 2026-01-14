@@ -22,7 +22,7 @@ export default class extends BridgeComponent {
         title: element.title,
         iosImage: element.bridgeAttribute("ios-image"),
         androidImage: element.bridgeAttribute("android-image"),
-        destructive: element.bridgeAttribute("destructive")
+        destructive: element.bridgeAttribute("destructive") == "true"
       }
     })
 

@@ -1,6 +1,6 @@
 {
   "name": "@joemasilotti/bridge-components",
-  "version": "0.12.1",
+  "version": "0.12.2",
   "description": "A collection of bridge components for Hotwire Native apps (Stimulus controllers).",
   "license": "MIT",
   "repository": {

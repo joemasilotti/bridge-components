@@ -4,6 +4,8 @@ import UIKit
 public final class MenuComponent: BridgeComponent {
     override public nonisolated class var name: String { "menu" }
 
+    private weak var menuBarButtonItem: UIBarButtonItem?
+
     override public func onReceive(message: Message) {
         guard let event = Event(rawValue: message.event) else { return }
 
@@ -33,7 +35,13 @@ public final class MenuComponent: BridgeComponent {
         )
         button.tintColor = Bridgework.color("Menu", hex: data.colorCode)
 
-        viewController?.navigationItem.rightBarButtonItem = button
+        var rightItems = viewController?.navigationItem.rightBarButtonItems ?? []
+        if let old = menuBarButtonItem {
+            rightItems.removeAll { $0 === old }
+        }
+        rightItems.append(button)
+        menuBarButtonItem = button
+        viewController?.navigationItem.rightBarButtonItems = rightItems
     }
 }
 

@@ -53,7 +53,7 @@ Then add the following to `AppDelegate.swift` to post new notification token dat
 ```swift
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        NotificationCenter.default.post(name: .didReceiveDeviceToken, object: deviceToken)
+        Bridgework.post(.didReceiveNotificationToken, deviceToken)
     }
 }
 ```

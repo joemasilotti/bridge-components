@@ -55,7 +55,7 @@ Additional codes can be added by updating one line of the native component. iOS 
 
 ### iOS
 
-(none)
+Requires iOS 16.0 or later. The barcode scanner uses [`DataScannerViewController`](https://developer.apple.com/documentation/visionkit/datascannerviewcontroller) from VisionKit, which is only available on iOS 16+. The component is automatically registered when running on iOS 16+ and skipped on earlier versions.
 
 ### Android
 

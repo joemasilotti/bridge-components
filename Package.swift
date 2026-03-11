@@ -6,7 +6,7 @@ let package = Package(
     name: "BridgeComponents",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v16)
+        .iOS("15.6")
     ],
     products: [
         .library(name: "BridgeComponents", targets: ["BridgeComponents"])

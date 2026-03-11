@@ -15,7 +15,11 @@ public final class ReviewPromptComponent: BridgeComponent {
 
     private func promptForReview() {
         if let scene = viewController?.view.window?.windowScene {
-            AppStore.requestReview(in: scene)
+            if #available(iOS 16.0, *) {
+                AppStore.requestReview(in: scene)
+            } else {
+                SKStoreReviewController.requestReview(in: scene)
+            }
         }
     }
 }

@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.13.1
+
+* Fix menu component not removing nav bar button on controller disconnect
+
 ## v0.13.0
 
 * Lower minimum iOS version from 16.0 to 15.6

@@ -10,6 +10,8 @@ public final class MenuComponent: BridgeComponent {
         switch event {
         case .connect:
             addMenuButton(via: message)
+        case .disconnect:
+            removeMenuButton()
         }
     }
 
@@ -35,11 +37,16 @@ public final class MenuComponent: BridgeComponent {
 
         viewController?.navigationItem.rightBarButtonItem = button
     }
+
+    private func removeMenuButton() {
+        viewController?.navigationItem.rightBarButtonItem = nil
+    }
 }
 
 private extension MenuComponent {
     enum Event: String {
         case connect
+        case disconnect
     }
 }
 

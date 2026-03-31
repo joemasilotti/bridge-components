@@ -35,6 +35,8 @@ public final class ShareComponent: BridgeComponent {
             activityItems: [url],
             applicationActivities: nil
         )
+        activityViewController.popoverPresentationController?.barButtonItem =
+            viewController?.navigationItem.rightBarButtonItem
         viewController?.present(activityViewController, animated: true)
     }
 }

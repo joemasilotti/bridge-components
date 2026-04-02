@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.13.2
+
+* Add `hidden` value to share component to suppress the native button
+* Add `share` event to trigger the native share sheet without a button
+
 ## v0.13.1
 
 * Fix menu component not removing nav bar button on controller disconnect

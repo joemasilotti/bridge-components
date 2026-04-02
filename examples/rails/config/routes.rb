@@ -49,6 +49,7 @@ Rails.application.routes.draw do
       collection do
         get :current
         get :custom
+        get :hidden
       end
     end
 

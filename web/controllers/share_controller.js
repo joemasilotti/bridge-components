@@ -3,9 +3,20 @@ import { BridgeComponent } from "@hotwired/hotwire-native-bridge"
 export default class extends BridgeComponent {
   static component = "share"
 
+  static values = {
+    hidden: Boolean
+  }
+
   connect() {
     super.connect()
-    this.#addButton()
+    if (!this.hiddenValue) {
+      this.#addButton()
+    }
+  }
+
+  share() {
+    const url = this.bridgeElement.bridgeAttribute("url") || window.location.href
+    this.send("share", {url}, () => {})
   }
 
   #addButton() {

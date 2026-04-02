@@ -1,0 +1,13 @@
+<% content_for :title, "Share Hidden Button" %>
+
+<div class="container mt-3">
+  <h1 class="d-hotwire-native-none">Share Hidden Button</h1>
+  <p>Presents a native share sheet without adding a button to the navigation bar.</p>
+
+  <button class="btn btn-primary"
+    data-controller="bridge--share"
+    data-bridge--share-hidden-value="true"
+    data-action="click->bridge--share#share">
+    Share this page
+  </button>
+</div>

@@ -10,6 +10,8 @@ public final class ShareComponent: BridgeComponent {
         switch event {
         case .connect:
             addButton(via: message)
+        case .share:
+            shareURL(from: message)
         }
     }
 
@@ -30,6 +32,11 @@ public final class ShareComponent: BridgeComponent {
         viewController?.navigationItem.rightBarButtonItem = button
     }
 
+    private func shareURL(from message: Message) {
+        guard let data: MessageData = message.data(), let url = data.url else { return }
+        share(url)
+    }
+
     private func share(_ url: URL) {
         let activityViewController = UIActivityViewController(
             activityItems: [url],
@@ -42,6 +49,7 @@ public final class ShareComponent: BridgeComponent {
 private extension ShareComponent {
     enum Event: String {
         case connect
+        case share
     }
 }
 

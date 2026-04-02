@@ -37,6 +37,7 @@ class ShareComponent(
         when (message.event) {
             "connect" -> addButton(message)
             "disconnect" -> removeButton()
+            "share" -> shareURL(message)
             else -> Log.w("ShareComponent", "Unknown event for message: $message")
         }
     }
@@ -66,6 +67,11 @@ class ShareComponent(
         val toolbar = fragment.toolbarForNavigation()
         val button = toolbar?.findViewById<ComposeView>(buttonId)
         toolbar?.removeView(button)
+    }
+
+    private fun shareURL(message: Message) {
+        val data = message.data<MessageData>() ?: return
+        share(data.url)
     }
 
     private fun share(url: String) {

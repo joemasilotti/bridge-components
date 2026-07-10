@@ -41,8 +41,8 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-    implementation("dev.hotwire:core:1.2.4")
-    implementation("dev.hotwire:navigation-fragments:1.2.4")
+    implementation("dev.hotwire:core:1.3.0")
+    implementation("dev.hotwire:navigation-fragments:1.3.0")
 
     implementation("com.masilotti.bridgecomponents:core:0.0.0")
 }

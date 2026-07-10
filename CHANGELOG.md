@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.14.0
+
+* Support Hotwire Native 1.3 (allow 1.2.x and 1.3.x)
+
 ## v0.13.2
 
 * Add `hidden` value to share component to suppress the native button

@@ -29,25 +29,36 @@ class ButtonComponent(
     name: String,
     private val bridgeDelegate: BridgeDelegate<HotwireDestination>
 ) : BridgeComponent<HotwireDestination>(name, bridgeDelegate) {
-    private val buttonId = 1
+    private val leftButtonId = 1
+    private val rightButtonId = 2
     private val fragment: HotwireFragment
         get() = bridgeDelegate.destination.fragment as HotwireFragment
 
     override fun onReceive(message: Message) {
         when (message.event) {
+            "left" -> addButton(message, true)
             "right" -> addButton(message)
-            // TODO: Add "left" button handling like on iOS.
-            "disconnect" -> removeButton()
+            "disconnect" -> {
+                removeLeftButton()
+                removeRightButton()
+            }
             else -> Log.w("ButtonComponent", "Unknown event for message: $message")
         }
     }
 
-    private fun addButton(message: Message) {
-        removeButton()
+    private fun addButton(message: Message, isLeftButton : Boolean = false) {
+        val buttonId = if (isLeftButton) leftButtonId else rightButtonId
+        val gravity = if (isLeftButton) Gravity.START else Gravity.END
+
+        if(isLeftButton) {
+            removeLeftButton()
+        }
+        else {
+            removeRightButton()
+        }
 
         val data = message.data<MessageData>() ?: return
         val toolbar = fragment.toolbarForNavigation() ?: return
-
         val composeView = ComposeView(fragment.requireContext()).apply {
             id = buttonId
             setContent {
@@ -61,15 +72,35 @@ class ButtonComponent(
         val layoutParams = Toolbar.LayoutParams(
             ViewGroup.LayoutParams.WRAP_CONTENT,
             ViewGroup.LayoutParams.WRAP_CONTENT
-        ).apply { gravity = Gravity.END }
+        ).apply { this.gravity = gravity}
 
         toolbar.addView(composeView, layoutParams)
     }
 
-    private fun removeButton() {
+    private fun removeButton(isLeftButton: Boolean = false) {
         val toolbar = fragment.toolbarForNavigation()
-        val button = toolbar?.findViewById<ComposeView>(buttonId)
-        toolbar?.removeView(button)
+        val leftButton = toolbar?.findViewById<ComposeView>(leftButtonId)
+        val rightButton = toolbar?.findViewById<ComposeView>(rightButtonId)
+
+        if(isLeftButton) {
+            toolbar?.removeView(leftButton)
+        }
+        else {
+            toolbar?.removeView(rightButton)
+        }
+
+    }
+
+    private fun removeLeftButton() {
+        val toolbar = fragment.toolbarForNavigation()
+        val leftButton = toolbar?.findViewById<ComposeView>(leftButtonId)
+        toolbar?.removeView(leftButton)
+    }
+
+    private fun removeRightButton() {
+        val toolbar = fragment.toolbarForNavigation()
+        val rightButton = toolbar?.findViewById<ComposeView>(rightButtonId)
+        toolbar?.removeView(rightButton)
     }
 
     @Serializable
